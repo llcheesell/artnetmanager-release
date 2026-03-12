@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtNet Manager &mdash; DMX Signal Management for Live Production</title>
+  <meta name="description" content="Cross-platform Art-Net/sACN signal management, visualization, and forwarding tool designed for live production environments.">
+  <meta name="theme-color" content="#06060a">
+  <link rel="icon" href="images/icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">
+      <img src="images/icon.png" alt="ArtNet Manager" width="28" height="28">
+      ArtNet Manager
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#preview">Preview</a></li>
+      <li><a href="#download">Download</a></li>
+    </ul>
+    <a href="#download" class="nav-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download
+    </a>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section id="hero">
+  <div class="container">
+    <img src="images/icon.png" alt="" class="hero-icon animate-in" width="80" height="80">
+
+    <h1 class="hero-title animate-in delay-1">
+      <span class="gradient-text">ArtNet Manager</span>
+    </h1>
+
+    <p class="hero-subtitle animate-in delay-2">
+      Art-Net / sACN 信号の管理・可視化・フォワーディングを一元化。<br>
+      ライブプロダクション現場のための、クロスプラットフォーム DMX ツール。
+    </p>
+
+    <div class="hero-badges animate-in delay-3">
+      <span class="badge"><span class="dot"></span> Art-Net 4</span>
+      <span class="badge"><span class="dot"></span> sACN (E1.31)</span>
+      <span class="badge">Cross-Platform</span>
+      <span class="badge">Open Source</span>
+    </div>
+
+    <div class="hero-cta animate-in delay-3">
+      <a href="https://github.com/CompositionInc/artnetmanager-release/releases/download/v1.0.0/ArtNet.Manager.Setup.1.0.0.exe" class="btn btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download v1.0.0
+      </a>
+      <a href="https://github.com/CompositionInc/ArtnetManager" class="btn btn-secondary" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+
+    <!-- Hero App Mockup -->
+    <div class="hero-mockup animate-in delay-4">
+      <div class="mockup-titlebar">
+        <div class="mockup-dot red"></div>
+        <div class="mockup-dot yellow"></div>
+        <div class="mockup-dot green"></div>
+      </div>
+      <div class="mockup-body">
+        <!-- Sidebar -->
+        <div class="mock-sidebar">
+          <div class="mock-sidebar-brand">
+            <div class="icon"></div>
+            <span>ArtNet Manager</span>
+          </div>
+          <div class="mock-nav-item active"><div class="mock-nav-icon"></div> Dashboard</div>
+          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Universes</div>
+          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Devices</div>
+          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Forwarding</div>
+          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Signal Flow</div>
+          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Monitoring</div>
+          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Settings</div>
+        </div>
+        <!-- Dashboard Content -->
+        <div class="mock-content">
+          <div class="mock-stats">
+            <div class="mock-stat-card">
+              <div class="mock-stat-label">Active Universes</div>
+              <div class="mock-stat-value cyan">4</div>
+            </div>
+            <div class="mock-stat-card">
+              <div class="mock-stat-label">Devices</div>
+              <div class="mock-stat-value emerald">12</div>
+            </div>
+            <div class="mock-stat-card">
+              <div class="mock-stat-label">Destinations</div>
+              <div class="mock-stat-value amber">3</div>
+            </div>
+            <div class="mock-stat-card">
+              <div class="mock-stat-label">Packets/s</div>
+              <div class="mock-stat-value violet">176</div>
+            </div>
+          </div>
+          <div class="mock-section-title">Active Universes</div>
+          <div class="mock-universe-grid">
+            <div class="mock-universe-card">
+              <div class="mock-universe-header">
+                <span class="mock-universe-name">0:0:0</span>
+                <span class="mock-protocol-badge artnet">Art-Net</span>
+              </div>
+              <div class="mock-universe-meta">192.168.1.10 <span class="mock-pps">44 pps</span></div>
+            </div>
+            <div class="mock-universe-card">
+              <div class="mock-universe-header">
+                <span class="mock-universe-name">0:0:1</span>
+                <span class="mock-protocol-badge sacn">sACN</span>
+              </div>
+              <div class="mock-universe-meta">192.168.1.20 <span class="mock-pps">44 pps</span></div>
+            </div>
+            <div class="mock-universe-card">
+              <div class="mock-universe-header">
+                <span class="mock-universe-name">0:0:2</span>
+                <span class="mock-protocol-badge artnet">Art-Net</span>
+              </div>
+              <div class="mock-universe-meta">192.168.1.10 <span class="mock-pps">44 pps</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Features ===== -->
+<section id="features">
+  <div class="container">
+    <div style="text-align:center;">
+      <span class="section-label">Features</span>
+      <h2>ライブ現場に必要なすべてを</h2>
+      <p class="section-desc">
+        DMX信号の受信・監視・変換・転送を、直感的なインターフェースで統合管理。
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <!-- 1 -->
+      <div class="feature-card">
+        <div class="feature-icon cyan">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </div>
+        <h3>リアルタイム DMX 可視化</h3>
+        <p>512チャンネルをCanvasベースのグリッドでリアルタイム表示。色分けされたインテンシティで、信号の変化を瞬時に把握。</p>
+      </div>
+      <!-- 2 -->
+      <div class="feature-card">
+        <div class="feature-icon violet">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Art-Net &amp; sACN デュアルプロトコル</h3>
+        <p>Art-Net 4 と sACN (E1.31) の両方に対応。プロトコル間の変換・ブリッジも自動で処理。</p>
+      </div>
+      <!-- 3 -->
+      <div class="feature-card">
+        <div class="feature-icon emerald">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <h3>ネットワークデバイス探索</h3>
+        <p>サブネットスキャン + ARP + 逆引きDNS で、ネットワーク上の全デバイスを自動検出。照明機器に限らず包括的に発見。</p>
+      </div>
+      <!-- 4 -->
+      <div class="feature-card">
+        <div class="feature-icon amber">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>シグナルフロー可視化</h3>
+        <p>ソースからユニバースを経由してデスティネーションへの信号経路をアニメーション付きで表示。流れるパーティクルで通信状態を直感的に確認。</p>
+      </div>
+      <!-- 5 -->
+      <div class="feature-card">
+        <div class="feature-icon orange">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16" y1="3" x2="16" y2="21"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+        </div>
+        <h3>フォワーディング &amp; ルーティング</h3>
+        <p>宛先ごとにユニバースフィルタリング、オフセット再マッピング、遅延設定（0〜10秒）を柔軟に構成。設定のインポート/エクスポートにも対応。</p>
+      </div>
+      <!-- 6 -->
+      <div class="feature-card">
+        <div class="feature-icon red">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>プロダクションセーフ設計</h3>
+        <p>パケットごとのエラー分離、バッファオーバーフロー保護、指数バックオフによる自動再接続。現場で止まらない堅牢性。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== App Preview ===== -->
+<section id="preview">
+  <div class="container">
+    <div style="text-align:center;">
+      <span class="section-label">App Preview</span>
+      <h2>インターフェース</h2>
+      <p class="section-desc">
+        ダークテーマの洗練されたUIで、必要な情報を素早く把握。
+      </p>
+    </div>
+
+    <div class="preview-grid">
+      <!-- Channel Grid -->
+      <div class="preview-card">
+        <div class="preview-image">
+          <div class="mock-channel-grid" id="channelGrid"></div>
+        </div>
+        <div class="preview-info">
+          <h3>Universe Viewer</h3>
+          <p>512チャンネルのDMX値をリアルタイムにグリッド表示。青→シアン→白のグラデーションでインテンシティを可視化。</p>
+        </div>
+      </div>
+
+      <!-- Signal Flow -->
+      <div class="preview-card">
+        <div class="preview-image">
+          <div class="mock-signal-flow">
+            <svg class="flow-lines" viewBox="0 0 600 300">
+              <path class="cyan" d="M90,60 C200,60 180,50 260,50" />
+              <path class="cyan" d="M90,60 C200,60 180,110 260,110" />
+              <path class="cyan" d="M90,120 C200,120 180,110 260,110" />
+              <path class="cyan" d="M90,120 C200,120 180,170 260,170" />
+              <path class="emerald" d="M310,50 C400,50 420,60 500,60" />
+              <path class="emerald" d="M310,110 C400,110 420,60 500,60" />
+              <path class="emerald" d="M310,170 C400,170 420,130 500,130" />
+            </svg>
+            <div class="mock-flow-column sources">
+              <div class="mock-flow-label">Sources</div>
+              <div class="mock-flow-node source">192.168.1.10</div>
+              <div class="mock-flow-node source">192.168.1.20</div>
+            </div>
+            <div class="mock-flow-column universes">
+              <div class="mock-flow-label">Universes</div>
+              <div class="mock-flow-node universe">Uni 0:0:0</div>
+              <div class="mock-flow-node universe">Uni 0:0:1</div>
+              <div class="mock-flow-node universe">Uni 0:0:2</div>
+            </div>
+            <div class="mock-flow-column destinations">
+              <div class="mock-flow-label">Destinations</div>
+              <div class="mock-flow-node dest">Main Stage</div>
+              <div class="mock-flow-node dest">Backup</div>
+            </div>
+          </div>
+        </div>
+        <div class="preview-info">
+          <h3>Signal Flow</h3>
+          <p>ソース→ユニバース→デスティネーションの信号経路をアニメーション付きで可視化。流れるパーティクルでライブ通信を表現。</p>
+        </div>
+      </div>
+
+      <!-- Device Discovery -->
+      <div class="preview-card wide">
+        <div class="preview-image" style="aspect-ratio:21/9;">
+          <div class="mock-device-table">
+            <div class="mock-table-toolbar">
+              <div class="mock-tab active">All</div>
+              <div class="mock-tab">Art-Net</div>
+              <div class="mock-tab">sACN</div>
+              <div class="mock-tab">Computers</div>
+              <div class="mock-scan-btn">Scan Network</div>
+            </div>
+            <div class="mock-table-row header">
+              <div></div>
+              <div>IP Address</div>
+              <div>Hostname</div>
+              <div>MAC Address</div>
+              <div>Category</div>
+            </div>
+            <div class="mock-table-row">
+              <div><div class="mock-status-dot"></div></div>
+              <div>192.168.1.10</div>
+              <div>MA-Node-01</div>
+              <div>00:1A:2B:3C:4D:5E</div>
+              <div><span class="mock-device-badge artnet">Art-Net</span></div>
+            </div>
+            <div class="mock-table-row">
+              <div><div class="mock-status-dot"></div></div>
+              <div>192.168.1.20</div>
+              <div>sACN-Gateway</div>
+              <div>00:2B:3C:4D:5E:6F</div>
+              <div><span class="mock-device-badge sacn">sACN</span></div>
+            </div>
+            <div class="mock-table-row">
+              <div><div class="mock-status-dot"></div></div>
+              <div>192.168.1.100</div>
+              <div>LIGHTING-PC</div>
+              <div>00:3C:4D:5E:6F:7A</div>
+              <div><span class="mock-device-badge computer">Computer</span></div>
+            </div>
+            <div class="mock-table-row">
+              <div><div class="mock-status-dot"></div></div>
+              <div>192.168.1.1</div>
+              <div>NetworkSwitch</div>
+              <div>00:4D:5E:6F:7A:8B</div>
+              <div><span class="mock-device-badge network">Network</span></div>
+            </div>
+            <div class="mock-table-row">
+              <div><div class="mock-status-dot offline"></div></div>
+              <div style="opacity:0.4;">192.168.1.30</div>
+              <div style="opacity:0.4;">DMX-Bridge-02</div>
+              <div style="opacity:0.4;">00:5E:6F:7A:8B:9C</div>
+              <div><span class="mock-device-badge artnet" style="opacity:0.4;">Art-Net</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="preview-info">
+          <h3>Device Discovery</h3>
+          <p>ネットワーク上のすべてのデバイスを自動検出。Art-Net ノード、sACN ゲートウェイ、コンピュータ、ネットワーク機器をカテゴリ分けして一覧表示。リアルタイムでオンライン/オフライン状態を監視。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Download ===== -->
+<section id="download">
+  <div class="container">
+    <span class="section-label">Download</span>
+    <h2>ダウンロード</h2>
+    <p class="section-desc">
+      テスト版 v1.0.0 &mdash; フィードバックをお待ちしています。
+    </p>
+
+    <div class="download-grid">
+      <!-- Windows -->
+      <div class="download-card">
+        <div class="platform-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--cyan)"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+        </div>
+        <h3>Windows</h3>
+        <p class="version">v1.0.0 &middot; Installer (.exe)</p>
+        <a href="https://github.com/CompositionInc/artnetmanager-release/releases/download/v1.0.0/ArtNet.Manager.Setup.1.0.0.exe" class="btn btn-primary" id="download-win-setup">Download</a>
+      </div>
+
+      <!-- Windows Portable -->
+      <div class="download-card">
+        <div class="platform-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--violet)"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+        </div>
+        <h3>Windows Portable</h3>
+        <p class="version">v1.0.0 &middot; Portable (.exe)</p>
+        <a href="https://github.com/CompositionInc/artnetmanager-release/releases/download/v1.0.0/ArtNet.Manager.1.0.0.exe" class="btn btn-secondary" id="download-win-portable">Download</a>
+      </div>
+
+      <!-- macOS -->
+      <div class="download-card">
+        <div class="platform-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--text-muted)"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        </div>
+        <h3>macOS</h3>
+        <p class="version">v1.0.0 &middot; Coming Soon</p>
+        <span class="btn btn-secondary" style="opacity:0.5; pointer-events:none;">Coming Soon</span>
+      </div>
+    </div>
+
+    <p class="download-note">
+      * テストビルドです。バグ報告・フィードバックは
+      <a href="https://github.com/CompositionInc/ArtnetManager/issues" target="_blank" rel="noopener">GitHub Issues</a>
+      までお願いします。
+    </p>
+  </div>
+</section>
+
+<!-- ===== Tech Stack ===== -->
+<section id="tech">
+  <div class="container">
+    <span class="section-label">Built With</span>
+    <h2>技術スタック</h2>
+    <p class="section-desc">モダンな技術で構築された、プロダクションレディなアプリケーション。</p>
+
+    <div class="tech-grid">
+      <div class="tech-item">
+        <div class="tech-logo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--cyan)"><circle cx="12" cy="12" r="3.5"/><ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="var(--cyan)" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="var(--cyan)" stroke-width="1.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="var(--cyan)" stroke-width="1.5" transform="rotate(120 12 12)"/></svg>
+        </div>
+        <span>React 19</span>
+      </div>
+      <div class="tech-item">
+        <div class="tech-logo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--violet)"><path d="M1.5 6L12 1.5 22.5 6 12 10.5z" fill="none" stroke="var(--violet)" stroke-width="1.5"/><path d="M1.5 12L12 16.5 22.5 12" fill="none" stroke="var(--violet)" stroke-width="1.5"/><path d="M1.5 18L12 22.5 22.5 18" fill="none" stroke="var(--violet)" stroke-width="1.5"/></svg>
+        </div>
+        <span>Electron 35</span>
+      </div>
+      <div class="tech-item">
+        <div class="tech-logo" style="color: #3178c6; font-weight:700; font-size:14px;">TS</div>
+        <span>TypeScript</span>
+      </div>
+      <div class="tech-item">
+        <div class="tech-logo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--cyan)"><path d="M12 2L2 19.5h20L12 2z" fill="none" stroke="var(--cyan)" stroke-width="1.5"/></svg>
+        </div>
+        <span>Vite</span>
+      </div>
+      <div class="tech-item">
+        <div class="tech-logo" style="color: #38bdf8; font-weight:700; font-size:12px;">TW</div>
+        <span>Tailwind CSS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="images/icon.png" alt="" width="20" height="20">
+        ArtNet Manager
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/CompositionInc/ArtnetManager" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/CompositionInc/ArtnetManager/issues" target="_blank" rel="noopener">Issues</a>
+        <a href="https://github.com/CompositionInc/ArtnetManager/blob/main/README.md" target="_blank" rel="noopener">Docs</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Composition Inc.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Minimal JS for Channel Grid Mockup ===== -->
+<script>
+(function() {
+  const grid = document.getElementById('channelGrid');
+  if (!grid) return;
+
+  // Create 512 cells
+  const cells = [];
+  for (let i = 0; i < 512; i++) {
+    const cell = document.createElement('div');
+    cell.className = 'mock-cell';
+    grid.appendChild(cell);
+    cells.push({ el: cell, value: 0, target: 0 });
+  }
+
+  // Define some "active" channel patterns to simulate DMX data
+  const patterns = [
+    // Dimmer chase
+    { start: 0, count: 32, style: 'chase' },
+    // RGB wash
+    { start: 64, count: 48, style: 'rgb' },
+    // Random sparkle
+    { start: 160, count: 96, style: 'sparkle' },
+    // Static warm
+    { start: 320, count: 64, style: 'warm' },
+  ];
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  function valueToColor(v) {
+    if (v < 3) return '#171717';
+    const t = v / 255;
+    if (t < 0.5) {
+      const s = t * 2;
+      return `rgb(${Math.round(lerp(10,26,s))},${Math.round(lerp(20,180,s))},${Math.round(lerp(40,240,s))})`;
+    } else {
+      const s = (t - 0.5) * 2;
+      return `rgb(${Math.round(lerp(26,220,s))},${Math.round(lerp(180,240,s))},${Math.round(lerp(240,255,s))})`;
+    }
+  }
+
+  let time = 0;
+  function animate() {
+    time += 0.02;
+
+    patterns.forEach(p => {
+      for (let i = 0; i < p.count; i++) {
+        const idx = p.start + i;
+        if (idx >= 512) break;
+        let val = 0;
+        switch (p.style) {
+          case 'chase':
+            val = Math.max(0, Math.sin((i / p.count) * Math.PI * 4 - time * 2) * 255);
+            break;
+          case 'rgb':
+            if (i % 3 === 0) val = Math.sin(time * 0.7) * 127 + 128;
+            else if (i % 3 === 1) val = Math.sin(time * 0.7 + 2.1) * 127 + 128;
+            else val = Math.sin(time * 0.7 + 4.2) * 127 + 128;
+            break;
+          case 'sparkle':
+            val = Math.random() > 0.85 ? Math.random() * 255 : cells[idx].value * 0.92;
+            break;
+          case 'warm':
+            val = 80 + Math.sin(time * 0.3 + i * 0.1) * 40;
+            break;
+        }
+        cells[idx].target = Math.max(0, Math.min(255, val));
+      }
+    });
+
+    cells.forEach(c => {
+      c.value = lerp(c.value, c.target, 0.15);
+      c.el.style.background = valueToColor(c.value);
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+})();
+</script>
+
+</body>
+</html>
