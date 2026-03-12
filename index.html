@@ -43,8 +43,7 @@
     </h1>
 
     <p class="hero-subtitle animate-in delay-2">
-      Art-Net / sACN 信号の管理・可視化・フォワーディングを一元化。<br>
-      ミニマムだが必要十分 &mdash; ライブプロダクション現場のための DMX ツール。
+      Art-Net / sACN 信号の管理・可視化・フォワーディングを一元化。ミニマムだが必要十分 &mdash; ライブプロダクション現場のための DMX ツール。
     </p>
 
     <div class="hero-badges animate-in delay-3">
@@ -151,7 +150,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         </div>
         <h3>リアルタイム DMX 可視化</h3>
-        <p>512チャンネルをCanvasベースのグリッドでリアルタイム表示。色分けされたインテンシティで、信号の変化を瞬時に把握。</p>
+        <p>512チャンネルをグリッドでリアルタイム表示。色分けされたインテンシティで、信号の変化を瞬時に把握。</p>
       </div>
       <!-- 2 -->
       <div class="feature-card">
@@ -222,34 +221,8 @@
 
       <!-- Signal Flow -->
       <div class="preview-card">
-        <div class="preview-image">
-          <div class="mock-signal-flow">
-            <svg class="flow-lines" viewBox="0 0 600 300">
-              <path class="cyan" d="M90,60 C200,60 180,50 260,50" />
-              <path class="cyan" d="M90,60 C200,60 180,110 260,110" />
-              <path class="cyan" d="M90,120 C200,120 180,110 260,110" />
-              <path class="cyan" d="M90,120 C200,120 180,170 260,170" />
-              <path class="emerald" d="M310,50 C400,50 420,60 500,60" />
-              <path class="emerald" d="M310,110 C400,110 420,60 500,60" />
-              <path class="emerald" d="M310,170 C400,170 420,130 500,130" />
-            </svg>
-            <div class="mock-flow-column sources">
-              <div class="mock-flow-label">Sources</div>
-              <div class="mock-flow-node source">192.168.1.10</div>
-              <div class="mock-flow-node source">192.168.1.20</div>
-            </div>
-            <div class="mock-flow-column universes">
-              <div class="mock-flow-label">Universes</div>
-              <div class="mock-flow-node universe">Uni 0:0:0</div>
-              <div class="mock-flow-node universe">Uni 0:0:1</div>
-              <div class="mock-flow-node universe">Uni 0:0:2</div>
-            </div>
-            <div class="mock-flow-column destinations">
-              <div class="mock-flow-label">Destinations</div>
-              <div class="mock-flow-node dest">Main Stage</div>
-              <div class="mock-flow-node dest">Backup</div>
-            </div>
-          </div>
+        <div class="preview-image" style="background:#0a0a0b;">
+          <canvas id="signalFlowCanvas" style="width:100%;height:100%;display:block;"></canvas>
         </div>
         <div class="preview-info">
           <h3>Signal Flow</h3>
@@ -338,7 +311,7 @@
         </div>
         <h3>Windows</h3>
         <p class="version">v1.0.0 &middot; Installer (.exe)</p>
-        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v1.0.0/ArtNet.Manager.Setup.1.0.0.exe" class="btn btn-primary" id="download-win-setup">Download</a>
+        <a href="https://github.com/CompositionInc/ArtnetManager/releases/download/v1.0.0/ArtNet.Manager.Setup.1.0.0.exe" class="btn btn-primary" id="download-win-setup">Download</a>
       </div>
 
       <!-- Windows Portable -->
@@ -348,17 +321,17 @@
         </div>
         <h3>Windows Portable</h3>
         <p class="version">v1.0.0 &middot; Portable (.exe)</p>
-        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v1.0.0/ArtNet.Manager.1.0.0.exe" class="btn btn-secondary" id="download-win-portable">Download</a>
+        <a href="https://github.com/CompositionInc/ArtnetManager/releases/download/v1.0.0/ArtNet.Manager.1.0.0.exe" class="btn btn-secondary" id="download-win-portable">Download</a>
       </div>
 
       <!-- macOS -->
       <div class="download-card">
         <div class="platform-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--text-muted)"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--text-secondary)"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         </div>
-        <h3>macOS</h3>
-        <p class="version">v1.0.0 &middot; Coming Soon</p>
-        <span class="btn btn-secondary" style="opacity:0.5; pointer-events:none;">Coming Soon</span>
+        <h3>macOS (Apple Silicon)</h3>
+        <p class="version">v1.0.0 &middot; DMG (.dmg)</p>
+        <a href="https://github.com/CompositionInc/ArtnetManager/releases/download/v1.0.0/ArtNet.Manager-1.0.0-arm64.dmg" class="btn btn-secondary" id="download-mac">Download</a>
       </div>
     </div>
 
@@ -511,6 +484,183 @@
   }
 
   animate();
+})();
+</script>
+
+<!-- ===== Signal Flow Canvas Animation ===== -->
+<script>
+(function() {
+  var canvas = document.getElementById('signalFlowCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+
+  function resize() {
+    var rect = canvas.parentElement.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    W = rect.width; H = rect.height;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  var CYAN = '#22d3ee', EMERALD = '#34d399', ORANGE = '#f97316';
+
+  var cols = [
+    { label: 'SOURCES', xr: 0.14, nodes: [
+      { label: '192.168.1.10', color: CYAN },
+      { label: '192.168.1.20', color: CYAN }
+    ]},
+    { label: 'UNIVERSES', xr: 0.5, nodes: [
+      { label: 'Uni 0:0:0', color: EMERALD },
+      { label: 'Uni 0:0:1', color: EMERALD },
+      { label: 'Uni 0:0:2', color: EMERALD }
+    ]},
+    { label: 'DESTINATIONS', xr: 0.86, nodes: [
+      { label: 'Main Stage', color: ORANGE },
+      { label: 'Backup', color: ORANGE }
+    ]}
+  ];
+
+  var links = [
+    [0,0, 1,0], [0,0, 1,1],
+    [0,1, 1,1], [0,1, 1,2],
+    [1,0, 2,0], [1,1, 2,0], [1,2, 2,1]
+  ];
+
+  var allParticles = [];
+  links.forEach(function(_, li) {
+    for (var i = 0; i < 3; i++) {
+      allParticles.push({ li: li, t: i / 3, speed: 0.0015 + Math.random() * 0.002 });
+    }
+  });
+
+  var NW, NH = 28;
+  function nodePos(ci, ni) {
+    var col = cols[ci];
+    var n = col.nodes.length;
+    var gap = 14, labelGap = 26;
+    var totalH = labelGap + n * NH + (n - 1) * gap;
+    var top = (H - totalH) / 2;
+    return { x: col.xr * W, y: top + labelGap + ni * (NH + gap) + NH / 2 };
+  }
+
+  function labelY(ci) {
+    var n = cols[ci].nodes.length;
+    var gap = 14, labelGap = 26;
+    var totalH = labelGap + n * NH + (n - 1) * gap;
+    return (H - totalH) / 2 + 8;
+  }
+
+  function cubicPt(p0, p1, t) {
+    var dx = p1.x - p0.x;
+    var c1x = p0.x + dx * 0.4, c1y = p0.y;
+    var c2x = p1.x - dx * 0.4, c2y = p1.y;
+    var mt = 1 - t;
+    return {
+      x: mt*mt*mt*p0.x + 3*mt*mt*t*c1x + 3*mt*t*t*c2x + t*t*t*p1.x,
+      y: mt*mt*mt*p0.y + 3*mt*mt*t*c1y + 3*mt*t*t*c2y + t*t*t*p1.y
+    };
+  }
+
+  function rr(x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x+r, y); ctx.lineTo(x+w-r, y);
+    ctx.quadraticCurveTo(x+w, y, x+w, y+r); ctx.lineTo(x+w, y+h-r);
+    ctx.quadraticCurveTo(x+w, y+h, x+w-r, y+h); ctx.lineTo(x+r, y+h);
+    ctx.quadraticCurveTo(x, y+h, x, y+h-r); ctx.lineTo(x, y+r);
+    ctx.quadraticCurveTo(x, y, x+r, y); ctx.closePath();
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = '#0a0a0b';
+    ctx.fillRect(0, 0, W, H);
+    NW = Math.min(120, W * 0.22);
+
+    // Curves
+    links.forEach(function(lk) {
+      var from = nodePos(lk[0], lk[1]);
+      var to = nodePos(lk[2], lk[3]);
+      var f = { x: from.x + NW/2, y: from.y };
+      var t = { x: to.x - NW/2, y: to.y };
+      var adx = t.x - f.x;
+      ctx.beginPath();
+      ctx.moveTo(f.x, f.y);
+      ctx.bezierCurveTo(f.x + adx * 0.4, f.y, t.x - adx * 0.4, t.y, t.x, t.y);
+      ctx.strokeStyle = cols[lk[0]].nodes[lk[1]].color;
+      ctx.globalAlpha = 0.12;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    });
+
+    // Particles
+    allParticles.forEach(function(p) {
+      var lk = links[p.li];
+      var from = nodePos(lk[0], lk[1]);
+      var to = nodePos(lk[2], lk[3]);
+      var f = { x: from.x + NW/2, y: from.y };
+      var t = { x: to.x - NW/2, y: to.y };
+      var pos = cubicPt(f, t, p.t);
+      var color = cols[lk[0]].nodes[lk[1]].color;
+
+      // Glow
+      ctx.beginPath();
+      ctx.arc(pos.x, pos.y, 8, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.globalAlpha = 0.08;
+      ctx.fill();
+
+      // Core
+      ctx.beginPath();
+      ctx.arc(pos.x, pos.y, 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.globalAlpha = 0.85;
+      ctx.fill();
+      ctx.globalAlpha = 1;
+
+      p.t += p.speed;
+      if (p.t > 1) p.t = 0;
+    });
+
+    // Column labels
+    ctx.font = '500 9px Inter, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    cols.forEach(function(col, ci) {
+      ctx.fillStyle = '#3f3f50';
+      ctx.fillText(col.label, col.xr * W, labelY(ci));
+    });
+
+    // Nodes
+    cols.forEach(function(col, ci) {
+      col.nodes.forEach(function(node, ni) {
+        var pos = nodePos(ci, ni);
+        var rx = pos.x - NW/2, ry = pos.y - NH/2;
+
+        rr(rx, ry, NW, NH, 6);
+        ctx.fillStyle = '#151518';
+        ctx.fill();
+
+        ctx.fillStyle = node.color;
+        ctx.globalAlpha = 0.7;
+        ctx.fillRect(rx, ry + 5, 3, NH - 10);
+        ctx.globalAlpha = 1;
+
+        ctx.fillStyle = node.color;
+        ctx.font = '10px "JetBrains Mono", monospace';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(node.label, pos.x + 2, pos.y);
+      });
+    });
+
+    requestAnimationFrame(draw);
+  }
+  draw();
 })();
 </script>
 
