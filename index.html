@@ -43,20 +43,20 @@
     </h1>
 
     <p class="hero-subtitle animate-in delay-2">
-      Art-Net / sACN 信号の管理・可視化・フォワーディングを一元化。ミニマムだが必要十分 &mdash; ライブプロダクション現場のための DMX ツール。
+      Art-Net / sACN 信号の管理・可視化・フォワーディングを一元化。ミニマムだけど強力な、ライブプロダクション現場のための DMX ツール。
     </p>
 
     <div class="hero-badges animate-in delay-3">
       <span class="badge"><span class="dot"></span> Art-Net 4</span>
       <span class="badge"><span class="dot"></span> sACN (E1.31)</span>
       <span class="badge">Cross-Platform</span>
-      <span class="badge">Minimal &amp; Essential</span>
+      <span class="badge">Minimal &amp; Powerful</span>
     </div>
 
     <div class="hero-cta animate-in delay-3">
       <a href="#download" class="btn btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download v1.0.0
+        Download v2.0.0
       </a>
     </div>
 
@@ -79,7 +79,6 @@
           <div class="mock-nav-item"><div class="mock-nav-icon"></div> Devices</div>
           <div class="mock-nav-item"><div class="mock-nav-icon"></div> Forwarding</div>
           <div class="mock-nav-item"><div class="mock-nav-icon"></div> Signal Flow</div>
-          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Monitoring</div>
           <div class="mock-nav-item"><div class="mock-nav-icon"></div> Settings</div>
         </div>
         <!-- Dashboard Content -->
@@ -110,6 +109,7 @@
                 <span class="mock-protocol-badge artnet">Art-Net</span>
               </div>
               <div class="mock-universe-meta">192.168.1.10 <span class="mock-pps">44 pps</span></div>
+              <div class="mock-merge-info">HTP <span class="mock-merge-sources">2 sources</span></div>
             </div>
             <div class="mock-universe-card">
               <div class="mock-universe-header">
@@ -137,9 +137,9 @@
   <div class="container">
     <div style="text-align:center;">
       <span class="section-label">Features</span>
-      <h2>ミニマムで、必要十分</h2>
+      <h2>ミニマムだけど、強力</h2>
       <p class="section-desc">
-        余計な機能は持たない。DMX信号の受信・監視・変換・転送を、シンプルなインターフェースに凝縮。
+        余計な機能は持たない。DMX信号の受信・マージ・監視・変換・転送を、シンプルなインターフェースに凝縮。
       </p>
     </div>
 
@@ -150,7 +150,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         </div>
         <h3>リアルタイム DMX 可視化</h3>
-        <p>512チャンネルをグリッドでリアルタイム表示。色分けされたインテンシティで、信号の変化を瞬時に把握。</p>
+        <p>512チャンネルをグリッドでリアルタイム表示。色分けされたインテンシティで、信号の変化を瞬時に把握。マルチユニバース同時表示にも対応。</p>
       </div>
       <!-- 2 -->
       <div class="feature-card">
@@ -160,15 +160,31 @@
         <h3>Art-Net &amp; sACN デュアルプロトコル</h3>
         <p>Art-Net 4 と sACN (E1.31) の両方に対応。プロトコル間の変換・ブリッジも自動で処理。</p>
       </div>
-      <!-- 3 -->
+      <!-- 3: NEW - Universe Merge -->
       <div class="feature-card">
         <div class="feature-icon emerald">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6L21 6"/><path d="M8 12L21 12"/><path d="M8 18L21 18"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>
+        </div>
+        <h3>ユニバースマージエンジン</h3>
+        <p>複数ソースの DMX 信号を HTP（最大値優先）/ LTP（最新値優先）/ Priority で自動マージ。DMXking/ENTTEC eDMX と同等のマルチソース処理。</p>
+      </div>
+      <!-- 4: NEW - Multi-NIC -->
+      <div class="feature-card">
+        <div class="feature-icon cyan">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <h3>マルチネットワークインターフェース</h3>
+        <p>複数の NIC に同時バインド。異なるサブネットからの Art-Net/sACN 信号を一元受信・マージ。アプリ再起動なしでのホットスイッチに対応。</p>
+      </div>
+      <!-- 5 -->
+      <div class="feature-card">
+        <div class="feature-icon amber">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
         </div>
         <h3>ネットワークデバイス探索</h3>
         <p>サブネットスキャン + ARP + 逆引きDNS で、ネットワーク上の全デバイスを自動検出。照明機器に限らず包括的に発見。</p>
       </div>
-      <!-- 4 -->
+      <!-- 6 -->
       <div class="feature-card">
         <div class="feature-icon amber">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
@@ -176,7 +192,7 @@
         <h3>シグナルフロー可視化</h3>
         <p>ソースからユニバースを経由してデスティネーションへの信号経路をアニメーション付きで表示。流れるパーティクルで通信状態を直感的に確認。</p>
       </div>
-      <!-- 5 -->
+      <!-- 7 -->
       <div class="feature-card">
         <div class="feature-icon orange">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16" y1="3" x2="16" y2="21"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
@@ -184,13 +200,21 @@
         <h3>フォワーディング &amp; ルーティング</h3>
         <p>宛先ごとにユニバースフィルタリング、オフセット再マッピング、遅延設定（0〜10秒）を柔軟に構成。設定のインポート/エクスポートにも対応。</p>
       </div>
-      <!-- 6 -->
+      <!-- 8: NEW - Guardian -->
       <div class="feature-card">
         <div class="feature-icon red">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3>プロダクションセーフ設計</h3>
-        <p>パケットごとのエラー分離、バッファオーバーフロー保護、指数バックオフによる自動再接続。現場で止まらない堅牢性。</p>
+        <h3>ガーディアンシステム</h3>
+        <p>外部プロセスがアプリを常時監視し、クラッシュ・セグフォルト・OOM・kill -9 を含むあらゆる異常終了から自動復旧。指数バックオフ付き。ライブ現場で止まらない。</p>
+      </div>
+      <!-- 9: NEW - Primary-Standby -->
+      <div class="feature-card">
+        <div class="feature-icon violet">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>PRIMARY-STANDBY バックアップ</h3>
+        <p>複数の ArtNet Manager インスタンスで PRIMARY-STANDBY 冗長構成。自動リーダー選出とヘルスモニタリングで、ダウンタイムゼロのフェイルオーバーを実現。</p>
       </div>
     </div>
   </div>
@@ -215,7 +239,7 @@
         </div>
         <div class="preview-info">
           <h3>Universe Viewer</h3>
-          <p>512チャンネルのDMX値をリアルタイムにグリッド表示。青→シアン→白のグラデーションでインテンシティを可視化。</p>
+          <p>512チャンネルのDMX値をリアルタイムにグリッド表示。青&#8594;シアン&#8594;白のグラデーションでインテンシティを可視化。</p>
         </div>
       </div>
 
@@ -226,13 +250,68 @@
         </div>
         <div class="preview-info">
           <h3>Signal Flow</h3>
-          <p>ソース→ユニバース→デスティネーションの信号経路をアニメーション付きで可視化。流れるパーティクルでライブ通信を表現。</p>
+          <p>ソース&#8594;ユニバース&#8594;デスティネーションの信号経路をアニメーション付きで可視化。流れるパーティクルでライブ通信を表現。</p>
+        </div>
+      </div>
+
+      <!-- Forwarding Delay UI -->
+      <div class="preview-card">
+        <div class="preview-image" style="background:#0c0c14;">
+          <div class="mock-delay-ui">
+            <div class="mock-delay-header">Forwarding Destinations</div>
+            <div class="mock-delay-row">
+              <div class="mock-delay-dest">
+                <span class="mock-delay-dot"></span>
+                <span class="mock-delay-ip">192.168.1.50</span>
+                <span class="mock-protocol-badge artnet" style="font-size:8px;">Art-Net</span>
+              </div>
+              <div class="mock-delay-config">
+                <div class="mock-delay-badge">
+                  <span class="mock-delay-label">DELAY</span>
+                  <span class="mock-delay-value">500ms</span>
+                </div>
+                <div class="mock-delay-universes">Uni 0-3</div>
+              </div>
+            </div>
+            <div class="mock-delay-row">
+              <div class="mock-delay-dest">
+                <span class="mock-delay-dot"></span>
+                <span class="mock-delay-ip">192.168.1.60</span>
+                <span class="mock-protocol-badge sacn" style="font-size:8px;">sACN</span>
+              </div>
+              <div class="mock-delay-config">
+                <div class="mock-delay-badge nodelay">
+                  <span class="mock-delay-label">DELAY</span>
+                  <span class="mock-delay-value">0ms</span>
+                </div>
+                <div class="mock-delay-universes">All Universes</div>
+              </div>
+            </div>
+            <div class="mock-delay-row">
+              <div class="mock-delay-dest">
+                <span class="mock-delay-dot"></span>
+                <span class="mock-delay-ip">10.0.0.100</span>
+                <span class="mock-protocol-badge artnet" style="font-size:8px;">Art-Net</span>
+              </div>
+              <div class="mock-delay-config">
+                <div class="mock-delay-badge">
+                  <span class="mock-delay-label">DELAY</span>
+                  <span class="mock-delay-value">2000ms</span>
+                </div>
+                <div class="mock-delay-universes">Uni 0, 4-8</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="preview-info">
+          <h3>Forwarding &amp; Delay</h3>
+          <p>デスティネーションごとに遅延設定（0&#12316;10秒）。タイミング調整が必要な現場での映像同期やバックアップ系統の遅延出力に。</p>
         </div>
       </div>
 
       <!-- Device Discovery -->
-      <div class="preview-card wide">
-        <div class="preview-image" style="aspect-ratio:21/9;">
+      <div class="preview-card">
+        <div class="preview-image" style="background:#0c0c14;">
           <div class="mock-device-table">
             <div class="mock-table-toolbar">
               <div class="mock-tab active">All</div>
@@ -300,7 +379,7 @@
     <span class="section-label">Download</span>
     <h2>ダウンロード</h2>
     <p class="section-desc">
-      テスト版 v1.0.0 &mdash; フィードバックをお待ちしています。
+      v2.0.0 &mdash; マージエンジン・マルチNIC・ガーディアン搭載。
     </p>
 
     <div class="download-grid">
@@ -310,8 +389,8 @@
           <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--cyan)"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
         </div>
         <h3>Windows</h3>
-        <p class="version">v1.0.0 &middot; Installer (.exe)</p>
-        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v1.0.0/ArtNet.Manager.Setup.1.0.0.exe" class="btn btn-primary" id="download-win-setup">Download</a>
+        <p class="version">v2.0.0 &middot; Installer (.exe)</p>
+        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.0.0/ArtNet.Manager.Setup.2.0.0.exe" class="btn btn-primary" id="download-win-setup">Download</a>
       </div>
 
       <!-- Windows Portable -->
@@ -320,8 +399,8 @@
           <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--violet)"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
         </div>
         <h3>Windows Portable</h3>
-        <p class="version">v1.0.0 &middot; Portable (.exe)</p>
-        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v1.0.0/ArtNet.Manager.1.0.0.exe" class="btn btn-secondary" id="download-win-portable">Download</a>
+        <p class="version">v2.0.0 &middot; Portable (.exe)</p>
+        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.0.0/ArtNet.Manager.2.0.0.exe" class="btn btn-secondary" id="download-win-portable">Download</a>
       </div>
 
       <!-- macOS -->
@@ -330,14 +409,14 @@
           <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--text-secondary)"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         </div>
         <h3>macOS (Apple Silicon)</h3>
-        <p class="version">v1.0.0 &middot; DMG (.dmg)</p>
-        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v1.0.0/ArtNet.Manager-1.0.0-arm64.dmg" class="btn btn-secondary" id="download-mac">Download</a>
+        <p class="version">v2.0.0 &middot; DMG (.dmg)</p>
+        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.0.0/ArtNet.Manager-2.0.0-arm64.dmg" class="btn btn-secondary" id="download-mac">Download</a>
       </div>
     </div>
 
     <div class="download-disclaimer">
       <p>
-        ArtNet Manager は Composition Inc. の元 <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> がリリースしたアプリケーションです。
+        ArtNet Manager は MOOV by Composition Inc. のもと、<a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> がリリースしたアプリケーションです。
         プロダクションレディなソフトウェアを目指して開発を進めていますが、現在はテスト段階であり、動作の完全な検証は完了していません。
         本ソフトウェアの使用に起因するいかなる損害・事故についても、開発者は一切の責任を負いかねます。
       </p>
@@ -381,7 +460,11 @@
       </div>
       <div class="tech-item">
         <div class="tech-logo" style="color: #38bdf8; font-weight:700; font-size:12px;">TW</div>
-        <span>Tailwind CSS</span>
+        <span>Tailwind CSS v4</span>
+      </div>
+      <div class="tech-item">
+        <div class="tech-logo" style="color: var(--emerald); font-weight:700; font-size:11px;">Z</div>
+        <span>Zustand</span>
       </div>
     </div>
   </div>
@@ -400,7 +483,7 @@
         <a href="#preview">Preview</a>
         <a href="#download">Download</a>
       </div>
-      <p class="footer-copy">&copy; 2025 Composition Inc.</p>
+      <p class="footer-copy">&copy; 2025 MOOV by Composition Inc.</p>
     </div>
   </div>
 </footer>
@@ -408,27 +491,21 @@
 <!-- ===== Minimal JS for Channel Grid Mockup ===== -->
 <script>
 (function() {
-  const grid = document.getElementById('channelGrid');
+  var grid = document.getElementById('channelGrid');
   if (!grid) return;
 
-  // Create 512 cells
-  const cells = [];
-  for (let i = 0; i < 512; i++) {
-    const cell = document.createElement('div');
+  var cells = [];
+  for (var i = 0; i < 512; i++) {
+    var cell = document.createElement('div');
     cell.className = 'mock-cell';
     grid.appendChild(cell);
     cells.push({ el: cell, value: 0, target: 0 });
   }
 
-  // Define some "active" channel patterns to simulate DMX data
-  const patterns = [
-    // Dimmer chase
+  var patterns = [
     { start: 0, count: 32, style: 'chase' },
-    // RGB wash
     { start: 64, count: 48, style: 'rgb' },
-    // Random sparkle
     { start: 160, count: 96, style: 'sparkle' },
-    // Static warm
     { start: 320, count: 64, style: 'warm' },
   ];
 
@@ -436,46 +513,46 @@
 
   function valueToColor(v) {
     if (v < 3) return '#171717';
-    const t = v / 255;
+    var t = v / 255;
     if (t < 0.5) {
-      const s = t * 2;
-      return `rgb(${Math.round(lerp(10,26,s))},${Math.round(lerp(20,180,s))},${Math.round(lerp(40,240,s))})`;
+      var s = t * 2;
+      return 'rgb('+Math.round(lerp(10,26,s))+','+Math.round(lerp(20,180,s))+','+Math.round(lerp(40,240,s))+')';
     } else {
-      const s = (t - 0.5) * 2;
-      return `rgb(${Math.round(lerp(26,220,s))},${Math.round(lerp(180,240,s))},${Math.round(lerp(240,255,s))})`;
+      var s2 = (t - 0.5) * 2;
+      return 'rgb('+Math.round(lerp(26,220,s2))+','+Math.round(lerp(180,240,s2))+','+Math.round(lerp(240,255,s2))+')';
     }
   }
 
-  let time = 0;
+  var time = 0;
   function animate() {
     time += 0.02;
 
-    patterns.forEach(p => {
-      for (let i = 0; i < p.count; i++) {
-        const idx = p.start + i;
+    patterns.forEach(function(p) {
+      for (var j = 0; j < p.count; j++) {
+        var idx = p.start + j;
         if (idx >= 512) break;
-        let val = 0;
+        var val = 0;
         switch (p.style) {
           case 'chase':
-            val = Math.max(0, Math.sin((i / p.count) * Math.PI * 4 - time * 2) * 255);
+            val = Math.max(0, Math.sin((j / p.count) * Math.PI * 4 - time * 2) * 255);
             break;
           case 'rgb':
-            if (i % 3 === 0) val = Math.sin(time * 0.7) * 127 + 128;
-            else if (i % 3 === 1) val = Math.sin(time * 0.7 + 2.1) * 127 + 128;
+            if (j % 3 === 0) val = Math.sin(time * 0.7) * 127 + 128;
+            else if (j % 3 === 1) val = Math.sin(time * 0.7 + 2.1) * 127 + 128;
             else val = Math.sin(time * 0.7 + 4.2) * 127 + 128;
             break;
           case 'sparkle':
             val = Math.random() > 0.85 ? Math.random() * 255 : cells[idx].value * 0.92;
             break;
           case 'warm':
-            val = 80 + Math.sin(time * 0.3 + i * 0.1) * 40;
+            val = 80 + Math.sin(time * 0.3 + j * 0.1) * 40;
             break;
         }
         cells[idx].target = Math.max(0, Math.min(255, val));
       }
     });
 
-    cells.forEach(c => {
+    cells.forEach(function(c) {
       c.value = lerp(c.value, c.target, 0.15);
       c.el.style.background = valueToColor(c.value);
     });
@@ -580,7 +657,6 @@
     ctx.fillRect(0, 0, W, H);
     NW = Math.min(120, W * 0.22);
 
-    // Curves
     links.forEach(function(lk) {
       var from = nodePos(lk[0], lk[1]);
       var to = nodePos(lk[2], lk[3]);
@@ -597,7 +673,6 @@
       ctx.globalAlpha = 1;
     });
 
-    // Particles
     allParticles.forEach(function(p) {
       var lk = links[p.li];
       var from = nodePos(lk[0], lk[1]);
@@ -607,14 +682,12 @@
       var pos = cubicPt(f, t, p.t);
       var color = cols[lk[0]].nodes[lk[1]].color;
 
-      // Glow
       ctx.beginPath();
       ctx.arc(pos.x, pos.y, 8, 0, Math.PI * 2);
       ctx.fillStyle = color;
       ctx.globalAlpha = 0.08;
       ctx.fill();
 
-      // Core
       ctx.beginPath();
       ctx.arc(pos.x, pos.y, 2.5, 0, Math.PI * 2);
       ctx.fillStyle = color;
@@ -626,7 +699,6 @@
       if (p.t > 1) p.t = 0;
     });
 
-    // Column labels
     ctx.font = '500 9px Inter, sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -635,7 +707,6 @@
       ctx.fillText(col.label, col.xr * W, labelY(ci));
     });
 
-    // Nodes
     cols.forEach(function(col, ci) {
       col.nodes.forEach(function(node, ni) {
         var pos = nodePos(ci, ni);
