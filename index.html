@@ -22,13 +22,13 @@
       ArtNet Manager
     </a>
     <ul class="nav-links">
-      <li><a href="#features">Features</a></li>
-      <li><a href="#preview">Preview</a></li>
-      <li><a href="#download">Download</a></li>
+      <li><a href="#features" data-i18n="nav_features">機能</a></li>
+      <li><a href="#preview" data-i18n="nav_preview">プレビュー</a></li>
+      <li><a href="#download" data-i18n="nav_download">ダウンロード</a></li>
     </ul>
     <a href="#download" class="nav-cta">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Download
+      <span data-i18n="nav_download">Download</span>
     </a>
   </div>
 </nav>
@@ -42,21 +42,21 @@
       <span class="gradient-text">ArtNet Manager</span>
     </h1>
 
-    <p class="hero-subtitle animate-in delay-2">
+    <p class="hero-subtitle animate-in delay-2" data-i18n="hero_subtitle">
       Art-Net / sACN 信号の管理・可視化・フォワーディングを一元化。ミニマムだけど強力な、ライブプロダクション現場のための DMX ツール。
     </p>
 
     <div class="hero-badges animate-in delay-3">
       <span class="badge"><span class="dot"></span> Art-Net 4</span>
       <span class="badge"><span class="dot"></span> sACN (E1.31)</span>
-      <span class="badge">Cross-Platform</span>
-      <span class="badge">Minimal &amp; Powerful</span>
+      <span class="badge" data-i18n="badge_cross_platform">Cross-Platform</span>
+      <span class="badge" data-i18n="badge_minimal">Minimal &amp; Powerful</span>
     </div>
 
     <div class="hero-cta animate-in delay-3">
       <a href="#download" class="btn btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download v2.1.0
+        <span data-i18n="hero_download_btn">Download v2.1.0</span>
       </a>
     </div>
 
@@ -136,9 +136,9 @@
 <section id="features">
   <div class="container">
     <div style="text-align:center;">
-      <span class="section-label">Features</span>
-      <h2>ミニマムだけど、強力</h2>
-      <p class="section-desc">
+      <span class="section-label" data-i18n="features_label">Features</span>
+      <h2 data-i18n="features_title">ミニマムだけど、強力</h2>
+      <p class="section-desc" data-i18n="features_desc">
         余計な機能は持たない。DMX信号の受信・マージ・監視・変換・転送を、シンプルなインターフェースに凝縮。
       </p>
     </div>
@@ -149,72 +149,72 @@
         <div class="feature-icon cyan">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         </div>
-        <h3>リアルタイム DMX 可視化</h3>
-        <p>512チャンネルをグリッドでリアルタイム表示。色分けされたインテンシティで、信号の変化を瞬時に把握。マルチユニバース同時表示にも対応。</p>
+        <h3 data-i18n="feat1_title">リアルタイム DMX 可視化</h3>
+        <p data-i18n="feat1_desc">512チャンネルをグリッドでリアルタイム表示。色分けされたインテンシティで、信号の変化を瞬時に把握。マルチユニバース同時表示にも対応。</p>
       </div>
       <!-- 2 -->
       <div class="feature-card">
         <div class="feature-icon violet">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
-        <h3>Art-Net &amp; sACN デュアルプロトコル</h3>
-        <p>Art-Net 4 と sACN (E1.31) の両方に対応。プロトコル間の変換・ブリッジも自動で処理。</p>
+        <h3 data-i18n="feat2_title">Art-Net &amp; sACN デュアルプロトコル</h3>
+        <p data-i18n="feat2_desc">Art-Net 4 と sACN (E1.31) の両方に対応。プロトコル間の変換・ブリッジも自動で処理。</p>
       </div>
-      <!-- 3: NEW - Universe Merge -->
+      <!-- 3: Universe Merge -->
       <div class="feature-card">
         <div class="feature-icon emerald">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6L21 6"/><path d="M8 12L21 12"/><path d="M8 18L21 18"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>
         </div>
-        <h3>ユニバースマージエンジン</h3>
-        <p>複数ソースの DMX 信号を HTP（最大値優先）/ LTP（最新値優先）/ Priority で自動マージ。DMXking/ENTTEC eDMX と同等のマルチソース処理。</p>
+        <h3 data-i18n="feat3_title">ユニバースマージエンジン</h3>
+        <p data-i18n="feat3_desc">複数ソースの DMX 信号を HTP（最大値優先）/ LTP（最新値優先）/ Priority で自動マージ。DMXking/ENTTEC eDMX と同等のマルチソース処理。</p>
       </div>
-      <!-- 4: NEW - Multi-NIC -->
+      <!-- 4: Multi-NIC -->
       <div class="feature-card">
         <div class="feature-icon cyan">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
         </div>
-        <h3>マルチネットワークインターフェース</h3>
-        <p>複数の NIC に同時バインド。異なるサブネットからの Art-Net/sACN 信号を一元受信・マージ。アプリ再起動なしでのホットスイッチに対応。</p>
+        <h3 data-i18n="feat4_title">マルチネットワークインターフェース</h3>
+        <p data-i18n="feat4_desc">複数の NIC に同時バインド。異なるサブネットからの Art-Net/sACN 信号を一元受信・マージ。アプリ再起動なしでのホットスイッチに対応。</p>
       </div>
       <!-- 5 -->
       <div class="feature-card">
         <div class="feature-icon amber">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
         </div>
-        <h3>ネットワークデバイス探索</h3>
-        <p>サブネットスキャン + ARP + 逆引きDNS で、ネットワーク上の全デバイスを自動検出。照明機器に限らず包括的に発見。</p>
+        <h3 data-i18n="feat5_title">ネットワークデバイス探索</h3>
+        <p data-i18n="feat5_desc">サブネットスキャン + ARP + 逆引きDNS で、ネットワーク上の全デバイスを自動検出。照明機器に限らず包括的に発見。</p>
       </div>
       <!-- 6 -->
       <div class="feature-card">
         <div class="feature-icon amber">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
-        <h3>シグナルフロー可視化</h3>
-        <p>ソースからユニバースを経由してデスティネーションへの信号経路をアニメーション付きで表示。流れるパーティクルで通信状態を直感的に確認。</p>
+        <h3 data-i18n="feat6_title">シグナルフロー可視化</h3>
+        <p data-i18n="feat6_desc">ソースからユニバースを経由してデスティネーションへの信号経路をアニメーション付きで表示。流れるパーティクルで通信状態を直感的に確認。</p>
       </div>
       <!-- 7 -->
       <div class="feature-card">
         <div class="feature-icon orange">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16" y1="3" x2="16" y2="21"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
         </div>
-        <h3>フォワーディング &amp; ルーティング</h3>
-        <p>宛先ごとにユニバースフィルタリング、オフセット再マッピング、遅延設定（0〜10秒）を柔軟に構成。設定のインポート/エクスポートにも対応。</p>
+        <h3 data-i18n="feat7_title">フォワーディング &amp; ルーティング</h3>
+        <p data-i18n="feat7_desc">宛先ごとにユニバースフィルタリング、オフセット再マッピング、遅延設定（0〜10秒）を柔軟に構成。設定のインポート/エクスポートにも対応。</p>
       </div>
-      <!-- 8: NEW - Guardian -->
+      <!-- 8: Guardian -->
       <div class="feature-card">
         <div class="feature-icon red">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3>ガーディアンシステム</h3>
-        <p>外部プロセスがアプリを常時監視し、クラッシュ・セグフォルト・OOM・kill -9 を含むあらゆる異常終了から自動復旧。指数バックオフ付き。ライブ現場で止まらない。</p>
+        <h3 data-i18n="feat8_title">ガーディアンシステム</h3>
+        <p data-i18n="feat8_desc">外部プロセスがアプリを常時監視し、クラッシュ・セグフォルト・OOM・kill -9 を含むあらゆる異常終了から自動復旧。指数バックオフ付き。ライブ現場で止まらない。</p>
       </div>
-      <!-- 9: NEW - Primary-Standby -->
+      <!-- 9: Primary-Standby -->
       <div class="feature-card">
         <div class="feature-icon violet">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
-        <h3>PRIMARY-STANDBY バックアップ</h3>
-        <p>複数の ArtNet Manager インスタンスで PRIMARY-STANDBY 冗長構成。自動リーダー選出とヘルスモニタリングで、ダウンタイムゼロのフェイルオーバーを実現。</p>
+        <h3 data-i18n="feat9_title">PRIMARY-STANDBY バックアップ</h3>
+        <p data-i18n="feat9_desc">複数の ArtNet Manager インスタンスで PRIMARY-STANDBY 冗長構成。自動リーダー選出とヘルスモニタリングで、ダウンタイムゼロのフェイルオーバーを実現。</p>
       </div>
     </div>
   </div>
@@ -224,9 +224,9 @@
 <section id="preview">
   <div class="container">
     <div style="text-align:center;">
-      <span class="section-label">App Preview</span>
-      <h2>インターフェース</h2>
-      <p class="section-desc">
+      <span class="section-label" data-i18n="preview_label">App Preview</span>
+      <h2 data-i18n="preview_title">インターフェース</h2>
+      <p class="section-desc" data-i18n="preview_desc">
         必要な情報だけを、最短で。ダークテーマの洗練されたUIで現場に集中。
       </p>
     </div>
@@ -239,7 +239,7 @@
         </div>
         <div class="preview-info">
           <h3>Universe Viewer</h3>
-          <p>512チャンネルのDMX値をリアルタイムにグリッド表示。青&#8594;シアン&#8594;白のグラデーションでインテンシティを可視化。</p>
+          <p data-i18n="preview_universe">512チャンネルのDMX値をリアルタイムにグリッド表示。青&#8594;シアン&#8594;白のグラデーションでインテンシティを可視化。</p>
         </div>
       </div>
 
@@ -250,7 +250,7 @@
         </div>
         <div class="preview-info">
           <h3>Signal Flow</h3>
-          <p>ソース&#8594;ユニバース&#8594;デスティネーションの信号経路をアニメーション付きで可視化。流れるパーティクルでライブ通信を表現。</p>
+          <p data-i18n="preview_signal">ソース&#8594;ユニバース&#8594;デスティネーションの信号経路をアニメーション付きで可視化。流れるパーティクルでライブ通信を表現。</p>
         </div>
       </div>
 
@@ -305,7 +305,7 @@
         </div>
         <div class="preview-info">
           <h3>Forwarding &amp; Delay</h3>
-          <p>デスティネーションごとに遅延設定（0&#12316;10秒）。タイミング調整が必要な現場での映像同期やバックアップ系統の遅延出力に。</p>
+          <p data-i18n="preview_delay">デスティネーションごとに遅延設定（0&#12316;10秒）。タイミング調整が必要な現場での映像同期やバックアップ系統の遅延出力に。</p>
         </div>
       </div>
 
@@ -366,7 +366,7 @@
         </div>
         <div class="preview-info">
           <h3>Device Discovery</h3>
-          <p>ネットワーク上のすべてのデバイスを自動検出。Art-Net ノード、sACN ゲートウェイ、コンピュータ、ネットワーク機器をカテゴリ分けして一覧表示。リアルタイムでオンライン/オフライン状態を監視。</p>
+          <p data-i18n="preview_device">ネットワーク上のすべてのデバイスを自動検出。Art-Net ノード、sACN ゲートウェイ、コンピュータ、ネットワーク機器をカテゴリ分けして一覧表示。リアルタイムでオンライン/オフライン状態を監視。</p>
         </div>
       </div>
     </div>
@@ -376,9 +376,9 @@
 <!-- ===== Download ===== -->
 <section id="download">
   <div class="container">
-    <span class="section-label">Download</span>
-    <h2>ダウンロード</h2>
-    <p class="section-desc">
+    <span class="section-label" data-i18n="download_label">Download</span>
+    <h2 data-i18n="download_title">ダウンロード</h2>
+    <p class="section-desc" data-i18n="download_desc">
       v2.1.0 &mdash; マージエンジン・マルチNIC・ガーディアン搭載。25件の信頼性修正。
     </p>
 
@@ -388,9 +388,9 @@
         <div class="platform-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--cyan)"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
         </div>
-        <h3>Windows</h3>
-        <p class="version">v2.1.0 &middot; Installer (.exe)</p>
-        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.1.0/ArtNet.Manager.Setup.2.1.0.exe" class="btn btn-primary" id="download-win-setup">Download</a>
+        <h3 data-i18n="dl_win">Windows</h3>
+        <p class="version" data-i18n="dl_win_version">v2.1.0 &middot; Installer (.exe)</p>
+        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.1.0/ArtNet.Manager.Setup.2.1.0.exe" class="btn btn-primary" id="download-win-setup" data-i18n="dl_btn">Download</a>
       </div>
 
       <!-- Windows Portable -->
@@ -398,9 +398,9 @@
         <div class="platform-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--violet)"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
         </div>
-        <h3>Windows Portable</h3>
-        <p class="version">v2.1.0 &middot; Portable (.exe)</p>
-        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.1.0/ArtNet.Manager.2.1.0.exe" class="btn btn-secondary" id="download-win-portable">Download</a>
+        <h3 data-i18n="dl_win_portable">Windows Portable</h3>
+        <p class="version" data-i18n="dl_win_portable_version">v2.1.0 &middot; Portable (.exe)</p>
+        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.1.0/ArtNet.Manager.2.1.0.exe" class="btn btn-secondary" id="download-win-portable" data-i18n="dl_btn">Download</a>
       </div>
 
       <!-- macOS -->
@@ -408,20 +408,20 @@
         <div class="platform-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--text-secondary)"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         </div>
-        <h3>macOS (Apple Silicon)</h3>
-        <p class="version">v2.1.0 &middot; DMG (.dmg)</p>
-        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.1.0/ArtNet.Manager-2.1.0-arm64.dmg" class="btn btn-secondary" id="download-mac">Download</a>
+        <h3 data-i18n="dl_mac">macOS (Apple Silicon)</h3>
+        <p class="version" data-i18n="dl_mac_version">v2.1.0 &middot; DMG (.dmg)</p>
+        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.1.0/ArtNet.Manager-2.1.0-arm64.dmg" class="btn btn-secondary" id="download-mac" data-i18n="dl_btn">Download</a>
       </div>
     </div>
 
     <div class="download-disclaimer">
-      <p>
-        ArtNet Manager は MOOV by Composition Inc. のもと、<a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> がリリースしたアプリケーションです。
+      <p data-i18n-html="disclaimer_p1">
+        ArtNet Manager は <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> のもと、<a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> がリリースしたアプリケーションです。
         プロダクションレディなソフトウェアを目指して開発を進めていますが、現在はテスト段階であり、動作の完全な検証は完了していません。
         本ソフトウェアの使用に起因するいかなる損害・事故についても、開発者は一切の責任を負いかねます。
       </p>
-      <p>
-        現場に根差した、信頼性の高いツールを目指しています。<br>
+      <p data-i18n="disclaimer_p2">
+        現場に根差した、信頼性の高いツールを目指しています。
         ぜひ実際にお試しいただき、バグ報告やご意見をお寄せください。皆さまのフィードバックが、このアプリをより良くします。
       </p>
     </div>
@@ -431,9 +431,9 @@
 <!-- ===== Tech Stack ===== -->
 <section id="tech">
   <div class="container">
-    <span class="section-label">Built With</span>
-    <h2>技術スタック</h2>
-    <p class="section-desc">モダンな技術で構築された、プロダクションレディなアプリケーション。</p>
+    <span class="section-label" data-i18n="tech_label">Built With</span>
+    <h2 data-i18n="tech_title">技術スタック</h2>
+    <p class="section-desc" data-i18n="tech_desc">モダンな技術で構築された、プロダクションレディなアプリケーション。</p>
 
     <div class="tech-grid">
       <div class="tech-item">
@@ -479,14 +479,17 @@
         ArtNet Manager
       </div>
       <div class="footer-links">
-        <a href="#features">Features</a>
-        <a href="#preview">Preview</a>
-        <a href="#download">Download</a>
+        <a href="#features" data-i18n="nav_features">Features</a>
+        <a href="#preview" data-i18n="nav_preview">Preview</a>
+        <a href="#download" data-i18n="nav_download">Download</a>
       </div>
-      <p class="footer-copy">&copy; 2025 MOOV by Composition Inc.</p>
+      <p class="footer-copy"><a href="https://moov-stud.io" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">&copy; 2025 MOOV by Composition Inc.</a></p>
     </div>
   </div>
 </footer>
+
+<!-- ===== i18n ===== -->
+<script src="js/i18n.js"></script>
 
 <!-- ===== Minimal JS for Channel Grid Mockup ===== -->
 <script>
