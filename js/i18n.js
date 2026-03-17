@@ -3,6 +3,8 @@
     ja: {
       nav_features: '機能',
       nav_preview: 'プレビュー',
+      nav_manual: 'マニュアル',
+      nav_home: 'ホーム',
       nav_download: 'ダウンロード',
       hero_subtitle:
         'Art-Net / sACN 信号の管理・可視化・フォワーディングを一元化。ミニマムだけど強力な、ライブプロダクション現場のための DMX ツール。',
@@ -77,6 +79,8 @@
     en: {
       nav_features: 'Features',
       nav_preview: 'Preview',
+      nav_manual: 'Manual',
+      nav_home: 'Home',
       nav_download: 'Download',
       hero_subtitle:
         'Unified management, visualization, and forwarding of Art-Net / sACN signals. A minimal yet powerful DMX tool built for live production.',
@@ -150,6 +154,8 @@
     de: {
       nav_features: 'Funktionen',
       nav_preview: 'Vorschau',
+      nav_manual: 'Handbuch',
+      nav_home: 'Startseite',
       nav_download: 'Download',
       hero_subtitle:
         'Verwaltung, Visualisierung und Forwarding von Art-Net / sACN Signalen \u2013 alles in einem Tool. Minimalistisch und dennoch leistungsstark \u2013 das DMX-Werkzeug f\u00fcr die Live-Produktion.',
@@ -224,6 +230,8 @@
     fr: {
       nav_features: 'Fonctionnalit\u00e9s',
       nav_preview: 'Aper\u00e7u',
+      nav_manual: 'Manuel',
+      nav_home: 'Accueil',
       nav_download: 'T\u00e9l\u00e9charger',
       hero_subtitle:
         'Gestion, visualisation et forwarding unifi\u00e9s des signaux Art-Net / sACN. Un outil DMX minimal mais puissant, con\u00e7u pour la production live.',
@@ -298,6 +306,8 @@
     es: {
       nav_features: 'Funciones',
       nav_preview: 'Vista previa',
+      nav_manual: 'Manual',
+      nav_home: 'Inicio',
       nav_download: 'Descargar',
       hero_subtitle:
         'Gesti\u00f3n, visualizaci\u00f3n y reenv\u00edo unificados de se\u00f1ales Art-Net / sACN. Una herramienta DMX minimalista pero potente, dise\u00f1ada para producci\u00f3n en vivo.',
@@ -372,6 +382,8 @@
     it: {
       nav_features: 'Funzionalit\u00e0',
       nav_preview: 'Anteprima',
+      nav_manual: 'Manuale',
+      nav_home: 'Home',
       nav_download: 'Scarica',
       hero_subtitle:
         'Gestione, visualizzazione e forwarding unificati dei segnali Art-Net / sACN. Uno strumento DMX minimale ma potente, progettato per la produzione live.',
@@ -446,6 +458,8 @@
     nl: {
       nav_features: 'Functies',
       nav_preview: 'Voorbeeld',
+      nav_manual: 'Handleiding',
+      nav_home: 'Home',
       nav_download: 'Downloaden',
       hero_subtitle:
         'Ge\u00efntegreerd beheer, visualisatie en forwarding van Art-Net / sACN signalen. Een minimalistische maar krachtige DMX-tool, gebouwd voor liveproductie.',
@@ -520,6 +534,8 @@
     pt: {
       nav_features: 'Funcionalidades',
       nav_preview: 'Pr\u00e9via',
+      nav_manual: 'Manual',
+      nav_home: 'Início',
       nav_download: 'Download',
       hero_subtitle:
         'Gest\u00e3o, visualiza\u00e7\u00e3o e encaminhamento unificados de sinais Art-Net / sACN. Uma ferramenta DMX minimalista mas poderosa, feita para produ\u00e7\u00e3o ao vivo.',
@@ -594,6 +610,8 @@
     ko: {
       nav_features: '\uae30\ub2a5',
       nav_preview: '\ubbf8\ub9ac\ubcf4\uae30',
+      nav_manual: '매뉴얼',
+      nav_home: '홈',
       nav_download: '\ub2e4\uc6b4\ub85c\ub4dc',
       hero_subtitle:
         'Art-Net / sACN \uc2e0\ud638\uc758 \uad00\ub9ac, \uc2dc\uac01\ud654, \ud3ec\uc6cc\ub529\uc744 \ud1b5\ud569. \ubbf8\ub2c8\uba40\ud558\uc9c0\ub9cc \uac15\ub825\ud55c, \ub77c\uc774\ube0c \ud504\ub85c\ub355\uc158 \ud604\uc7a5\uc744 \uc704\ud55c DMX \ud234.',
@@ -668,6 +686,8 @@
     zh: {
       nav_features: '\u529f\u80fd',
       nav_preview: '\u9884\u89c8',
+      nav_manual: '手册',
+      nav_home: '首页',
       nav_download: '\u4e0b\u8f7d',
       hero_subtitle:
         '\u7edf\u4e00\u7ba1\u7406\u3001\u53ef\u89c6\u5316\u548c\u8f6c\u53d1 Art-Net / sACN \u4fe1\u53f7\u3002\u7b80\u7ea6\u800c\u5f3a\u5927\u7684 DMX \u5de5\u5177\uff0c\u4e3a\u73b0\u573a\u5236\u4f5c\u800c\u751f\u3002',
