@@ -71,6 +71,8 @@
       dl_win_portable_version: 'v2.1.0 · Portable (.exe)',
       dl_mac: 'macOS (Apple Silicon)',
       dl_mac_version: 'v2.1.0 · DMG (.dmg)',
+      mac_adp_notice: 'このアプリはADP申請中です。認可されるまでの間はコマンドラインでの許可が必要です。',
+      mac_adp_link: '詳しくはマニュアルへ →',
       dl_btn: 'Download',
       disclaimer_p1:
         'ArtNet Manager は <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> のもと、<a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> がリリースしたアプリケーションです。プロダクションレディなソフトウェアを目指して開発を進めていますが、現在はテスト段階であり、動作の完全な検証は完了していません。本ソフトウェアの使用に起因するいかなる損害・事故についても、開発者は一切の責任を負いかねます。',
@@ -154,6 +156,8 @@
       dl_win_portable_version: 'v2.1.0 \u00b7 Portable (.exe)',
       dl_mac: 'macOS (Apple Silicon)',
       dl_mac_version: 'v2.1.0 \u00b7 DMG (.dmg)',
+      mac_adp_notice: 'This app is pending Apple Developer Program approval. Until then, command-line permission is required to open it.',
+      mac_adp_link: 'See the manual for details →',
       dl_btn: 'Download',
       disclaimer_p1:
         'ArtNet Manager is an application released by <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> under <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> While we are working toward production-ready software, it is currently in a testing phase and has not been fully verified. The developer assumes no liability for any damages or incidents resulting from the use of this software.',
@@ -236,6 +240,8 @@
       dl_win_portable_version: 'v2.1.0 \u00b7 Portable (.exe)',
       dl_mac: 'macOS (Apple Silicon)',
       dl_mac_version: 'v2.1.0 \u00b7 DMG (.dmg)',
+      mac_adp_notice: 'Diese App wartet auf die Genehmigung des Apple Developer Program. Bis dahin ist eine Befehlszeilen-Freigabe erforderlich.',
+      mac_adp_link: 'Details im Handbuch →',
       dl_btn: 'Download',
       disclaimer_p1:
         'ArtNet Manager ist eine Anwendung, die von <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> unter <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> ver\u00f6ffentlicht wurde. Wir arbeiten auf eine produktionsreife Software hin, sie befindet sich jedoch derzeit in der Testphase und wurde noch nicht vollst\u00e4ndig verifiziert. Der Entwickler \u00fcbernimmt keine Haftung f\u00fcr Sch\u00e4den oder Vorf\u00e4lle, die aus der Nutzung dieser Software resultieren.',
@@ -317,6 +323,8 @@
       dl_win_portable_version: 'v2.1.0 \u00b7 Portable (.exe)',
       dl_mac: 'macOS (Apple Silicon)',
       dl_mac_version: 'v2.1.0 \u00b7 DMG (.dmg)',
+      mac_adp_notice: "Cette app est en attente d\u2019approbation du programme d\u00e9veloppeur Apple. En attendant, une autorisation en ligne de commande est n\u00e9cessaire.",
+      mac_adp_link: 'Voir le manuel →',
       dl_btn: 'T\u00e9l\u00e9charger',
       disclaimer_p1:
         'ArtNet Manager est une application publi\u00e9e par <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> sous <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> Bien que nous travaillions vers un logiciel pr\u00eat pour la production, il est actuellement en phase de test et n\u2019a pas \u00e9t\u00e9 enti\u00e8rement v\u00e9rifi\u00e9. Le d\u00e9veloppeur d\u00e9cline toute responsabilit\u00e9 pour les dommages ou incidents r\u00e9sultant de l\u2019utilisation de ce logiciel.',
@@ -400,6 +408,8 @@
       dl_win_portable_version: 'v2.1.0 \u00b7 Portable (.exe)',
       dl_mac: 'macOS (Apple Silicon)',
       dl_mac_version: 'v2.1.0 \u00b7 DMG (.dmg)',
+      mac_adp_notice: 'Esta app está pendiente de aprobación del Apple Developer Program. Hasta entonces, se requiere permiso por línea de comandos.',
+      mac_adp_link: 'Ver el manual →',
       dl_btn: 'Descargar',
       disclaimer_p1:
         'ArtNet Manager es una aplicaci\u00f3n publicada por <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> bajo <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> Aunque trabajamos hacia un software listo para producci\u00f3n, actualmente se encuentra en fase de pruebas y no ha sido completamente verificado. El desarrollador no asume ninguna responsabilidad por da\u00f1os o incidentes derivados del uso de este software.',
@@ -481,6 +491,8 @@
       dl_win_portable_version: 'v2.1.0 \u00b7 Portable (.exe)',
       dl_mac: 'macOS (Apple Silicon)',
       dl_mac_version: 'v2.1.0 \u00b7 DMG (.dmg)',
+      mac_adp_notice: "Questa app \u00e8 in attesa di approvazione dal Apple Developer Program. Nel frattempo \u00e8 necessaria l\u2019autorizzazione da riga di comando.",
+      mac_adp_link: 'Vedi il manuale →',
       dl_btn: 'Scarica',
       disclaimer_p1:
         'ArtNet Manager \u00e8 un\u2019applicazione rilasciata da <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> sotto <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> Sebbene stiamo lavorando a un software pronto per la produzione, \u00e8 attualmente in fase di test e non \u00e8 stato completamente verificato. Lo sviluppatore non si assume alcuna responsabilit\u00e0 per danni o incidenti derivanti dall\u2019uso di questo software.',
@@ -564,6 +576,8 @@
       dl_win_portable_version: 'v2.1.0 \u00b7 Portable (.exe)',
       dl_mac: 'macOS (Apple Silicon)',
       dl_mac_version: 'v2.1.0 \u00b7 DMG (.dmg)',
+      mac_adp_notice: 'Deze app wacht op goedkeuring van het Apple Developer Program. In de tussentijd is opdrachtregel-toestemming vereist.',
+      mac_adp_link: 'Zie de handleiding →',
       dl_btn: 'Downloaden',
       disclaimer_p1:
         'ArtNet Manager is een applicatie uitgebracht door <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> onder <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> Hoewel we toewerken naar productierijpe software, bevindt deze zich momenteel in de testfase en is nog niet volledig geverifieerd. De ontwikkelaar aanvaardt geen aansprakelijkheid voor schade of incidenten die voortvloeien uit het gebruik van deze software.',
@@ -645,6 +659,8 @@
       dl_win_portable_version: 'v2.1.0 \u00b7 Portable (.exe)',
       dl_mac: 'macOS (Apple Silicon)',
       dl_mac_version: 'v2.1.0 \u00b7 DMG (.dmg)',
+      mac_adp_notice: 'Esta app aguarda aprovação do Apple Developer Program. Até então, é necessária permissão por linha de comandos.',
+      mac_adp_link: 'Ver o manual →',
       dl_btn: 'Download',
       disclaimer_p1:
         'ArtNet Manager \u00e9 uma aplica\u00e7\u00e3o lan\u00e7ada por <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> sob <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> Embora estejamos a trabalhar para um software pronto para produ\u00e7\u00e3o, encontra-se atualmente em fase de testes e n\u00e3o foi totalmente verificado. O desenvolvedor n\u00e3o assume qualquer responsabilidade por danos ou incidentes resultantes do uso deste software.',
@@ -726,6 +742,8 @@
       dl_win_portable_version: 'v2.1.0 \u00b7 Portable (.exe)',
       dl_mac: 'macOS (Apple Silicon)',
       dl_mac_version: 'v2.1.0 \u00b7 DMG (.dmg)',
+      mac_adp_notice: '이 앱은 Apple Developer Program 승인 대기 중입니다. 승인될 때까지 커맨드라인 권한 허용이 필요합니다.',
+      mac_adp_link: '자세한 내용은 매뉴얼 참조 →',
       dl_btn: '\ub2e4\uc6b4\ub85c\ub4dc',
       disclaimer_p1:
         'ArtNet Manager\ub294 <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> \ud558\uc5d0 <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a>\uc774 \ubc30\ud3ec\ud55c \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc785\ub2c8\ub2e4. \ud504\ub85c\ub355\uc158 \ub808\ub514 \uc18c\ud504\ud2b8\uc6e8\uc5b4\ub97c \ubaa9\ud45c\ub85c \uac1c\ubc1c \uc911\uc774\ub098, \ud604\uc7ac \ud14c\uc2a4\ud2b8 \ub2e8\uacc4\ub85c \ub3d9\uc791\uc774 \uc644\uc804\ud788 \uac80\uc99d\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4. \ubcf8 \uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc0ac\uc6a9\uc73c\ub85c \uc778\ud55c \uc5b4\ub5a0\ud55c \uc190\ud574\ub098 \uc0ac\uace0\uc5d0 \ub300\ud574\uc11c\ub3c4 \uac1c\ubc1c\uc790\ub294 \ucc45\uc784\uc744 \uc9c0\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.',
@@ -807,6 +825,8 @@
       dl_win_portable_version: 'v2.1.0 \u00b7 Portable (.exe)',
       dl_mac: 'macOS (Apple Silicon)',
       dl_mac_version: 'v2.1.0 \u00b7 DMG (.dmg)',
+      mac_adp_notice: '此应用正在等待 Apple Developer Program 审批。在此之前，需要通过命令行授权才能打开。',
+      mac_adp_link: '详见手册 →',
       dl_btn: '\u4e0b\u8f7d',
       disclaimer_p1:
         'ArtNet Manager \u662f\u7531 <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> \u5728 <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> \u65d7\u4e0b\u53d1\u5e03\u7684\u5e94\u7528\u7a0b\u5e8f\u3002\u6211\u4eec\u6b63\u5728\u671d\u7740\u751f\u4ea7\u5c31\u7eea\u7684\u8f6f\u4ef6\u52aa\u529b\uff0c\u4f46\u76ee\u524d\u5904\u4e8e\u6d4b\u8bd5\u9636\u6bb5\uff0c\u5c1a\u672a\u5b8c\u6210\u5168\u9762\u9a8c\u8bc1\u3002\u5f00\u53d1\u8005\u4e0d\u5bf9\u56e0\u4f7f\u7528\u672c\u8f6f\u4ef6\u800c\u5f15\u8d77\u7684\u4efb\u4f55\u635f\u5bb3\u6216\u4e8b\u6545\u627f\u62c5\u8d23\u4efb\u3002',

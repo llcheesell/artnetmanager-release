@@ -334,7 +334,6 @@
         <button class="gallery-tab" data-tab="2" role="tab" data-i18n="ss_tab_flow">Signal Flow</button>
         <button class="gallery-tab" data-tab="3" role="tab" data-i18n="ss_tab_forwarding">Forwarding</button>
         <button class="gallery-tab" data-tab="4" role="tab" data-i18n="ss_tab_discovery">Device Discovery</button>
-        <button class="gallery-tab" data-tab="5" role="tab" data-i18n="ss_tab_dashboard2">Dashboard (50 Universes)</button>
       </div>
       <div class="gallery-stage">
         <div class="gallery-frame">
@@ -345,12 +344,11 @@
             <span class="gallery-wintitle" id="galleryWinTitle">Dashboard</span>
           </div>
           <div class="gallery-panels">
-            <img class="gallery-panel active" src="screenshots/screenshot-dashboard.png"   alt="Dashboard"          data-label="Dashboard">
-            <img class="gallery-panel"        src="screenshots/screenshot-universes.png"   alt="Universe Viewer"    data-label="Universe Viewer">
-            <img class="gallery-panel"        src="screenshots/screenshot-signal-flow.png" alt="Signal Flow"        data-label="Signal Flow">
-            <img class="gallery-panel"        src="screenshots/screenshot-forwarding.png"  alt="Forwarding"         data-label="Signal Forwarding">
-            <img class="gallery-panel"        src="screenshots/screenshot-discovery.png"   alt="Device Discovery"   data-label="Device Discovery">
-            <img class="gallery-panel"        src="screenshots/screenshot-dashboard-2.png" alt="Dashboard Extended" data-label="Dashboard (50 Universes)">
+            <img class="gallery-panel active" src="screenshots/screenshot-dashboard-2.png" alt="Dashboard"        data-label="Dashboard">
+            <img class="gallery-panel"        src="screenshots/screenshot-universes.png"   alt="Universe Viewer"  data-label="Universe Viewer">
+            <img class="gallery-panel"        src="screenshots/screenshot-signal-flow.png" alt="Signal Flow"      data-label="Signal Flow">
+            <img class="gallery-panel"        src="screenshots/screenshot-forwarding.png"  alt="Forwarding"       data-label="Signal Forwarding">
+            <img class="gallery-panel"        src="screenshots/screenshot-discovery.png"   alt="Device Discovery" data-label="Device Discovery">
           </div>
         </div>
         <p class="gallery-caption" id="galleryCaption" data-i18n="ss_cap_dashboard">
@@ -392,13 +390,20 @@
       </div>
 
       <!-- macOS -->
-      <div class="download-card">
+      <div class="download-card mac-download-card">
         <div class="platform-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--text-secondary)"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         </div>
         <h3 data-i18n="dl_mac">macOS (Apple Silicon)</h3>
         <p class="version" data-i18n="dl_mac_version">v2.1.0 &middot; DMG (.dmg)</p>
-        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.1.0/ArtNet.Manager-2.1.0-arm64.dmg" class="btn btn-secondary" id="download-mac" data-i18n="dl_btn">Download</a>
+        <div class="mac-btn-wrap">
+          <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.1.0/ArtNet.Manager-2.1.0-arm64.dmg" class="btn btn-secondary" id="download-mac" data-i18n="dl_btn">Download</a>
+          <div class="mac-adp-tooltip" role="tooltip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span data-i18n="mac_adp_notice">このアプリはADP申請中です。認可されるまでの間はコマンドラインでの許可が必要です。</span>
+            <a href="manual.html#s2" data-i18n="mac_adp_link">詳しくはマニュアルへ →</a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -732,14 +737,13 @@
 <script>
 (function() {
   var captions = {
-    0: { en:'Real-time overview of active universes, discovered devices, destinations, and packet rate.', ja:'アクティブユニバース・デバイス・転送先・パケットレートをリアルタイム表示。' },
+    0: { en:'Dashboard monitoring 50 simultaneous universes at 1,864 pps — including STANDBY cluster node. Typical scale for a large live show.', ja:'50ユニバース・1,864ppsをリアルタイム監視。STANDBYクラスターノードも表示。大規模ライブ現場でのスケール。' },
     1: { en:'512 DMX channels visualized as a color-coded grid across multiple universes simultaneously.', ja:'512チャンネルをカラーグリッドで可視化。複数ユニバースの同時表示に対応。' },
     2: { en:'Interactive diagram showing live signal paths from sources through universes to forwarding destinations.', ja:'ソース→ユニバース→転送先の信号経路をパーティクルアニメーションで可視化。' },
     3: { en:'Configure forwarding destinations with per-universe overrides, offset remapping, and delay settings.', ja:'転送先を設定。ユニバース単位のオーバーライド・オフセット・遅延を柔軟に構成。' },
-    4: { en:'Automatically discovers all devices on the network — Art-Net nodes, sACN gateways, computers, and more.', ja:'ネットワーク上の全デバイスを自動検出。Art-Netノード、sACNゲートウェイ、コンピュータなどを一覧表示。' },
-    5: { en:'Dashboard monitoring 50 simultaneous universes at 1,864 pps — typical scale for a large live show.', ja:'50ユニバース・1,864ppsを同時モニタリング。大規模ライブ現場でのスケールを確認。' }
+    4: { en:'Automatically discovers all devices on the network — Art-Net nodes, sACN gateways, computers, and more.', ja:'ネットワーク上の全デバイスを自動検出。Art-Netノード、sACNゲートウェイ、コンピュータなどを一覧表示。' }
   };
-  var tabLabels = ['Dashboard','Universe Viewer','Signal Flow','Signal Forwarding','Device Discovery','Dashboard (50 Universes)'];
+  var tabLabels = ['Dashboard','Universe Viewer','Signal Flow','Signal Forwarding','Device Discovery'];
 
   var tabs = document.querySelectorAll('.gallery-tab');
   var panels = document.querySelectorAll('.gallery-panel');
