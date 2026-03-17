@@ -1075,8 +1075,10 @@ footer {
 }
 .mac-adp-tooltip {
   display: none;
+  pointer-events: auto;
   position: absolute;
-  bottom: calc(100% + 10px);
+  bottom: 100%;
+  margin-bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: 280px;
@@ -1087,20 +1089,21 @@ footer {
   font-size: 0.8rem;
   line-height: 1.5;
   color: rgba(251, 191, 36, 0.9);
-  z-index: 100;
+  z-index: 200;
   gap: 8px;
   align-items: flex-start;
   box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-  pointer-events: none;
 }
-.mac-adp-tooltip a {
-  display: block;
-  margin-top: 6px;
-  color: #fbbf24;
-  text-decoration: underline;
-  font-weight: 600;
-  pointer-events: auto;
+/* Invisible bridge fills the gap so mouse can reach the tooltip */
+.mac-adp-tooltip::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 14px;
 }
+/* Visible arrow */
 .mac-adp-tooltip::after {
   content: '';
   position: absolute;
@@ -1109,9 +1112,17 @@ footer {
   transform: translateX(-50%);
   border: 6px solid transparent;
   border-top-color: rgba(251, 191, 36, 0.5);
+  pointer-events: none;
+}
+.mac-adp-tooltip a {
+  display: block;
+  margin-top: 6px;
+  color: #fbbf24;
+  text-decoration: underline;
+  font-weight: 600;
 }
 .mac-btn-wrap:hover .mac-adp-tooltip,
-.mac-btn-wrap:focus-within .mac-adp-tooltip {
+.mac-adp-tooltip:hover {
   display: flex;
 }
 
