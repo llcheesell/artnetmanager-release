@@ -21,7 +21,7 @@
       features_label: 'Features',
       features_title: 'ミニマムだけど、強力',
       features_desc:
-        '余計な機能は持たない。DMX信号の受信・マージ・監視・変換・転送を、シンプルなインターフェースに凝縮。',
+        'DMX信号の受信・マージ・監視・変換・転送を、シンプルなインターフェースに凝縮。',
       feat1_title: 'リアルタイム DMX 可視化',
       feat1_desc:
         '512チャンネルをグリッドでリアルタイム表示。色分けされたインテンシティで、信号の変化を瞬時に把握。マルチユニバース同時表示にも対応。',
@@ -82,7 +82,7 @@
       tech_title: '技術スタック',
       tech_desc:
         'モダンな技術で構築された、プロダクションレディなアプリケーション。',
-      footer_copy: '\u00a9 2025 MOOV by Composition Inc.',
+      footer_copy: '\u00a9 2026 MOOV by Composition Inc.',
     },
 
     en: {
@@ -166,7 +166,7 @@
       tech_label: 'Built With',
       tech_title: 'Tech Stack',
       tech_desc: 'A production-ready application built with modern technologies.',
-      footer_copy: '\u00a9 2025 MOOV by Composition Inc.',
+      footer_copy: '\u00a9 2026 MOOV by Composition Inc.',
     },
 
     de: {
@@ -251,7 +251,7 @@
       tech_title: 'Technologie-Stack',
       tech_desc:
         'Eine produktionsreife Anwendung, entwickelt mit modernen Technologien.',
-      footer_copy: '\u00a9 2025 MOOV by Composition Inc.',
+      footer_copy: '\u00a9 2026 MOOV by Composition Inc.',
     },
 
     fr: {
@@ -334,7 +334,7 @@
       tech_title: 'Stack technique',
       tech_desc:
         'Une application pr\u00eate pour la production, construite avec des technologies modernes.',
-      footer_copy: '\u00a9 2025 MOOV by Composition Inc.',
+      footer_copy: '\u00a9 2026 MOOV by Composition Inc.',
     },
 
     es: {
@@ -419,7 +419,7 @@
       tech_title: 'Stack tecnol\u00f3gico',
       tech_desc:
         'Una aplicaci\u00f3n lista para producci\u00f3n, construida con tecnolog\u00edas modernas.',
-      footer_copy: '\u00a9 2025 MOOV by Composition Inc.',
+      footer_copy: '\u00a9 2026 MOOV by Composition Inc.',
     },
 
     it: {
@@ -502,7 +502,7 @@
       tech_title: 'Stack tecnologico',
       tech_desc:
         'Un\u2019applicazione pronta per la produzione, costruita con tecnologie moderne.',
-      footer_copy: '\u00a9 2025 MOOV by Composition Inc.',
+      footer_copy: '\u00a9 2026 MOOV by Composition Inc.',
     },
 
     nl: {
@@ -587,7 +587,7 @@
       tech_title: 'Technologie-stack',
       tech_desc:
         'Een productierijpe applicatie, gebouwd met moderne technologie\u00ebn.',
-      footer_copy: '\u00a9 2025 MOOV by Composition Inc.',
+      footer_copy: '\u00a9 2026 MOOV by Composition Inc.',
     },
 
     pt: {
@@ -670,7 +670,7 @@
       tech_title: 'Stack tecnol\u00f3gico',
       tech_desc:
         'Uma aplica\u00e7\u00e3o pronta para produ\u00e7\u00e3o, constru\u00edda com tecnologias modernas.',
-      footer_copy: '\u00a9 2025 MOOV by Composition Inc.',
+      footer_copy: '\u00a9 2026 MOOV by Composition Inc.',
     },
 
     ko: {
@@ -753,7 +753,7 @@
       tech_title: '\uae30\uc220 \uc2a4\ud0dd',
       tech_desc:
         '\ubaa8\ub358 \uae30\uc220\ub85c \uad6c\ucd95\ub41c \ud504\ub85c\ub355\uc158 \ub808\ub514 \uc560\ud50c\ub9ac\ucf00\uc774\uc158.',
-      footer_copy: '\u00a9 2025 MOOV by Composition Inc.',
+      footer_copy: '\u00a9 2026 MOOV by Composition Inc.',
     },
 
     zh: {
@@ -836,7 +836,7 @@
       tech_title: '\u6280\u672f\u6808',
       tech_desc:
         '\u91c7\u7528\u73b0\u4ee3\u6280\u672f\u6784\u5efa\u7684\u751f\u4ea7\u5c31\u7eea\u5e94\u7528\u3002',
-      footer_copy: '\u00a9 2025 MOOV by Composition Inc.',
+      footer_copy: '\u00a9 2026 MOOV by Composition Inc.',
     },
   };
 
