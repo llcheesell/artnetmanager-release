@@ -24,6 +24,7 @@
     <ul class="nav-links">
       <li><a href="#features" data-i18n="nav_features">機能</a></li>
       <li><a href="#preview" data-i18n="nav_preview">プレビュー</a></li>
+      <li><a href="#screenshots" data-i18n="nav_screenshots">Screenshots</a></li>
       <li><a href="manual.html" data-i18n="nav_manual">Manual</a></li>
       <li><a href="#download" data-i18n="nav_download">ダウンロード</a></li>
     </ul>
@@ -61,73 +62,16 @@
       </a>
     </div>
 
-    <!-- Hero App Mockup -->
-    <div class="hero-mockup animate-in delay-4">
-      <div class="mockup-titlebar">
-        <div class="mockup-dot red"></div>
-        <div class="mockup-dot yellow"></div>
-        <div class="mockup-dot green"></div>
-      </div>
-      <div class="mockup-body">
-        <!-- Sidebar -->
-        <div class="mock-sidebar">
-          <div class="mock-sidebar-brand">
-            <div class="icon"></div>
-            <span>ArtNet Manager</span>
-          </div>
-          <div class="mock-nav-item active"><div class="mock-nav-icon"></div> Dashboard</div>
-          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Universes</div>
-          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Devices</div>
-          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Forwarding</div>
-          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Signal Flow</div>
-          <div class="mock-nav-item"><div class="mock-nav-icon"></div> Settings</div>
+    <!-- Hero Screenshot -->
+    <div class="hero-screenshot animate-in delay-4">
+      <div class="hero-screenshot-frame">
+        <div class="hero-screenshot-titlebar">
+          <span class="hero-screenshot-dot" style="background:#ff5f57"></span>
+          <span class="hero-screenshot-dot" style="background:#febc2e"></span>
+          <span class="hero-screenshot-dot" style="background:#28c840"></span>
+          <span class="hero-screenshot-title">ArtNet Manager</span>
         </div>
-        <!-- Dashboard Content -->
-        <div class="mock-content">
-          <div class="mock-stats">
-            <div class="mock-stat-card">
-              <div class="mock-stat-label">Active Universes</div>
-              <div class="mock-stat-value cyan">4</div>
-            </div>
-            <div class="mock-stat-card">
-              <div class="mock-stat-label">Devices</div>
-              <div class="mock-stat-value emerald">12</div>
-            </div>
-            <div class="mock-stat-card">
-              <div class="mock-stat-label">Destinations</div>
-              <div class="mock-stat-value amber">3</div>
-            </div>
-            <div class="mock-stat-card">
-              <div class="mock-stat-label">Packets/s</div>
-              <div class="mock-stat-value violet">176</div>
-            </div>
-          </div>
-          <div class="mock-section-title">Active Universes</div>
-          <div class="mock-universe-grid">
-            <div class="mock-universe-card">
-              <div class="mock-universe-header">
-                <span class="mock-universe-name">0:0:0</span>
-                <span class="mock-protocol-badge artnet">Art-Net</span>
-              </div>
-              <div class="mock-universe-meta">192.168.1.10 <span class="mock-pps">44 pps</span></div>
-              <div class="mock-merge-info">HTP <span class="mock-merge-sources">2 sources</span></div>
-            </div>
-            <div class="mock-universe-card">
-              <div class="mock-universe-header">
-                <span class="mock-universe-name">0:0:1</span>
-                <span class="mock-protocol-badge sacn">sACN</span>
-              </div>
-              <div class="mock-universe-meta">192.168.1.20 <span class="mock-pps">44 pps</span></div>
-            </div>
-            <div class="mock-universe-card">
-              <div class="mock-universe-header">
-                <span class="mock-universe-name">0:0:2</span>
-                <span class="mock-protocol-badge artnet">Art-Net</span>
-              </div>
-              <div class="mock-universe-meta">192.168.1.10 <span class="mock-pps">44 pps</span></div>
-            </div>
-          </div>
-        </div>
+        <img src="screenshots/screenshot-signal-flow.png" alt="ArtNet Manager - Signal Flow" class="hero-screenshot-img">
       </div>
     </div>
   </div>
@@ -374,6 +318,49 @@
   </div>
 </section>
 
+<!-- ===== Screenshots ===== -->
+<section id="screenshots">
+  <div class="container">
+    <div style="text-align:center;">
+      <span class="section-label" data-i18n="screenshots_label">Screenshots</span>
+      <h2 data-i18n="screenshots_title">アプリ画面</h2>
+      <p class="section-desc" data-i18n="screenshots_desc">実際のアプリケーション画面をご覧ください。</p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-tabs" role="tablist">
+        <button class="gallery-tab active" data-tab="0" role="tab" data-i18n="ss_tab_dashboard">Dashboard</button>
+        <button class="gallery-tab" data-tab="1" role="tab" data-i18n="ss_tab_universes">Universe Viewer</button>
+        <button class="gallery-tab" data-tab="2" role="tab" data-i18n="ss_tab_flow">Signal Flow</button>
+        <button class="gallery-tab" data-tab="3" role="tab" data-i18n="ss_tab_forwarding">Forwarding</button>
+        <button class="gallery-tab" data-tab="4" role="tab" data-i18n="ss_tab_discovery">Device Discovery</button>
+        <button class="gallery-tab" data-tab="5" role="tab" data-i18n="ss_tab_dashboard2">Dashboard (50 Universes)</button>
+      </div>
+      <div class="gallery-stage">
+        <div class="gallery-frame">
+          <div class="gallery-titlebar">
+            <span class="gallery-dot" style="background:#ff5f57"></span>
+            <span class="gallery-dot" style="background:#febc2e"></span>
+            <span class="gallery-dot" style="background:#28c840"></span>
+            <span class="gallery-wintitle" id="galleryWinTitle">Dashboard</span>
+          </div>
+          <div class="gallery-panels">
+            <img class="gallery-panel active" src="screenshots/screenshot-dashboard.png"   alt="Dashboard"          data-label="Dashboard">
+            <img class="gallery-panel"        src="screenshots/screenshot-universes.png"   alt="Universe Viewer"    data-label="Universe Viewer">
+            <img class="gallery-panel"        src="screenshots/screenshot-signal-flow.png" alt="Signal Flow"        data-label="Signal Flow">
+            <img class="gallery-panel"        src="screenshots/screenshot-forwarding.png"  alt="Forwarding"         data-label="Signal Forwarding">
+            <img class="gallery-panel"        src="screenshots/screenshot-discovery.png"   alt="Device Discovery"   data-label="Device Discovery">
+            <img class="gallery-panel"        src="screenshots/screenshot-dashboard-2.png" alt="Dashboard Extended" data-label="Dashboard (50 Universes)">
+          </div>
+        </div>
+        <p class="gallery-caption" id="galleryCaption" data-i18n="ss_cap_dashboard">
+          アクティブユニバース・デバイス・転送先・パケットレートをリアルタイム表示。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== Download ===== -->
 <section id="download">
   <div class="container">
@@ -482,6 +469,7 @@
       <div class="footer-links">
         <a href="#features" data-i18n="nav_features">Features</a>
         <a href="#preview" data-i18n="nav_preview">Preview</a>
+        <a href="#screenshots" data-i18n="nav_screenshots">Screenshots</a>
         <a href="manual.html" data-i18n="nav_manual">Manual</a>
         <a href="#download" data-i18n="nav_download">Download</a>
       </div>
@@ -737,6 +725,41 @@
     requestAnimationFrame(draw);
   }
   draw();
+})();
+</script>
+
+<!-- ===== Gallery JS ===== -->
+<script>
+(function() {
+  var captions = {
+    0: { en:'Real-time overview of active universes, discovered devices, destinations, and packet rate.', ja:'アクティブユニバース・デバイス・転送先・パケットレートをリアルタイム表示。' },
+    1: { en:'512 DMX channels visualized as a color-coded grid across multiple universes simultaneously.', ja:'512チャンネルをカラーグリッドで可視化。複数ユニバースの同時表示に対応。' },
+    2: { en:'Interactive diagram showing live signal paths from sources through universes to forwarding destinations.', ja:'ソース→ユニバース→転送先の信号経路をパーティクルアニメーションで可視化。' },
+    3: { en:'Configure forwarding destinations with per-universe overrides, offset remapping, and delay settings.', ja:'転送先を設定。ユニバース単位のオーバーライド・オフセット・遅延を柔軟に構成。' },
+    4: { en:'Automatically discovers all devices on the network — Art-Net nodes, sACN gateways, computers, and more.', ja:'ネットワーク上の全デバイスを自動検出。Art-Netノード、sACNゲートウェイ、コンピュータなどを一覧表示。' },
+    5: { en:'Dashboard monitoring 50 simultaneous universes at 1,864 pps — typical scale for a large live show.', ja:'50ユニバース・1,864ppsを同時モニタリング。大規模ライブ現場でのスケールを確認。' }
+  };
+  var tabLabels = ['Dashboard','Universe Viewer','Signal Flow','Signal Forwarding','Device Discovery','Dashboard (50 Universes)'];
+
+  var tabs = document.querySelectorAll('.gallery-tab');
+  var panels = document.querySelectorAll('.gallery-panel');
+  var winTitle = document.getElementById('galleryWinTitle');
+  var caption = document.getElementById('galleryCaption');
+
+  function activate(idx) {
+    tabs.forEach(function(t,i){ t.classList.toggle('active', i===idx); });
+    panels.forEach(function(p,i){ p.classList.toggle('active', i===idx); });
+    if (winTitle) winTitle.textContent = tabLabels[idx];
+    if (caption) {
+      var lang = document.documentElement.lang || 'en';
+      var c = captions[idx];
+      caption.textContent = (c && c[lang]) ? c[lang] : (c ? c.en : '');
+    }
+  }
+
+  tabs.forEach(function(tab, idx) {
+    tab.addEventListener('click', function() { activate(idx); });
+  });
 })();
 </script>
 
