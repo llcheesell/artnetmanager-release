@@ -118,6 +118,14 @@
         <li data-i18n="s2_install_step3">Launch ArtNet Manager from your applications.</li>
       </ol>
 
+      <div class="info-card warning">
+        <div class="info-label" data-i18n="important_label">IMPORTANT</div>
+        <p data-i18n="s2_macos_gatekeeper"><strong>macOS: "App is damaged" or won't open after clicking Open Anyway</strong><br>
+        Because ArtNet Manager is not yet notarized by Apple, macOS Gatekeeper may block the app from launching. To resolve this, run the following command in Terminal after moving the app to Applications:</p>
+        <pre style="margin:10px 0 0;padding:8px 12px;background:rgba(0,0,0,0.3);border-radius:4px;font-size:0.85rem;overflow-x:auto;"><code>xattr -cr "/Applications/ArtNet Manager.app"</code></pre>
+        <p data-i18n="s2_macos_gatekeeper2" style="margin-top:8px;">Then launch the app normally. This is a one-time step and will not be required again.</p>
+      </div>
+
       <div class="info-card tip">
         <div class="info-label" data-i18n="tip_label">TIP</div>
         <p data-i18n="s2_tip_guardian">For production environments, enable Guardian Mode from the application menu to ensure automatic recovery from unexpected crashes.</p>
