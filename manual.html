@@ -172,6 +172,11 @@
       <h2 data-i18n="s3_title">Dashboard</h2>
       <p data-i18n="s3_intro">The main overview page showing real-time status of the entire system.</p>
 
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-dashboard.png" alt="Dashboard" loading="lazy">
+        <figcaption>Dashboard — system overview with active universes, devices, destinations, and cluster status</figcaption>
+      </figure>
+
       <h3 data-i18n="s3_stats_title">Statistics Cards</h3>
       <table class="manual-table">
         <thead>
@@ -204,6 +209,11 @@
     <section class="manual-section" id="universe-viewer">
       <h2 data-i18n="s4_title">Universe Viewer</h2>
       <p data-i18n="s4_intro">Real-time visualization of DMX channel data.</p>
+
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-universes.png" alt="Universe Viewer" loading="lazy">
+        <figcaption>Universe Viewer — 512-channel color-coded grid with multi-universe selection</figcaption>
+      </figure>
 
       <h3 data-i18n="s4_operation_title">How to Use</h3>
       <ol class="steps">
@@ -241,6 +251,11 @@
       <h2 data-i18n="s5_title">Device Discovery</h2>
       <p data-i18n="s5_intro">Automatically discover and manage DMX devices on the network.</p>
 
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-discovery.png" alt="Device Discovery" loading="lazy">
+        <figcaption>Device Discovery — all network devices with IP, hostname, MAC, and category</figcaption>
+      </figure>
+
       <h3 data-i18n="s5_filter_title">Filter Tabs</h3>
       <p data-i18n="s5_filter_desc">Filter devices by category: All / Art-Net / sACN / Cluster / Computers / Other. Use the search box to filter by IP address, hostname, or MAC address.</p>
 
@@ -273,6 +288,11 @@
     <section class="manual-section" id="forwarding">
       <h2 data-i18n="s6_title">Forwarding</h2>
       <p data-i18n="s6_intro">The core feature for routing received signals to specified destinations.</p>
+
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-forwarding.png" alt="Forwarding" loading="lazy">
+        <figcaption>Forwarding — destination-centric routing with per-universe overrides</figcaption>
+      </figure>
 
       <h3 data-i18n="s6_dest_title">Destination Settings</h3>
       <table class="manual-table">
@@ -345,6 +365,11 @@
       <h2 data-i18n="s7_title">Signal Flow</h2>
       <p data-i18n="s7_intro">Visualize signal paths with a real-time interactive diagram.</p>
 
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-signal-flow.png" alt="Signal Flow" loading="lazy">
+        <figcaption>Signal Flow — animated data flow visualization with flowing particles</figcaption>
+      </figure>
+
       <h3 data-i18n="s7_layout_title">3-Column Layout</h3>
       <div class="flow-diagram">
         <div class="flow-box source" data-i18n="s7_col_sources">SOURCES (Input)</div>
@@ -375,6 +400,12 @@
       </ul>
 
       <h3>Simplified Mode (50+ Universes)</h3>
+
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-signalflow-simplified.png" alt="Signal Flow Simplified Mode" loading="lazy">
+        <figcaption>Simplified Mode — aggregated universe node for 50+ universes</figcaption>
+      </figure>
+
       <p>When the universe count exceeds the threshold (default: 50), Signal Flow automatically switches to a simplified view:</p>
       <ul>
         <li>Individual universe nodes are replaced by a single aggregated node showing the total count, active universes, and total packet rate</li>
@@ -388,6 +419,11 @@
     <section class="manual-section" id="recording">
       <h2>Recording &amp; Playback</h2>
       <p>Record live DMX signals and play them back through configured forwarding destinations.</p>
+
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-recording.png" alt="Recording" loading="lazy">
+        <figcaption>Recording — REC overlay with real-time stats (duration, frames, drops)</figcaption>
+      </figure>
 
       <h3>Recording</h3>
       <ol class="steps">
@@ -412,6 +448,12 @@
       </ul>
 
       <h3>Player Mode</h3>
+
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-player.png" alt="Player Mode" loading="lazy">
+        <figcaption>Player Mode — playback with transport controls and seek bar</figcaption>
+      </figure>
+
       <ol class="steps">
         <li>Switch to <strong>Player Mode</strong> using the mode switch in the header.</li>
         <li>Open an <code>.anmr</code> file from the file browser.</li>
@@ -433,6 +475,11 @@
     <section class="manual-section" id="signal-checker">
       <h2>Signal Checker</h2>
       <p>A built-in test signal generator for verifying Art-Net/sACN signal paths without external hardware.</p>
+
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-signal-checker.png" alt="Signal Checker" loading="lazy">
+        <figcaption>Signal Checker — 12 test patterns with configurable universe range and speed</figcaption>
+      </figure>
 
       <h3>How to Launch</h3>
       <p>Open Signal Checker from the application menu: <strong>Tools &rarr; Signal Checker</strong>. It opens in a separate window.</p>
@@ -623,6 +670,12 @@
       </ul>
 
       <h3>Manual Promote to PRIMARY</h3>
+
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-cluster-promote.png" alt="Cluster Promote" loading="lazy">
+        <figcaption>Cluster tooltip with Promote to PRIMARY button</figcaption>
+      </figure>
+
       <p>You can manually promote a STANDBY node to PRIMARY:</p>
       <ul>
         <li>Click the <strong>Promote to PRIMARY</strong> button in the cluster tooltip (hover over the cluster badge in the header).</li>
@@ -666,12 +719,24 @@
       <h2>About &amp; Feedback</h2>
 
       <h3>About Dialog</h3>
+
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-about.png" alt="About Dialog" loading="lazy">
+        <figcaption>About dialog — version info and update check</figcaption>
+      </figure>
+
       <p>Access from the sidebar at the bottom. Shows the current app version, developer information, and links to the distribution site and repository.</p>
 
       <h3>Version Check</h3>
       <p>Click <strong>Check for Updates</strong> in the About dialog to compare your version against the latest release. If an update is available, a download link is provided.</p>
 
       <h3>Bug Report &amp; Feature Request</h3>
+
+      <figure class="manual-screenshot">
+        <img src="screenshots/screenshot-bugreport.png" alt="Bug Report Dialog" loading="lazy">
+        <figcaption>Bug Report — diagnostic info and logs copied to clipboard</figcaption>
+      </figure>
+
       <p>Access from the sidebar menu. Two options:</p>
       <ul>
         <li><strong>Bug Report</strong> — Describe the issue, and a comprehensive diagnostic snapshot is automatically prepared</li>
