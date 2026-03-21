@@ -83,7 +83,7 @@
     <!-- Pillar 1: Signal Integration & Transmission -->
     <div class="pillar">
       <div class="pillar-text">
-        <span class="section-label">Signal Management</span>
+        <span class="section-label" data-i18n="pillar1_label">Signal Management</span>
         <h2 data-i18n="pillar1_title">信号の統合と伝送</h2>
         <p class="pillar-desc" data-i18n="pillar1_desc">
           Art-Net / sACN 信号を受信し、HTP・LTP・Priority でマージ。ユニバース単位のフィルタリング、オフセット再マッピング、遅延設定を経て、複数の宛先に同時転送。マルチ NIC 対応で、異なるサブネットの信号を一元管理。
@@ -109,7 +109,7 @@
     <!-- Pillar 2: Record & Playback -->
     <div class="pillar pillar-reverse">
       <div class="pillar-text">
-        <span class="section-label" style="color:var(--violet)">Record & Playback</span>
+        <span class="section-label" style="color:var(--violet)" data-i18n="pillar2_label">Record & Playback</span>
         <h2 data-i18n="pillar2_title">信号の記録と再生</h2>
         <p class="pillar-desc" data-i18n="pillar2_desc">
           受信中の DMX 信号をリアルタイムに記録。独自の ANMR フォーマットでデルタ圧縮し、長時間のキャプチャにも対応。記録した信号はプレイヤーモードでいつでも再生。リハーサルの記録、現場でのバックアップ出力、問題のデバッグに。
@@ -135,7 +135,7 @@
     <!-- Pillar 3: Visualization -->
     <div class="pillar">
       <div class="pillar-text">
-        <span class="section-label" style="color:var(--emerald)">Visualization</span>
+        <span class="section-label" style="color:var(--emerald)" data-i18n="pillar3_label">Visualization</span>
         <h2 data-i18n="pillar3_title">伝送のビジュアライズ</h2>
         <p class="pillar-desc" data-i18n="pillar3_desc">
           512 チャンネルのグリッド表示、ソースからデスティネーションへの信号経路アニメーション、ダッシュボードでのリアルタイム統計。信号がどこからどこへ、どのように流れているかを一目で把握。
@@ -427,6 +427,13 @@
   tabs.forEach(function(tab, idx) {
     tab.addEventListener('click', function() { activate(idx); });
   });
+
+  // Set initial caption in correct language (after i18n sets lang)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { setTimeout(function(){ activate(0); }, 0); });
+  } else {
+    setTimeout(function(){ activate(0); }, 0);
+  }
 })();
 </script>
 
