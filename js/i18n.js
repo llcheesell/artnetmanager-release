@@ -109,6 +109,7 @@
       feedback_title: 'フィードバックをお寄せください',
       feedback_desc: 'バグ報告や機能リクエストはこちらから。開発の参考にさせていただきます。',
       feedback_btn: 'バグ報告・機能リクエスト',
+      feedback_note: '現場に根差した、信頼性の高いツールを目指しています。皆さまのフィードバックが、このアプリをより良くします。',
       tech_label: 'Built With',
       tech_title: '技術スタック',
       tech_desc:
@@ -225,6 +226,7 @@
       feedback_title: 'Share Your Feedback',
       feedback_desc: 'Report bugs or request features. Your input shapes development.',
       feedback_btn: 'Bug Report / Feature Request',
+      feedback_note: 'Building a reliable tool rooted in real-world production needs. Your feedback makes this app better.',
       tech_label: 'Built With',
       tech_title: 'Tech Stack',
       tech_desc: 'A production-ready application built with modern technologies.',

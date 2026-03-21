@@ -103,10 +103,10 @@
   </div>
 </section>
 
-<!-- ===== Canvas Separator: Signal Flow ===== -->
-<section id="canvas-flow" class="canvas-section">
+<!-- ===== Canvas Separator: Recording Concept ===== -->
+<section id="canvas-rec" class="canvas-section">
   <div class="canvas-container">
-    <canvas id="signalFlowCanvas"></canvas>
+    <canvas id="recordingCanvas"></canvas>
   </div>
 </section>
 
@@ -145,6 +145,19 @@
         </div>
       </div>
     </div>
+
+  </div>
+</section>
+
+<!-- ===== Canvas Separator: Signal Flow ===== -->
+<section id="canvas-flow" class="canvas-section">
+  <div class="canvas-container">
+    <canvas id="signalFlowCanvas"></canvas>
+  </div>
+</section>
+
+<section id="hero-features-3" style="padding-top:0;">
+  <div class="container">
 
     <!-- Pillar 3: Visualization -->
     <div class="pillar">
@@ -331,10 +344,6 @@
         プロダクションレディなソフトウェアを目指して開発を進めていますが、現在はテスト段階であり、動作の完全な検証は完了していません。
         本ソフトウェアの使用に起因するいかなる損害・事故についても、開発者は一切の責任を負いかねます。
       </p>
-      <p data-i18n="disclaimer_p2">
-        現場に根差した、信頼性の高いツールを目指しています。
-        ぜひ実際にお試しいただき、バグ報告やご意見をお寄せください。皆さまのフィードバックが、このアプリをより良くします。
-      </p>
     </div>
   </div>
 </section>
@@ -351,46 +360,9 @@
        class="btn btn-secondary" target="_blank" rel="noopener" data-i18n="feedback_btn">
       バグ報告・機能リクエスト
     </a>
-  </div>
-</section>
-
-<!-- ===== Tech Stack ===== -->
-<section id="tech">
-  <div class="container">
-    <span class="section-label" data-i18n="tech_label">Built With</span>
-    <h2 data-i18n="tech_title">技術スタック</h2>
-    <div class="tech-grid">
-      <div class="tech-item">
-        <div class="tech-logo">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--cyan)"><circle cx="12" cy="12" r="3.5"/><ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="var(--cyan)" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="var(--cyan)" stroke-width="1.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="var(--cyan)" stroke-width="1.5" transform="rotate(120 12 12)"/></svg>
-        </div>
-        <span>React 19</span>
-      </div>
-      <div class="tech-item">
-        <div class="tech-logo">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--violet)"><path d="M1.5 6L12 1.5 22.5 6 12 10.5z" fill="none" stroke="var(--violet)" stroke-width="1.5"/><path d="M1.5 12L12 16.5 22.5 12" fill="none" stroke="var(--violet)" stroke-width="1.5"/><path d="M1.5 18L12 22.5 22.5 18" fill="none" stroke="var(--violet)" stroke-width="1.5"/></svg>
-        </div>
-        <span>Electron 35</span>
-      </div>
-      <div class="tech-item">
-        <div class="tech-logo" style="color: #3178c6; font-weight:700; font-size:14px;">TS</div>
-        <span>TypeScript</span>
-      </div>
-      <div class="tech-item">
-        <div class="tech-logo">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--cyan)"><path d="M12 2L2 19.5h20L12 2z" fill="none" stroke="var(--cyan)" stroke-width="1.5"/></svg>
-        </div>
-        <span>Vite</span>
-      </div>
-      <div class="tech-item">
-        <div class="tech-logo" style="color: #38bdf8; font-weight:700; font-size:12px;">TW</div>
-        <span>Tailwind CSS v4</span>
-      </div>
-      <div class="tech-item">
-        <div class="tech-logo" style="color: var(--emerald); font-weight:700; font-size:11px;">Z</div>
-        <span>Zustand</span>
-      </div>
-    </div>
+    <p style="margin-top:2rem;font-size:0.8rem;color:var(--text-dim);max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7;" data-i18n="feedback_note">
+      現場に根差した、信頼性の高いツールを目指しています。皆さまのフィードバックが、このアプリをより良くします。
+    </p>
   </div>
 </section>
 
@@ -516,6 +488,193 @@
       ctx.fillStyle = valueToColor(cells[i].value);
       ctx.fillRect(x, y, cellW, cellH);
     }
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script>
+
+<!-- ===== Recording Concept Canvas ===== -->
+<script>
+(function() {
+  var canvas = document.getElementById('recordingCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+
+  function resize() {
+    var rect = canvas.parentElement.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    W = rect.width; H = rect.height;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  // Signal bars: vertical bars scrolling right representing DMX data
+  var BARS = 80;
+  var barValues = [];
+  for (var i = 0; i < BARS; i++) {
+    barValues.push(Math.random() * 0.8 + 0.1);
+  }
+
+  // Recorded buffer: captured bar snapshots
+  var recBuffer = [];
+  var recCapacity = 30;
+  var playHead = 0;
+
+  var time = 0;
+  var running = true;
+
+  var observer = new IntersectionObserver(function(entries) {
+    running = entries[0].isIntersecting;
+    if (running) animate();
+  }, { threshold: 0.05 });
+  observer.observe(canvas.parentElement);
+
+  function animate() {
+    if (!running) return;
+    time += 0.02;
+
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = '#06060a';
+    ctx.fillRect(0, 0, W, H);
+
+    var barW = W / BARS;
+    var midY = H * 0.5;
+    var maxH = H * 0.35;
+
+    // Update signal values with flowing wave
+    for (var i = 0; i < BARS; i++) {
+      var wave = Math.sin(time * 1.5 + i * 0.15) * 0.3;
+      var wave2 = Math.sin(time * 0.8 + i * 0.08) * 0.2;
+      var noise = (Math.random() - 0.5) * 0.05;
+      barValues[i] = Math.max(0.05, Math.min(1, 0.5 + wave + wave2 + noise));
+    }
+
+    // Record zone: center third captures signal
+    var recStart = Math.floor(BARS * 0.35);
+    var recEnd = Math.floor(BARS * 0.65);
+
+    // Capture to buffer periodically
+    if (Math.floor(time * 10) % 3 === 0 && recBuffer.length < recCapacity) {
+      var snap = [];
+      for (var ri = recStart; ri < recEnd; ri++) snap.push(barValues[ri]);
+      recBuffer.push(snap);
+      if (recBuffer.length > recCapacity) recBuffer.shift();
+    }
+
+    // Draw live signal bars (left section — cyan)
+    for (var i = 0; i < BARS; i++) {
+      var x = i * barW;
+      var h = barValues[i] * maxH;
+      var inRecZone = i >= recStart && i < recEnd;
+
+      if (inRecZone) {
+        // Recording zone: brighter, with red tint
+        var alpha = 0.5 + barValues[i] * 0.4;
+        ctx.fillStyle = 'rgba(239, 68, 68, ' + alpha + ')';
+      } else if (i < recStart) {
+        // Incoming signal: cyan
+        var alpha = 0.2 + barValues[i] * 0.3;
+        ctx.fillStyle = 'rgba(34, 211, 238, ' + alpha + ')';
+      } else {
+        // Past recording: dim
+        ctx.fillStyle = 'rgba(63, 63, 80, 0.15)';
+      }
+
+      // Symmetrical bars from center
+      ctx.fillRect(x + 1, midY - h, barW - 2, h * 2);
+    }
+
+    // Draw REC indicator
+    var recX = recStart * barW;
+    var recW = (recEnd - recStart) * barW;
+
+    // REC zone border
+    ctx.strokeStyle = 'rgba(239, 68, 68, 0.3)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 4]);
+    ctx.strokeRect(recX, midY - maxH - 10, recW, maxH * 2 + 20);
+    ctx.setLineDash([]);
+
+    // REC label
+    ctx.font = '600 9px Inter, sans-serif';
+    ctx.textAlign = 'center';
+
+    // Blinking REC dot
+    var blink = Math.sin(time * 4) > 0;
+    if (blink) {
+      ctx.beginPath();
+      ctx.arc(recX + recW / 2 - 18, midY - maxH - 20, 3, 0, Math.PI * 2);
+      ctx.fillStyle = '#ef4444';
+      ctx.fill();
+    }
+    ctx.fillStyle = 'rgba(239, 68, 68, 0.7)';
+    ctx.fillText('REC', recX + recW / 2, midY - maxH - 17);
+
+    // Draw playback section (right side) — replayed bars in violet
+    if (recBuffer.length > 0) {
+      playHead = (playHead + 0.03) % recBuffer.length;
+      var pbIdx = Math.floor(playHead);
+      var snap = recBuffer[pbIdx];
+      var pbStartX = W * 0.78;
+      var pbW = W * 0.18;
+      var pbBarW = pbW / snap.length;
+
+      // PLAY zone border
+      ctx.strokeStyle = 'rgba(167, 139, 250, 0.25)';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([4, 4]);
+      ctx.strokeRect(pbStartX - 4, midY - maxH - 10, pbW + 8, maxH * 2 + 20);
+      ctx.setLineDash([]);
+
+      // Play label
+      ctx.fillStyle = 'rgba(167, 139, 250, 0.6)';
+      ctx.font = '600 9px Inter, sans-serif';
+      ctx.textAlign = 'center';
+
+      // Play triangle
+      ctx.beginPath();
+      ctx.moveTo(pbStartX + pbW / 2 - 20, midY - maxH - 23);
+      ctx.lineTo(pbStartX + pbW / 2 - 20, midY - maxH - 15);
+      ctx.lineTo(pbStartX + pbW / 2 - 14, midY - maxH - 19);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(167, 139, 250, 0.6)';
+      ctx.fill();
+
+      ctx.fillText('PLAY', pbStartX + pbW / 2, midY - maxH - 17);
+
+      for (var pi = 0; pi < snap.length; pi++) {
+        var px = pbStartX + pi * pbBarW;
+        var ph = snap[pi] * maxH * 0.9;
+        var pa = 0.3 + snap[pi] * 0.4;
+        ctx.fillStyle = 'rgba(167, 139, 250, ' + pa + ')';
+        ctx.fillRect(px + 1, midY - ph, pbBarW - 2, ph * 2);
+      }
+    }
+
+    // Arrow from REC to PLAY
+    var arrowY = midY + maxH + 20;
+    ctx.beginPath();
+    ctx.moveTo(recX + recW, arrowY);
+    ctx.lineTo(W * 0.78 - 8, arrowY);
+    ctx.strokeStyle = 'rgba(113, 113, 122, 0.2)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 3]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Arrow tip
+    ctx.beginPath();
+    ctx.moveTo(W * 0.78 - 8, arrowY - 4);
+    ctx.lineTo(W * 0.78, arrowY);
+    ctx.lineTo(W * 0.78 - 8, arrowY + 4);
+    ctx.fillStyle = 'rgba(113, 113, 122, 0.3)';
+    ctx.fill();
 
     requestAnimationFrame(animate);
   }
