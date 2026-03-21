@@ -78,6 +78,13 @@
         'ArtNet Manager は <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> のもと、<a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> がリリースしたアプリケーションです。プロダクションレディなソフトウェアを目指して開発を進めていますが、現在はテスト段階であり、動作の完全な検証は完了していません。本ソフトウェアの使用に起因するいかなる損害・事故についても、開発者は一切の責任を負いかねます。',
       disclaimer_p2:
         '現場に根差した、信頼性の高いツールを目指しています。ぜひ実際にお試しいただき、バグ報告やご意見をお寄せください。皆さまのフィードバックが、このアプリをより良くします。',
+      teaser_label: 'Coming Soon',
+      teaser_title: 'Next Update',
+      teaser_desc: '次のバージョンで、さらに深く。',
+      teaser_feat1_title: '信号伝送の信頼性向上',
+      teaser_feat1_desc: 'パケットロス補償、自動再接続、伝送品質モニタリングを統合。途切れない信号を。',
+      teaser_feat2_title: '信号の記録・再生機能',
+      teaser_feat2_desc: 'DMX信号をキャプチャし、いつでも正確に再生。リハーサル、デバッグ、本番のバックアップに。',
       tech_label: 'Built With',
       tech_title: '技術スタック',
       tech_desc:
@@ -163,6 +170,13 @@
         'ArtNet Manager is an application released by <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> under <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> While we are working toward production-ready software, it is currently in a testing phase and has not been fully verified. The developer assumes no liability for any damages or incidents resulting from the use of this software.',
       disclaimer_p2:
         'We are building a reliable tool rooted in real-world production needs. Please try it out and share your bug reports and feedback. Your input makes this app better.',
+      teaser_label: 'Coming Soon',
+      teaser_title: 'Next Update',
+      teaser_desc: 'Going deeper in the next version.',
+      teaser_feat1_title: 'Enhanced Signal Reliability',
+      teaser_feat1_desc: 'Packet loss compensation, automatic reconnection, and transmission quality monitoring — integrated. Uninterrupted signal delivery.',
+      teaser_feat2_title: 'Signal Recording & Playback',
+      teaser_feat2_desc: 'Capture DMX signals and replay them with precision. For rehearsals, debugging, and live show backup.',
       tech_label: 'Built With',
       tech_title: 'Tech Stack',
       tech_desc: 'A production-ready application built with modern technologies.',
@@ -247,6 +261,13 @@
         'ArtNet Manager ist eine Anwendung, die von <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> unter <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> ver\u00f6ffentlicht wurde. Wir arbeiten auf eine produktionsreife Software hin, sie befindet sich jedoch derzeit in der Testphase und wurde noch nicht vollst\u00e4ndig verifiziert. Der Entwickler \u00fcbernimmt keine Haftung f\u00fcr Sch\u00e4den oder Vorf\u00e4lle, die aus der Nutzung dieser Software resultieren.',
       disclaimer_p2:
         'Wir entwickeln ein zuverl\u00e4ssiges Werkzeug, das auf realen Produktionsanforderungen basiert. Probieren Sie es aus und teilen Sie uns Ihre Fehlerberichte und Ihr Feedback mit. Ihr Input macht diese App besser.',
+      teaser_label: 'Coming Soon',
+      teaser_title: 'Next Update',
+      teaser_desc: 'In der n\u00e4chsten Version noch tiefer.',
+      teaser_feat1_title: 'Verbesserte Signalzuverl\u00e4ssigkeit',
+      teaser_feat1_desc: 'Paketverlust-Kompensation, automatische Wiederverbindung und \u00dcbertragungsqualit\u00e4ts-Monitoring \u2014 integriert. Unterbrechungsfreie Signal\u00fcbertragung.',
+      teaser_feat2_title: 'Signalaufnahme & -wiedergabe',
+      teaser_feat2_desc: 'DMX-Signale aufzeichnen und jederzeit pr\u00e4zise wiedergeben. F\u00fcr Proben, Debugging und Live-Show-Backup.',
       tech_label: 'Built With',
       tech_title: 'Technologie-Stack',
       tech_desc:
@@ -330,6 +351,13 @@
         'ArtNet Manager est une application publi\u00e9e par <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> sous <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> Bien que nous travaillions vers un logiciel pr\u00eat pour la production, il est actuellement en phase de test et n\u2019a pas \u00e9t\u00e9 enti\u00e8rement v\u00e9rifi\u00e9. Le d\u00e9veloppeur d\u00e9cline toute responsabilit\u00e9 pour les dommages ou incidents r\u00e9sultant de l\u2019utilisation de ce logiciel.',
       disclaimer_p2:
         'Nous construisons un outil fiable, ancr\u00e9 dans les besoins r\u00e9els de la production. Essayez-le et partagez vos rapports de bugs et retours. Vos contributions am\u00e9liorent cette application.',
+      teaser_label: 'Coming Soon',
+      teaser_title: 'Next Update',
+      teaser_desc: 'Encore plus loin dans la prochaine version.',
+      teaser_feat1_title: 'Fiabilit\u00e9 de transmission am\u00e9lior\u00e9e',
+      teaser_feat1_desc: 'Compensation de perte de paquets, reconnexion automatique et surveillance de la qualit\u00e9 de transmission \u2014 int\u00e9gr\u00e9s. Un signal sans interruption.',
+      teaser_feat2_title: 'Enregistrement & lecture de signal',
+      teaser_feat2_desc: 'Capturez les signaux DMX et rejouez-les avec pr\u00e9cision. Pour les r\u00e9p\u00e9titions, le d\u00e9bogage et la sauvegarde de spectacles.',
       tech_label: 'Built With',
       tech_title: 'Stack technique',
       tech_desc:
@@ -415,6 +443,13 @@
         'ArtNet Manager es una aplicaci\u00f3n publicada por <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> bajo <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> Aunque trabajamos hacia un software listo para producci\u00f3n, actualmente se encuentra en fase de pruebas y no ha sido completamente verificado. El desarrollador no asume ninguna responsabilidad por da\u00f1os o incidentes derivados del uso de este software.',
       disclaimer_p2:
         'Estamos construyendo una herramienta fiable basada en las necesidades reales de producci\u00f3n. Pru\u00e9balo y comparte tus informes de errores y comentarios. Tu aportaci\u00f3n hace que esta app sea mejor.',
+      teaser_label: 'Coming Soon',
+      teaser_title: 'Next Update',
+      teaser_desc: 'A\u00fan m\u00e1s profundo en la pr\u00f3xima versi\u00f3n.',
+      teaser_feat1_title: 'Fiabilidad de transmisi\u00f3n mejorada',
+      teaser_feat1_desc: 'Compensaci\u00f3n de p\u00e9rdida de paquetes, reconexi\u00f3n autom\u00e1tica y monitorizaci\u00f3n de calidad de transmisi\u00f3n \u2014 integrados. Se\u00f1al ininterrumpida.',
+      teaser_feat2_title: 'Grabaci\u00f3n y reproducci\u00f3n de se\u00f1al',
+      teaser_feat2_desc: 'Captura se\u00f1ales DMX y repr\u00f3ducelas con precisi\u00f3n. Para ensayos, depuraci\u00f3n y respaldo de espect\u00e1culos en vivo.',
       tech_label: 'Built With',
       tech_title: 'Stack tecnol\u00f3gico',
       tech_desc:
@@ -498,6 +533,13 @@
         'ArtNet Manager \u00e8 un\u2019applicazione rilasciata da <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> sotto <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> Sebbene stiamo lavorando a un software pronto per la produzione, \u00e8 attualmente in fase di test e non \u00e8 stato completamente verificato. Lo sviluppatore non si assume alcuna responsabilit\u00e0 per danni o incidenti derivanti dall\u2019uso di questo software.',
       disclaimer_p2:
         'Stiamo costruendo uno strumento affidabile radicato nelle reali esigenze della produzione. Provatelo e condividete le vostre segnalazioni di bug e i vostri feedback. Il vostro contributo rende quest\u2019app migliore.',
+      teaser_label: 'Coming Soon',
+      teaser_title: 'Next Update',
+      teaser_desc: 'Ancora pi\u00f9 a fondo nella prossima versione.',
+      teaser_feat1_title: 'Affidabilit\u00e0 di trasmissione migliorata',
+      teaser_feat1_desc: 'Compensazione perdita pacchetti, riconnessione automatica e monitoraggio qualit\u00e0 di trasmissione \u2014 integrati. Segnale senza interruzioni.',
+      teaser_feat2_title: 'Registrazione e riproduzione del segnale',
+      teaser_feat2_desc: 'Cattura i segnali DMX e riproducili con precisione. Per prove, debug e backup di spettacoli dal vivo.',
       tech_label: 'Built With',
       tech_title: 'Stack tecnologico',
       tech_desc:
@@ -583,6 +625,13 @@
         'ArtNet Manager is een applicatie uitgebracht door <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> onder <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> Hoewel we toewerken naar productierijpe software, bevindt deze zich momenteel in de testfase en is nog niet volledig geverifieerd. De ontwikkelaar aanvaardt geen aansprakelijkheid voor schade of incidenten die voortvloeien uit het gebruik van deze software.',
       disclaimer_p2:
         'We bouwen een betrouwbare tool geworteld in de werkelijke behoeften van de productie. Probeer het uit en deel je bugrapporten en feedback. Jouw bijdrage maakt deze app beter.',
+      teaser_label: 'Coming Soon',
+      teaser_title: 'Next Update',
+      teaser_desc: 'Nog dieper in de volgende versie.',
+      teaser_feat1_title: 'Verbeterde signaalbetrouwbaarheid',
+      teaser_feat1_desc: 'Pakketverliescompensatie, automatische herverbinding en transmissiekwaliteitsbewaking \u2014 ge\u00efntegreerd. Ononderbroken signaaltransmissie.',
+      teaser_feat2_title: 'Signaalopname & -weergave',
+      teaser_feat2_desc: 'Leg DMX-signalen vast en speel ze nauwkeurig af. Voor repetities, debugging en live-show back-up.',
       tech_label: 'Built With',
       tech_title: 'Technologie-stack',
       tech_desc:
@@ -666,6 +715,13 @@
         'ArtNet Manager \u00e9 uma aplica\u00e7\u00e3o lan\u00e7ada por <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> sob <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> Embora estejamos a trabalhar para um software pronto para produ\u00e7\u00e3o, encontra-se atualmente em fase de testes e n\u00e3o foi totalmente verificado. O desenvolvedor n\u00e3o assume qualquer responsabilidade por danos ou incidentes resultantes do uso deste software.',
       disclaimer_p2:
         'Estamos a construir uma ferramenta fi\u00e1vel baseada nas necessidades reais da produ\u00e7\u00e3o. Experimente e partilhe os seus relat\u00f3rios de bugs e feedback. A sua contribui\u00e7\u00e3o torna esta app melhor.',
+      teaser_label: 'Coming Soon',
+      teaser_title: 'Next Update',
+      teaser_desc: 'Ainda mais fundo na pr\u00f3xima vers\u00e3o.',
+      teaser_feat1_title: 'Fiabilidade de transmiss\u00e3o melhorada',
+      teaser_feat1_desc: 'Compensa\u00e7\u00e3o de perda de pacotes, reconex\u00e3o autom\u00e1tica e monitoriza\u00e7\u00e3o da qualidade de transmiss\u00e3o \u2014 integrados. Sinal ininterrupto.',
+      teaser_feat2_title: 'Grava\u00e7\u00e3o e reprodu\u00e7\u00e3o de sinal',
+      teaser_feat2_desc: 'Capture sinais DMX e reproduza-os com precis\u00e3o. Para ensaios, depura\u00e7\u00e3o e backup de espet\u00e1culos ao vivo.',
       tech_label: 'Built With',
       tech_title: 'Stack tecnol\u00f3gico',
       tech_desc:
@@ -749,6 +805,13 @@
         'ArtNet Manager\ub294 <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> \ud558\uc5d0 <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a>\uc774 \ubc30\ud3ec\ud55c \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc785\ub2c8\ub2e4. \ud504\ub85c\ub355\uc158 \ub808\ub514 \uc18c\ud504\ud2b8\uc6e8\uc5b4\ub97c \ubaa9\ud45c\ub85c \uac1c\ubc1c \uc911\uc774\ub098, \ud604\uc7ac \ud14c\uc2a4\ud2b8 \ub2e8\uacc4\ub85c \ub3d9\uc791\uc774 \uc644\uc804\ud788 \uac80\uc99d\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4. \ubcf8 \uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc0ac\uc6a9\uc73c\ub85c \uc778\ud55c \uc5b4\ub5a0\ud55c \uc190\ud574\ub098 \uc0ac\uace0\uc5d0 \ub300\ud574\uc11c\ub3c4 \uac1c\ubc1c\uc790\ub294 \ucc45\uc784\uc744 \uc9c0\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.',
       disclaimer_p2:
         '\ud604\uc7a5\uc5d0 \uadfc\uac70\ud55c \uc2e0\ub8b0\uc131 \ub192\uc740 \ud234\uc744 \ubaa9\ud45c\ub85c \ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4. \uc2e4\uc81c\ub85c \uc0ac\uc6a9\ud574 \ubcf4\uc2dc\uace0 \ubc84\uadf8 \ub9ac\ud3ec\ud2b8\ub098 \uc758\uacac\uc744 \ubcf4\ub0b4\uc8fc\uc138\uc694. \uc5ec\ub7ec\ubd84\uc758 \ud53c\ub4dc\ubc31\uc774 \uc774 \uc571\uc744 \ub354 \uc88b\uac8c \ub9cc\ub4ed\ub2c8\ub2e4.',
+      teaser_label: 'Coming Soon',
+      teaser_title: 'Next Update',
+      teaser_desc: '\ub2e4\uc74c \ubc84\uc804\uc5d0\uc11c \ub354 \uae4a\uc774.',
+      teaser_feat1_title: '\uc2e0\ud638 \uc804\uc1a1 \uc2e0\ub8b0\uc131 \ud5a5\uc0c1',
+      teaser_feat1_desc: '\ud328\ud0b7 \uc190\uc2e4 \ubcf4\uc0c1, \uc790\ub3d9 \uc7ac\uc5f0\uacb0, \uc804\uc1a1 \ud488\uc9c8 \ubaa8\ub2c8\ud130\ub9c1\uc744 \ud1b5\ud569. \ub04a\uae40 \uc5c6\ub294 \uc2e0\ud638\ub97c.',
+      teaser_feat2_title: '\uc2e0\ud638 \ub179\ud654 \ubc0f \uc7ac\uc0dd \uae30\ub2a5',
+      teaser_feat2_desc: 'DMX \uc2e0\ud638\ub97c \uce90\ucc98\ud558\uace0 \uc5b8\uc81c\ub4e0 \uc815\ud655\ud558\uac8c \uc7ac\uc0dd. \ub9ac\ud5c8\uc124, \ub514\ubc84\uae45, \ub77c\uc774\ube0c \uc1fc \ubc31\uc5c5\uc5d0.',
       tech_label: 'Built With',
       tech_title: '\uae30\uc220 \uc2a4\ud0dd',
       tech_desc:
@@ -832,6 +895,13 @@
         'ArtNet Manager \u662f\u7531 <a href="https://github.com/llcheesell" target="_blank" rel="noopener">llcheesell</a> \u5728 <a href="https://moov-stud.io" target="_blank" rel="noopener">MOOV by Composition Inc.</a> \u65d7\u4e0b\u53d1\u5e03\u7684\u5e94\u7528\u7a0b\u5e8f\u3002\u6211\u4eec\u6b63\u5728\u671d\u7740\u751f\u4ea7\u5c31\u7eea\u7684\u8f6f\u4ef6\u52aa\u529b\uff0c\u4f46\u76ee\u524d\u5904\u4e8e\u6d4b\u8bd5\u9636\u6bb5\uff0c\u5c1a\u672a\u5b8c\u6210\u5168\u9762\u9a8c\u8bc1\u3002\u5f00\u53d1\u8005\u4e0d\u5bf9\u56e0\u4f7f\u7528\u672c\u8f6f\u4ef6\u800c\u5f15\u8d77\u7684\u4efb\u4f55\u635f\u5bb3\u6216\u4e8b\u6545\u627f\u62c5\u8d23\u4efb\u3002',
       disclaimer_p2:
         '\u6211\u4eec\u81f4\u529b\u4e8e\u6253\u9020\u4e00\u6b3e\u690d\u6839\u4e8e\u73b0\u573a\u5b9e\u9645\u9700\u6c42\u7684\u53ef\u9760\u5de5\u5177\u3002\u8bf7\u5c1d\u8bd5\u4f7f\u7528\u5e76\u5206\u4eab\u60a8\u7684 Bug \u62a5\u544a\u548c\u53cd\u9988\u3002\u60a8\u7684\u53cd\u9988\u8ba9\u8fd9\u6b3e\u5e94\u7528\u66f4\u597d\u3002',
+      teaser_label: 'Coming Soon',
+      teaser_title: 'Next Update',
+      teaser_desc: '\u4e0b\u4e00\u7248\u672c\uff0c\u66f4\u8fdb\u4e00\u6b65\u3002',
+      teaser_feat1_title: '\u4fe1\u53f7\u4f20\u8f93\u53ef\u9760\u6027\u63d0\u5347',
+      teaser_feat1_desc: '\u4e22\u5305\u8865\u507f\u3001\u81ea\u52a8\u91cd\u8fde\u3001\u4f20\u8f93\u8d28\u91cf\u76d1\u63a7 \u2014 \u4e00\u4f53\u5316\u96c6\u6210\u3002\u4fe1\u53f7\u6c38\u4e0d\u4e2d\u65ad\u3002',
+      teaser_feat2_title: '\u4fe1\u53f7\u5f55\u5236\u4e0e\u56de\u653e',
+      teaser_feat2_desc: '\u6355\u83b7 DMX \u4fe1\u53f7\u5e76\u7cbe\u786e\u56de\u653e\u3002\u7528\u4e8e\u5f69\u6392\u3001\u8c03\u8bd5\u548c\u73b0\u573a\u6f14\u51fa\u5907\u4efd\u3002',
       tech_label: 'Built With',
       tech_title: '\u6280\u672f\u6808',
       tech_desc:
