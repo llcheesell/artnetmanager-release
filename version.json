@@ -1,0 +1,62 @@
+{
+  "version": "2.7.6",
+  "downloadUrl": "https://llcheesell.github.io/artnetmanager-release/",
+  "releaseNotes": "About dialog, version check, bug report & feature request",
+  "history": [
+    {
+      "version": "2.7.6",
+      "date": "2026-03-21",
+      "notes": "Update distribution URLs"
+    },
+    {
+      "version": "2.7.5",
+      "date": "2026-03-21",
+      "notes": "About dialog, version check, bug report & feature request"
+    },
+    {
+      "version": "2.7.4",
+      "date": "2026-03-21",
+      "notes": "Interactive tooltips, split-brain prevention on double promote"
+    },
+    {
+      "version": "2.7.3",
+      "date": "2026-03-21",
+      "notes": "Manual Promote to PRIMARY button for cluster"
+    },
+    {
+      "version": "2.7.2",
+      "date": "2026-03-21",
+      "notes": "Reduce GC pressure and allocations on frame hot path"
+    },
+    {
+      "version": "2.7.0",
+      "date": "2026-03-21",
+      "notes": "Integrate Signal Checker as built-in mini-app"
+    },
+    {
+      "version": "2.6.1",
+      "date": "2026-03-21",
+      "notes": "Version bump and versioning rules"
+    },
+    {
+      "version": "2.5.0",
+      "date": "2026-03-20",
+      "notes": "Signal recording and player mode"
+    },
+    {
+      "version": "2.2.0",
+      "date": "2026-03-20",
+      "notes": "ArtNet routing reliability improvements"
+    },
+    {
+      "version": "2.1.0",
+      "date": "2026-03-20",
+      "notes": "Reliability improvements, IPC race condition fix"
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-03-19",
+      "notes": "Merge engine, multi-NIC, display formats, guardian mode"
+    }
+  ]
+}
