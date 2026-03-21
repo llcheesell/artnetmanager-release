@@ -1,8 +1,13 @@
 {
-  "version": "2.7.6",
+  "version": "2.7.12",
   "downloadUrl": "https://llcheesell.github.io/artnetmanager-release/",
-  "releaseNotes": "About dialog, version check, bug report & feature request",
+  "releaseNotes": "Signal recording & playback, performance optimization, cluster promote, diagnostic reports",
   "history": [
+    {
+      "version": "2.7.12",
+      "date": "2026-03-22",
+      "notes": "Signal recording/playback, SignalFlow performance (batch draw, simplified mode), cluster promote with split-brain prevention, About/version check, diagnostic snapshot for bug reports, enriched startup logs, documentation update"
+    },
     {
       "version": "2.7.6",
       "date": "2026-03-21",
