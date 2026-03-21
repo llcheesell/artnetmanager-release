@@ -36,7 +36,12 @@
 
 <!-- ===== Hero ===== -->
 <section id="hero">
-  <div class="container">
+  <!-- Animated channel grid background -->
+  <div class="hero-canvas-bg">
+    <canvas id="heroGridCanvas"></canvas>
+  </div>
+
+  <div class="hero-content container">
     <img src="images/icon.png" alt="" class="hero-icon animate-in" width="80" height="80">
 
     <h1 class="hero-title animate-in delay-1">
@@ -60,19 +65,6 @@
         <span data-i18n="hero_download_btn">Download v2.7.12</span>
       </a>
     </div>
-
-    <!-- Hero Screenshot -->
-    <div class="hero-screenshot animate-in delay-4">
-      <div class="hero-screenshot-frame">
-        <div class="hero-screenshot-titlebar">
-          <span class="hero-screenshot-dot" style="background:#ff5f57"></span>
-          <span class="hero-screenshot-dot" style="background:#febc2e"></span>
-          <span class="hero-screenshot-dot" style="background:#28c840"></span>
-          <span class="hero-screenshot-title">ArtNet Manager</span>
-        </div>
-        <img src="screenshots/screenshot-recording.png" alt="ArtNet Manager - Dashboard with Recording" class="hero-screenshot-img">
-      </div>
-    </div>
   </div>
 </section>
 
@@ -91,20 +83,36 @@
       </div>
       <div class="pillar-visual">
         <div class="pillar-screenshot-bg" style="background-image:url(screenshots/screenshot-dashboard-2.png)"></div>
-        <div class="pillar-crops">
-          <!-- Crop: Dashboard stats bar -->
-          <div class="pillar-crop pillar-crop-main">
-            <img src="screenshots/screenshot-dashboard-2.png" alt="Dashboard stats" loading="lazy"
-                 style="object-position: 15% 8%;">
+        <div class="pillar-crops pillar-crops--routing">
+          <div class="pillar-crop crop-main">
+            <img src="screenshots/screenshot-dashboard-2.png" alt="" loading="lazy"
+                 style="object-position: 15% 12%;">
           </div>
-          <!-- Crop: Forwarding destinations -->
-          <div class="pillar-crop pillar-crop-sub">
-            <img src="screenshots/screenshot-forwarding.png" alt="Forwarding config" loading="lazy"
-                 style="object-position: 50% 15%;">
+          <div class="pillar-crop crop-sub1">
+            <img src="screenshots/screenshot-forwarding.png" alt="" loading="lazy"
+                 style="object-position: 50% 20%;">
+          </div>
+          <div class="pillar-crop crop-sub2">
+            <img src="screenshots/screenshot-cluster-promote.png" alt="" loading="lazy"
+                 style="object-position: 50% 50%;">
           </div>
         </div>
       </div>
     </div>
+
+  </div>
+</section>
+
+<!-- ===== Canvas Separator: Signal Flow ===== -->
+<section id="canvas-flow" class="canvas-section">
+  <div class="canvas-container">
+    <canvas id="signalFlowCanvas"></canvas>
+  </div>
+</section>
+
+<!-- ===== Pillar 2 & 3 ===== -->
+<section id="hero-features-2" style="padding-top:0;">
+  <div class="container">
 
     <!-- Pillar 2: Record & Playback -->
     <div class="pillar pillar-reverse">
@@ -117,16 +125,22 @@
       </div>
       <div class="pillar-visual">
         <div class="pillar-screenshot-bg" style="background-image:url(screenshots/screenshot-recording.png)"></div>
-        <div class="pillar-crops">
-          <!-- Crop: Recording indicator & stats -->
-          <div class="pillar-crop pillar-crop-main">
-            <img src="screenshots/screenshot-recording.png" alt="Recording in progress" loading="lazy"
-                 style="object-position: 25% 5%;">
+        <div class="pillar-crops pillar-crops--recording">
+          <div class="pillar-crop crop-sub1">
+            <img src="screenshots/screenshot-recording.png" alt="" loading="lazy"
+                 style="object-position: 20% 4%;">
           </div>
-          <!-- Crop: Player transport -->
-          <div class="pillar-crop pillar-crop-sub">
-            <img src="screenshots/screenshot-player.png" alt="Player transport controls" loading="lazy"
-                 style="object-position: 35% 5%;">
+          <div class="pillar-crop crop-sub2">
+            <img src="screenshots/screenshot-player.png" alt="" loading="lazy"
+                 style="object-position: 10% 80%;">
+          </div>
+          <div class="pillar-crop crop-sub3">
+            <img src="screenshots/screenshot-recording.png" alt="" loading="lazy"
+                 style="object-position: 0% 100%;">
+          </div>
+          <div class="pillar-crop crop-main">
+            <img src="screenshots/screenshot-player.png" alt="" loading="lazy"
+                 style="object-position: 35% 6%;">
           </div>
         </div>
       </div>
@@ -143,16 +157,18 @@
       </div>
       <div class="pillar-visual">
         <div class="pillar-screenshot-bg" style="background-image:url(screenshots/screenshot-signal-flow.png)"></div>
-        <div class="pillar-crops">
-          <!-- Crop: Signal flow center -->
-          <div class="pillar-crop pillar-crop-main">
-            <img src="screenshots/screenshot-signal-flow.png" alt="Signal Flow" loading="lazy"
-                 style="object-position: 50% 40%;">
+        <div class="pillar-crops pillar-crops--viz">
+          <div class="pillar-crop crop-main">
+            <img src="screenshots/screenshot-signal-flow.png" alt="" loading="lazy"
+                 style="object-position: 45% 35%;">
           </div>
-          <!-- Crop: Universe grid -->
-          <div class="pillar-crop pillar-crop-sub">
-            <img src="screenshots/screenshot-universes.png" alt="Universe grid" loading="lazy"
-                 style="object-position: 50% 30%;">
+          <div class="pillar-crop crop-sub1">
+            <img src="screenshots/screenshot-universes.png" alt="" loading="lazy"
+                 style="object-position: 50% 25%;">
+          </div>
+          <div class="pillar-crop crop-sub2">
+            <img src="screenshots/screenshot-signalflow-simplified.png" alt="" loading="lazy"
+                 style="object-position: 40% 50%;">
           </div>
         </div>
       </div>
@@ -165,8 +181,8 @@
 <section id="features">
   <div class="container">
     <div style="text-align:center;">
-      <span class="section-label" data-i18n="features_label">More Features</span>
-      <h2 data-i18n="features_title">さらに、充実の機能</h2>
+      <span class="section-label" data-i18n="features_label">Features</span>
+      <h2 data-i18n="features_title">現場で必要なもの、揃ってます</h2>
     </div>
 
     <div class="feature-grid">
@@ -200,7 +216,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
         <h3 data-i18n="feat_cluster_title">PRIMARY-STANDBY バックアップ</h3>
-        <p data-i18n="feat_cluster_desc">複数インスタンスで冗長構成。自動リーダー選出とヘルスモニタリングで、ダウンタイムゼロのフェイルオーバーを実現。手動 Promote にも対応。</p>
+        <p data-i18n="feat_cluster_desc">複数インスタンスで冗長構成。自動リーダー選出とヘルスモニタリングで、ダウンタイムゼロのフェイルオーバーを実現。権限の移譲も簡単。ノード間の設定同期にも対応。</p>
       </div>
       <!-- Dual Protocol -->
       <div class="feature-card">
@@ -260,9 +276,7 @@
             <img class="gallery-panel"        src="screenshots/screenshot-discovery.png"   alt="Device Discovery">
           </div>
         </div>
-        <p class="gallery-caption" id="galleryCaption">
-          11ユニバース・451pps を監視中。REC 録画中のダッシュボード画面。
-        </p>
+        <p class="gallery-caption" id="galleryCaption"></p>
       </div>
     </div>
   </div>
@@ -278,27 +292,22 @@
     </p>
 
     <div class="download-grid">
-      <!-- Windows -->
       <div class="download-card">
         <div class="platform-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--cyan)"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
         </div>
         <h3 data-i18n="dl_win">Windows</h3>
         <p class="version">v2.7.12 &middot; Installer (.exe)</p>
-        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.7.12/ArtNet.Manager.Setup.2.7.12.exe" class="btn btn-primary" id="download-win-setup" data-i18n="dl_btn">Download</a>
+        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.7.12/ArtNet.Manager.Setup.2.7.12.exe" class="btn btn-primary" data-i18n="dl_btn">Download</a>
       </div>
-
-      <!-- Windows Portable -->
       <div class="download-card">
         <div class="platform-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--violet)"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
         </div>
         <h3 data-i18n="dl_win_portable">Windows Portable</h3>
         <p class="version">v2.7.12 &middot; Portable (.exe)</p>
-        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.7.12/ArtNet.Manager.2.7.12.exe" class="btn btn-secondary" id="download-win-portable" data-i18n="dl_btn">Download</a>
+        <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.7.12/ArtNet.Manager.2.7.12.exe" class="btn btn-secondary" data-i18n="dl_btn">Download</a>
       </div>
-
-      <!-- macOS -->
       <div class="download-card mac-download-card">
         <div class="platform-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--text-secondary)"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -306,7 +315,7 @@
         <h3 data-i18n="dl_mac">macOS (Apple Silicon)</h3>
         <p class="version">v2.7.12 &middot; DMG (.dmg)</p>
         <div class="mac-btn-wrap">
-          <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.7.12/ArtNet.Manager-2.7.12-arm64.dmg" class="btn btn-secondary" id="download-mac" data-i18n="dl_btn">Download</a>
+          <a href="https://github.com/llcheesell/artnetmanager-release/releases/download/v2.7.12/ArtNet.Manager-2.7.12-arm64.dmg" class="btn btn-secondary" data-i18n="dl_btn">Download</a>
           <div class="mac-adp-tooltip" role="tooltip">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             <span data-i18n="mac_adp_notice">このアプリはADP申請中です。認可されるまでの間はコマンドラインでの許可が必要です。</span>
@@ -330,12 +339,26 @@
   </div>
 </section>
 
+<!-- ===== Feedback ===== -->
+<section id="feedback">
+  <div class="container" style="text-align:center;">
+    <span class="section-label" data-i18n="feedback_label">Feedback</span>
+    <h2 data-i18n="feedback_title">フィードバックをお寄せください</h2>
+    <p class="section-desc" data-i18n="feedback_desc">
+      バグ報告や機能リクエストはこちらから。開発の参考にさせていただきます。
+    </p>
+    <a href="https://compinc.notion.site/32a074df2ed580969875d28a5f3779e7?pvs=105"
+       class="btn btn-secondary" target="_blank" rel="noopener" data-i18n="feedback_btn">
+      バグ報告・機能リクエスト
+    </a>
+  </div>
+</section>
+
 <!-- ===== Tech Stack ===== -->
 <section id="tech">
   <div class="container">
     <span class="section-label" data-i18n="tech_label">Built With</span>
     <h2 data-i18n="tech_title">技術スタック</h2>
-
     <div class="tech-grid">
       <div class="tech-item">
         <div class="tech-logo">
@@ -393,6 +416,301 @@
 <!-- ===== i18n ===== -->
 <script src="js/i18n.js"></script>
 
+<!-- ===== Hero Channel Grid Canvas ===== -->
+<script>
+(function() {
+  var canvas = document.getElementById('heroGridCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W, H, dpr;
+
+  function resize() {
+    var rect = canvas.parentElement.getBoundingClientRect();
+    dpr = window.devicePixelRatio || 1;
+    W = rect.width; H = rect.height;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  var COLS = 48, ROWS = 20;
+  var cells = [];
+  for (var i = 0; i < COLS * ROWS; i++) {
+    cells.push({ value: 0, target: 0 });
+  }
+
+  var patterns = [
+    { start: 0, count: 96, style: 'chase' },
+    { start: 120, count: 72, style: 'rgb' },
+    { start: 240, count: 160, style: 'sparkle' },
+    { start: 500, count: 120, style: 'warm' },
+  ];
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  function valueToColor(v) {
+    if (v < 3) return 'rgba(23,23,23,0.4)';
+    var t = v / 255;
+    var r, g, b;
+    if (t < 0.5) {
+      var s = t * 2;
+      r = lerp(10, 30, s); g = lerp(20, 140, s); b = lerp(60, 220, s);
+    } else {
+      var s2 = (t - 0.5) * 2;
+      r = lerp(30, 180, s2); g = lerp(140, 200, s2); b = lerp(220, 255, s2);
+    }
+    return 'rgba(' + Math.round(r) + ',' + Math.round(g) + ',' + Math.round(b) + ',0.6)';
+  }
+
+  var time = 0;
+  var running = true;
+
+  var observer = new IntersectionObserver(function(entries) {
+    running = entries[0].isIntersecting;
+    if (running) animate();
+  }, { threshold: 0.05 });
+  observer.observe(canvas.parentElement);
+
+  function animate() {
+    if (!running) return;
+    time += 0.015;
+
+    var total = COLS * ROWS;
+    patterns.forEach(function(p) {
+      for (var j = 0; j < p.count; j++) {
+        var idx = (p.start + j) % total;
+        var val = 0;
+        switch (p.style) {
+          case 'chase':
+            val = Math.max(0, Math.sin((j / p.count) * Math.PI * 4 - time * 2) * 255);
+            break;
+          case 'rgb':
+            if (j % 3 === 0) val = Math.sin(time * 0.7) * 127 + 128;
+            else if (j % 3 === 1) val = Math.sin(time * 0.7 + 2.1) * 127 + 128;
+            else val = Math.sin(time * 0.7 + 4.2) * 127 + 128;
+            break;
+          case 'sparkle':
+            val = Math.random() > 0.88 ? Math.random() * 255 : cells[idx].value * 0.93;
+            break;
+          case 'warm':
+            val = 60 + Math.sin(time * 0.3 + j * 0.08) * 35;
+            break;
+        }
+        cells[idx].target = Math.max(0, Math.min(255, val));
+      }
+    });
+
+    ctx.clearRect(0, 0, W, H);
+    var gap = 1;
+    var cellW = (W - (COLS + 1) * gap) / COLS;
+    var cellH = (H - (ROWS + 1) * gap) / ROWS;
+
+    for (var i = 0; i < total; i++) {
+      cells[i].value = lerp(cells[i].value, cells[i].target, 0.12);
+      var col = i % COLS;
+      var row = Math.floor(i / COLS);
+      var x = gap + col * (cellW + gap);
+      var y = gap + row * (cellH + gap);
+      ctx.fillStyle = valueToColor(cells[i].value);
+      ctx.fillRect(x, y, cellW, cellH);
+    }
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script>
+
+<!-- ===== Signal Flow Canvas ===== -->
+<script>
+(function() {
+  var canvas = document.getElementById('signalFlowCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+
+  function resize() {
+    var rect = canvas.parentElement.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    W = rect.width; H = rect.height;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  var CYAN = '#22d3ee', EMERALD = '#34d399', ORANGE = '#f97316', VIOLET = '#a78bfa';
+
+  var cols = [
+    { label: 'SOURCES', xr: 0.12, nodes: [
+      { label: '192.168.1.10', color: CYAN },
+      { label: '192.168.1.20', color: CYAN },
+      { label: '10.0.0.100', color: VIOLET }
+    ]},
+    { label: 'UNIVERSES', xr: 0.5, nodes: [
+      { label: 'Uni 0:0:0', color: EMERALD },
+      { label: 'Uni 0:0:1', color: EMERALD },
+      { label: 'Uni 0:0:2', color: EMERALD },
+      { label: 'Uni 0:0:3', color: EMERALD }
+    ]},
+    { label: 'DESTINATIONS', xr: 0.88, nodes: [
+      { label: 'Stage Set', color: ORANGE },
+      { label: 'Virtual Prod', color: ORANGE },
+      { label: 'Backup', color: ORANGE }
+    ]}
+  ];
+
+  var links = [
+    [0,0, 1,0], [0,0, 1,1],
+    [0,1, 1,1], [0,1, 1,2],
+    [0,2, 1,2], [0,2, 1,3],
+    [1,0, 2,0], [1,1, 2,0], [1,1, 2,1],
+    [1,2, 2,1], [1,3, 2,2]
+  ];
+
+  var allParticles = [];
+  links.forEach(function(_, li) {
+    for (var i = 0; i < 4; i++) {
+      allParticles.push({ li: li, t: i / 4, speed: 0.0012 + Math.random() * 0.0018 });
+    }
+  });
+
+  var NW, NH = 24;
+
+  function nodePos(ci, ni) {
+    var col = cols[ci];
+    var n = col.nodes.length;
+    var gap = 10, labelGap = 22;
+    var totalH = labelGap + n * NH + (n - 1) * gap;
+    var top = (H - totalH) / 2;
+    return { x: col.xr * W, y: top + labelGap + ni * (NH + gap) + NH / 2 };
+  }
+
+  function labelY(ci) {
+    var n = cols[ci].nodes.length;
+    var gap = 10, labelGap = 22;
+    var totalH = labelGap + n * NH + (n - 1) * gap;
+    return (H - totalH) / 2 + 6;
+  }
+
+  function cubicPt(p0, p1, t) {
+    var dx = p1.x - p0.x;
+    var c1x = p0.x + dx * 0.4, c1y = p0.y;
+    var c2x = p1.x - dx * 0.4, c2y = p1.y;
+    var mt = 1 - t;
+    return {
+      x: mt*mt*mt*p0.x + 3*mt*mt*t*c1x + 3*mt*t*t*c2x + t*t*t*p1.x,
+      y: mt*mt*mt*p0.y + 3*mt*mt*t*c1y + 3*mt*t*t*c2y + t*t*t*p1.y
+    };
+  }
+
+  var running = true;
+  var observer = new IntersectionObserver(function(entries) {
+    running = entries[0].isIntersecting;
+    if (running) draw();
+  }, { threshold: 0.05 });
+  observer.observe(canvas.parentElement);
+
+  function draw() {
+    if (!running) return;
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = '#06060a';
+    ctx.fillRect(0, 0, W, H);
+    NW = Math.min(100, W * 0.18);
+
+    // Ambient glow behind universes
+    var grd = ctx.createRadialGradient(W * 0.5, H * 0.5, 0, W * 0.5, H * 0.5, H * 0.6);
+    grd.addColorStop(0, 'rgba(34, 211, 238, 0.03)');
+    grd.addColorStop(1, 'transparent');
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, W, H);
+
+    // Draw links
+    links.forEach(function(lk) {
+      var from = nodePos(lk[0], lk[1]);
+      var to = nodePos(lk[2], lk[3]);
+      var f = { x: from.x + NW/2, y: from.y };
+      var t = { x: to.x - NW/2, y: to.y };
+      var adx = t.x - f.x;
+      ctx.beginPath();
+      ctx.moveTo(f.x, f.y);
+      ctx.bezierCurveTo(f.x + adx * 0.4, f.y, t.x - adx * 0.4, t.y, t.x, t.y);
+      ctx.strokeStyle = cols[lk[0]].nodes[lk[1]].color;
+      ctx.globalAlpha = 0.1;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    });
+
+    // Draw particles
+    allParticles.forEach(function(p) {
+      var lk = links[p.li];
+      var from = nodePos(lk[0], lk[1]);
+      var to = nodePos(lk[2], lk[3]);
+      var f = { x: from.x + NW/2, y: from.y };
+      var t = { x: to.x - NW/2, y: to.y };
+      var pos = cubicPt(f, t, p.t);
+      var color = cols[lk[0]].nodes[lk[1]].color;
+
+      ctx.beginPath();
+      ctx.arc(pos.x, pos.y, 6, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.globalAlpha = 0.06;
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(pos.x, pos.y, 2, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.globalAlpha = 0.8;
+      ctx.fill();
+      ctx.globalAlpha = 1;
+
+      p.t += p.speed;
+      if (p.t > 1) p.t = 0;
+    });
+
+    // Column headers
+    ctx.font = '500 8px Inter, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    cols.forEach(function(col, ci) {
+      ctx.fillStyle = '#3f3f50';
+      ctx.fillText(col.label, col.xr * W, labelY(ci));
+    });
+
+    // Nodes
+    cols.forEach(function(col, ci) {
+      col.nodes.forEach(function(node, ni) {
+        var pos = nodePos(ci, ni);
+        var rx = pos.x - NW/2, ry = pos.y - NH/2;
+
+        ctx.beginPath();
+        ctx.roundRect(rx, ry, NW, NH, 5);
+        ctx.fillStyle = '#131316';
+        ctx.fill();
+
+        ctx.fillStyle = node.color;
+        ctx.globalAlpha = 0.6;
+        ctx.fillRect(rx, ry + 4, 2.5, NH - 8);
+        ctx.globalAlpha = 1;
+
+        ctx.fillStyle = node.color;
+        ctx.font = '9px "JetBrains Mono", monospace';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(node.label, pos.x + 2, pos.y);
+      });
+    });
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+
 <!-- ===== Gallery JS ===== -->
 <script>
 (function() {
@@ -428,7 +746,7 @@
     tab.addEventListener('click', function() { activate(idx); });
   });
 
-  // Set initial caption in correct language (after i18n sets lang)
+  // Set initial caption after i18n sets the lang attribute
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() { setTimeout(function(){ activate(0); }, 0); });
   } else {
