@@ -55,12 +55,15 @@
       <li><a href="#device-discovery" data-i18n="toc_devices">Device Discovery</a></li>
       <li><a href="#forwarding" data-i18n="toc_forwarding">Forwarding</a></li>
       <li><a href="#signal-flow" data-i18n="toc_signalflow">Signal Flow</a></li>
+      <li><a href="#recording">Recording &amp; Playback</a></li>
+      <li><a href="#signal-checker">Signal Checker</a></li>
       <li><a href="#settings" data-i18n="toc_settings">Settings</a></li>
       <li class="toc-divider"></li>
       <li><a href="#merge-engine" data-i18n="toc_merge">Merge Engine</a></li>
       <li><a href="#multi-nic" data-i18n="toc_multinic">Multi-NIC</a></li>
       <li><a href="#cluster" data-i18n="toc_cluster">Cluster / Redundancy</a></li>
       <li><a href="#guardian" data-i18n="toc_guardian">Guardian Mode</a></li>
+      <li><a href="#about-feedback">About &amp; Feedback</a></li>
       <li class="toc-divider"></li>
       <li><a href="#troubleshooting" data-i18n="toc_troubleshooting">Troubleshooting</a></li>
     </ul>
@@ -90,6 +93,9 @@
           <tr><td data-i18n="s1_f6_name">Merge</td><td data-i18n="s1_f6_desc">Merge signals from multiple sources using HTP/LTP/Priority modes</td></tr>
           <tr><td data-i18n="s1_f7_name">Redundancy</td><td data-i18n="s1_f7_desc">Automatic PRIMARY/STANDBY failover via clustering</td></tr>
           <tr><td data-i18n="s1_f8_name">Auto-Restart</td><td data-i18n="s1_f8_desc">Guardian mode automatically recovers from crashes or accidental termination</td></tr>
+          <tr><td>Signal Recording</td><td>Record and play back DMX signals in ANMR binary format</td></tr>
+          <tr><td>Signal Checker</td><td>Built-in test signal generator with 12 patterns</td></tr>
+          <tr><td>Bug Report</td><td>One-click diagnostic snapshot for issue triage</td></tr>
         </tbody>
       </table>
 
@@ -367,6 +373,111 @@
         <li data-i18n="s7_interact1">Drag nodes to adjust their position</li>
         <li data-i18n="s7_interact2">Hover over a node to highlight related connections</li>
       </ul>
+
+      <h3>Simplified Mode (50+ Universes)</h3>
+      <p>When the universe count exceeds the threshold (default: 50), Signal Flow automatically switches to a simplified view:</p>
+      <ul>
+        <li>Individual universe nodes are replaced by a single aggregated node showing the total count, active universes, and total packet rate</li>
+        <li>Connections collapse from hundreds of lines to a few Source → Aggregate → Destination connections</li>
+        <li>This maintains smooth 60fps rendering even with 90+ universes</li>
+      </ul>
+      <p>The threshold is configurable via the <strong>Simplify ≥ N uni</strong> input in the Signal Flow header.</p>
+    </section>
+
+    <!-- ===== Recording & Playback ===== -->
+    <section class="manual-section" id="recording">
+      <h2>Recording &amp; Playback</h2>
+      <p>Record live DMX signals and play them back through configured forwarding destinations.</p>
+
+      <h3>Recording</h3>
+      <ol class="steps">
+        <li>Click the <strong>REC</strong> button in the header to start recording all active universes.</li>
+        <li>A pulsing red <strong>REC</strong> overlay appears indicating recording is in progress.</li>
+        <li>The REC tooltip shows real-time stats: duration, frame count, dropped frames, and file size.</li>
+        <li>Click <strong>STOP</strong> to finish recording. The file is saved as an <code>.anmr</code> file in the configured recording directory.</li>
+      </ol>
+
+      <div class="info-card tip">
+        <div class="info-label">TIP</div>
+        <p>Recording runs in a dedicated Worker Thread to prevent any impact on signal reception and forwarding performance.</p>
+      </div>
+
+      <h3>ANMR File Format</h3>
+      <p>ArtNet Manager uses a custom binary format (<code>.anmr</code>) optimized for DMX signal recording:</p>
+      <ul>
+        <li><strong>Delta compression</strong> — Only changed channels are stored, dramatically reducing file size</li>
+        <li><strong>Seek index</strong> — One entry per second for fast navigation</li>
+        <li><strong>Multi-universe</strong> — All active universes recorded simultaneously</li>
+        <li><strong>Frame-accurate timestamps</strong> — Millisecond precision relative to recording start</li>
+      </ul>
+
+      <h3>Player Mode</h3>
+      <ol class="steps">
+        <li>Switch to <strong>Player Mode</strong> using the mode switch in the header.</li>
+        <li>Open an <code>.anmr</code> file from the file browser.</li>
+        <li>Use the transport controls: <strong>Play</strong>, <strong>Pause</strong>, <strong>Stop</strong>, and the seek bar.</li>
+        <li>Enable <strong>Repeat</strong> to loop playback continuously.</li>
+      </ol>
+      <p>During playback, recorded signals are forwarded through all configured and enabled forwarding destinations, just like live signals.</p>
+
+      <div class="info-card warning">
+        <div class="info-label">IMPORTANT</div>
+        <p>Switching to Player Mode stops live signal reception. Switching back to Normal Mode resumes live reception. A confirmation dialog appears if recording is in progress.</p>
+      </div>
+
+      <h3>Recording Settings</h3>
+      <p>Configure the recording output directory in the Settings page under the Recording section. The default location is <code>~/Documents/ArtNet Manager Recordings/</code>.</p>
+    </section>
+
+    <!-- ===== Signal Checker ===== -->
+    <section class="manual-section" id="signal-checker">
+      <h2>Signal Checker</h2>
+      <p>A built-in test signal generator for verifying Art-Net/sACN signal paths without external hardware.</p>
+
+      <h3>How to Launch</h3>
+      <p>Open Signal Checker from the application menu: <strong>Tools &rarr; Signal Checker</strong>. It opens in a separate window.</p>
+
+      <h3>Connection Settings</h3>
+      <table class="manual-table">
+        <thead>
+          <tr><th>Setting</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Target IP</td><td>Destination IP address for test signals (default: 127.0.0.1 for local testing)</td></tr>
+          <tr><td>Port</td><td>Target port (Art-Net: 6454, sACN: 5568)</td></tr>
+          <tr><td>Protocol</td><td>Art-Net or sACN</td></tr>
+          <tr><td>Universe Range</td><td>Universes to send test signals to (e.g., <code>0-50</code>)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Auto Mode (12 Test Patterns)</h3>
+      <table class="manual-table">
+        <thead>
+          <tr><th>Pattern</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Chase</td><td>Sequential channel chase across all channels</td></tr>
+          <tr><td>Random</td><td>Random values across all channels (changes every frame)</td></tr>
+          <tr><td>Gradient</td><td>Smooth gradient from channel 1 to 512</td></tr>
+          <tr><td>Strobe</td><td>All channels alternating between 0 and 255</td></tr>
+          <tr><td>Sine Wave</td><td>Sine wave pattern moving across channels</td></tr>
+          <tr><td>Full On</td><td>All channels at 255</td></tr>
+          <tr><td>Blackout</td><td>All channels at 0</td></tr>
+          <tr><td>Odd/Even</td><td>Alternating odd and even channels</td></tr>
+          <tr><td>Binary Count</td><td>Binary counting pattern</td></tr>
+          <tr><td>Ramp Up</td><td>Linear ramp from 0 to 255</td></tr>
+          <tr><td>Ramp Down</td><td>Linear ramp from 255 to 0</td></tr>
+          <tr><td>Pulse</td><td>Pulsing intensity on all channels</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Manual Mode</h3>
+      <p>Set individual channel values manually for targeted testing. Useful for verifying specific channel mappings and fixture responses.</p>
+
+      <div class="info-card tip">
+        <div class="info-label">TIP</div>
+        <p>Use Signal Checker with Target IP <code>127.0.0.1</code> to send test signals back to ArtNet Manager itself, verifying the entire signal path including forwarding destinations.</p>
+      </div>
     </section>
 
     <!-- ===== 8. Settings ===== -->
@@ -510,6 +621,19 @@
         <li data-i18n="s11_op2">Use Force Role to manually switch roles.</li>
         <li data-i18n="s11_op3">Toggle Auto Sync on or off as needed.</li>
       </ul>
+
+      <h3>Manual Promote to PRIMARY</h3>
+      <p>You can manually promote a STANDBY node to PRIMARY:</p>
+      <ul>
+        <li>Click the <strong>Promote to PRIMARY</strong> button in the cluster tooltip (hover over the cluster badge in the header).</li>
+        <li>Alternatively, use the Promote button next to Cluster Status on the Dashboard.</li>
+      </ul>
+      <p>The promoted node immediately becomes PRIMARY, and the previous PRIMARY transitions to STANDBY. Split-brain prevention ensures only one PRIMARY exists at any time.</p>
+
+      <div class="info-card tip">
+        <div class="info-label">TIP</div>
+        <p>Double-promotion is safe: if you promote Node A then immediately promote Node B, Node B becomes PRIMARY and Node A returns to STANDBY automatically.</p>
+      </div>
     </section>
 
     <!-- ===== 12. Guardian Mode ===== -->
@@ -535,6 +659,39 @@
         <li data-i18n="s12_shutdown2">Keyboard shortcut: Ctrl+Shift+Q (Mac: Cmd+Shift+Q)</li>
         <li data-i18n="s12_shutdown3">After the confirmation dialog, the Guardian is suppressed and the app fully terminates.</li>
       </ul>
+    </section>
+
+    <!-- ===== About & Feedback ===== -->
+    <section class="manual-section" id="about-feedback">
+      <h2>About &amp; Feedback</h2>
+
+      <h3>About Dialog</h3>
+      <p>Access from the sidebar at the bottom. Shows the current app version, developer information, and links to the distribution site and repository.</p>
+
+      <h3>Version Check</h3>
+      <p>Click <strong>Check for Updates</strong> in the About dialog to compare your version against the latest release. If an update is available, a download link is provided.</p>
+
+      <h3>Bug Report &amp; Feature Request</h3>
+      <p>Access from the sidebar menu. Two options:</p>
+      <ul>
+        <li><strong>Bug Report</strong> — Describe the issue, and a comprehensive diagnostic snapshot is automatically prepared</li>
+        <li><strong>Feature Request</strong> — Describe the desired feature</li>
+      </ul>
+
+      <h3>Diagnostic Snapshot</h3>
+      <p>The diagnostic snapshot includes all information needed for issue triage:</p>
+      <ul>
+        <li>System information (OS, CPU, memory, hostname)</li>
+        <li>Network interfaces with MAC addresses</li>
+        <li>Engine settings (protocols, ports, NIC configuration)</li>
+        <li>Universe state (count, active, packet rates)</li>
+        <li>Forwarding destination settings and status</li>
+        <li>Cluster status (role, peers, health)</li>
+        <li>Recording/playback state</li>
+        <li>Recent errors and warnings</li>
+        <li>Last 100 log entries</li>
+      </ul>
+      <p>Click <strong>Copy Diagnostic &amp; Open Issue</strong> to copy the snapshot to your clipboard and open a GitHub issue, or use <strong>Copy</strong> to copy the full report for email or the feedback form.</p>
     </section>
 
     <!-- ===== 13. Troubleshooting ===== -->
@@ -620,6 +777,18 @@
         <li data-i18n="s13_m2">Select an appropriate merge mode (HTP/LTP/Priority) on the Settings page.</li>
         <li data-i18n="s13_m3">You can also apply a different merge mode to specific universes only.</li>
       </ul>
+
+      <h3>Recording Issues</h3>
+      <table class="manual-table">
+        <thead>
+          <tr><th>Check</th><th>Solution</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Dropped Frames</td><td>Check the REC tooltip for drop count. High drops may indicate disk I/O bottleneck or CPU load. Try reducing the number of active universes or forwarding destinations during recording.</td></tr>
+          <tr><td>Large File Size</td><td>ANMR files use delta compression, but high-change signals (e.g., random patterns on 90 universes) produce large files. Consider recording shorter segments.</td></tr>
+          <tr><td>Playback Not Forwarding</td><td>Ensure you are in Player Mode and forwarding destinations are enabled. STANDBY nodes do not forward.</td></tr>
+        </tbody>
+      </table>
     </section>
 
     <!-- ===== Footer ===== -->
