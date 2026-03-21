@@ -946,6 +946,107 @@ nav {
   text-underline-offset: 2px;
 }
 
+/* --- Coming Soon Teaser --- */
+#teaser {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#teaser::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.teaser-label {
+  color: var(--violet) !important;
+  border-color: var(--violet-dim) !important;
+}
+
+.teaser-title {
+  background: linear-gradient(135deg, var(--text-muted) 0%, var(--text-dim) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.05em;
+}
+
+.teaser-desc {
+  color: var(--text-dim) !important;
+  font-style: italic;
+}
+
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.teaser-card {
+  background: linear-gradient(135deg, rgba(17, 17, 25, 0.6) 0%, rgba(13, 13, 20, 0.4) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  position: relative;
+  transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+.teaser-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.02) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.teaser-card:hover {
+  border-color: var(--violet-dim);
+  box-shadow: 0 0 30px rgba(167, 139, 250, 0.06);
+}
+
+.teaser-icon {
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+
+.teaser-card:hover .teaser-icon {
+  opacity: 0.8;
+  color: var(--violet-dim);
+}
+
+.teaser-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.teaser-card p {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .teaser-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Tech Stack --- */
 #tech {
   border-top: 1px solid var(--border);
