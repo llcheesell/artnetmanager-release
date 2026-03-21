@@ -279,14 +279,16 @@
             <span class="gallery-wintitle" id="galleryWinTitle">Dashboard</span>
           </div>
           <div class="gallery-panels">
-            <img class="gallery-panel active" src="screenshots/screenshot-dashboard-2.png" alt="Dashboard">
-            <img class="gallery-panel"        src="screenshots/screenshot-universes.png"   alt="Universe Viewer">
-            <img class="gallery-panel"        src="screenshots/screenshot-signal-flow.png" alt="Signal Flow">
-            <img class="gallery-panel"        src="screenshots/screenshot-forwarding.png"  alt="Forwarding">
-            <img class="gallery-panel"        src="screenshots/screenshot-recording.png"   alt="Recording">
-            <img class="gallery-panel"        src="screenshots/screenshot-player.png"      alt="Player">
-            <img class="gallery-panel"        src="screenshots/screenshot-signal-checker.png" alt="Signal Checker">
-            <img class="gallery-panel"        src="screenshots/screenshot-discovery.png"   alt="Device Discovery">
+            <div class="gallery-slider" id="gallerySlider">
+              <img class="gallery-panel" src="screenshots/screenshot-dashboard-2.png" alt="Dashboard">
+              <img class="gallery-panel" src="screenshots/screenshot-universes.png"   alt="Universe Viewer">
+              <img class="gallery-panel" src="screenshots/screenshot-signal-flow.png" alt="Signal Flow">
+              <img class="gallery-panel" src="screenshots/screenshot-forwarding.png"  alt="Forwarding">
+              <img class="gallery-panel" src="screenshots/screenshot-recording.png"   alt="Recording">
+              <img class="gallery-panel" src="screenshots/screenshot-player.png"      alt="Player">
+              <img class="gallery-panel" src="screenshots/screenshot-signal-checker.png" alt="Signal Checker">
+              <img class="gallery-panel" src="screenshots/screenshot-discovery.png"   alt="Device Discovery">
+            </div>
           </div>
         </div>
         <p class="gallery-caption" id="galleryCaption"></p>
@@ -886,13 +888,26 @@
   var tabLabels = ['Dashboard','Universe Viewer','Signal Flow','Signal Forwarding','Recording','Player','Signal Checker','Device Discovery'];
 
   var tabs = document.querySelectorAll('.gallery-tab');
-  var panels = document.querySelectorAll('.gallery-panel');
+  var slider = document.getElementById('gallerySlider');
   var winTitle = document.getElementById('galleryWinTitle');
   var caption = document.getElementById('galleryCaption');
+  var INTERVAL = 5000;
 
   function activate(idx) {
-    tabs.forEach(function(t,i){ t.classList.toggle('active', i===idx); });
-    panels.forEach(function(p,i){ p.classList.toggle('active', i===idx); });
+    // Update tabs — remove active, force reflow for animation restart
+    tabs.forEach(function(t, i) {
+      t.classList.remove('active');
+      // Force animation restart by removing/re-adding
+      t.style.animation = 'none';
+      t.offsetHeight; // trigger reflow
+      t.style.animation = '';
+    });
+    tabs[idx].classList.add('active');
+
+    // Slide
+    if (slider) slider.style.transform = 'translateX(-' + (idx * 100) + '%)';
+
+    // Title & caption
     if (winTitle) winTitle.textContent = tabLabels[idx];
     if (caption) {
       var lang = document.documentElement.lang || 'en';
@@ -910,7 +925,7 @@
     autoTimer = setInterval(function() {
       currentIdx = (currentIdx + 1) % totalTabs;
       activate(currentIdx);
-    }, 5000);
+    }, INTERVAL);
   }
 
   function stopAuto() {
@@ -921,11 +936,10 @@
     tab.addEventListener('click', function() {
       currentIdx = idx;
       activate(idx);
-      startAuto(); // restart timer on manual click
+      startAuto();
     });
   });
 
-  // Set initial caption after i18n sets the lang attribute, then start slideshow
   function init() {
     activate(0);
     startAuto();
