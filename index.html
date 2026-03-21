@@ -874,7 +874,7 @@
 <script>
 (function() {
   var captions = {
-    0: { en:'Dashboard monitoring 11 universes at 451 pps with recording active.', ja:'11ユニバース・451pps を監視中。REC 録画中のダッシュボード画面。' },
+    0: { en:'Dashboard overview: multi-universe HTP merge, signal types, Timecode, Cluster status at a glance.', ja:'複数のユニバース、信号種をHTPでマージ・TimecodeやClusterの様子などが一覧できるダッシュボード画面。' },
     1: { en:'512 DMX channels visualized as a color-coded grid across multiple universes.', ja:'512チャンネルをカラーグリッドで可視化。複数ユニバースの同時表示に対応。' },
     2: { en:'Interactive signal flow diagram showing live paths from sources through universes to destinations.', ja:'ソース→ユニバース→転送先の信号経路をパーティクルアニメーションで可視化。' },
     3: { en:'Configure forwarding destinations with per-universe overrides, offset remapping, and delay.', ja:'転送先を設定。ユニバース単位のオーバーライド・オフセット・遅延を柔軟に構成。' },
@@ -901,15 +901,40 @@
     }
   }
 
+  var currentIdx = 0;
+  var totalTabs = tabs.length;
+  var autoTimer = null;
+
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(function() {
+      currentIdx = (currentIdx + 1) % totalTabs;
+      activate(currentIdx);
+    }, 5000);
+  }
+
+  function stopAuto() {
+    if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+  }
+
   tabs.forEach(function(tab, idx) {
-    tab.addEventListener('click', function() { activate(idx); });
+    tab.addEventListener('click', function() {
+      currentIdx = idx;
+      activate(idx);
+      startAuto(); // restart timer on manual click
+    });
   });
 
-  // Set initial caption after i18n sets the lang attribute
+  // Set initial caption after i18n sets the lang attribute, then start slideshow
+  function init() {
+    activate(0);
+    startAuto();
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() { setTimeout(function(){ activate(0); }, 0); });
+    document.addEventListener('DOMContentLoaded', function() { setTimeout(init, 0); });
   } else {
-    setTimeout(function(){ activate(0); }, 0);
+    setTimeout(init, 0);
   }
 })();
 </script>
