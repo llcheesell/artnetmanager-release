@@ -1,8 +1,13 @@
 {
-  "version": "2.7.17",
+  "version": "2.7.18",
   "downloadUrl": "https://llcheesell.github.io/artnetmanager-release/",
-  "releaseNotes": "Settings persistence fix, player file-not-found handling, open save directory in file manager",
+  "releaseNotes": "Fix: app failed to launch after Permanent Shutdown (guardian deadlock)",
   "history": [
+    {
+      "version": "2.7.18",
+      "date": "2026-03-23",
+      "notes": "Fix: app failed to launch after Permanent Shutdown — bootstrap now clears sentinel file on fresh launch, preventing guardian deadlock"
+    },
     {
       "version": "2.7.17",
       "date": "2026-03-22",
