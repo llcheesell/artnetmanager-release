@@ -1,8 +1,13 @@
 {
-  "version": "2.7.12",
+  "version": "2.7.17",
   "downloadUrl": "https://llcheesell.github.io/artnetmanager-release/",
-  "releaseNotes": "Signal recording & playback, performance optimization, cluster promote, diagnostic reports",
+  "releaseNotes": "AppSettings persistence, defensive validation, recording save directory fix, player file-not-found handling",
   "history": [
+    {
+      "version": "2.7.17",
+      "date": "2026-03-22",
+      "notes": "AppSettings disk persistence, defensive validation for NIC/recording/sACN, recording save directory fix, player file-not-found handling with save directory display"
+    },
     {
       "version": "2.7.12",
       "date": "2026-03-22",
