@@ -389,7 +389,7 @@
       feat_config_title: 'Export & import de configuration',
       feat_config_desc: 'Sauvegarder et charger les configurations de forwarding. Réutiliser les paramètres entre lieux et créer des sauvegardes.',
       features_label: 'Features',
-      features_title: 'Tout ce qu'il vous faut sur site',
+      features_title: 'Tout ce qu\u0027il vous faut sur site',
       features_desc:
         'Pas de superflu. R\u00e9ception, fusion, surveillance, conversion et transfert de signaux DMX \u2014 dans une interface \u00e9pur\u00e9e.',
       feat1_title: 'Visualisation DMX en temps r\u00e9el',
