@@ -373,6 +373,14 @@ nav {
 .pillar-crops--recording .crop-sub2 { grid-area: sub2; }
 .pillar-crops--recording .crop-sub3 { grid-area: sub3; }
 
+/* Single image: full area */
+.pillar-crops--single {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "main";
+}
+.pillar-crops--single .crop-main { grid-area: main; }
+
 /* Visualization: 2col, main large */
 .pillar-crops--viz {
   grid-template-columns: 1.4fr 1fr;
