@@ -68,6 +68,13 @@
   </div>
 </section>
 
+<!-- ===== Canvas Separator: Signal Merge & Route ===== -->
+<section id="canvas-merge" class="canvas-section">
+  <div class="canvas-container">
+    <canvas id="mergeCanvas"></canvas>
+  </div>
+</section>
+
 <!-- ===== Hero Features — 3 Pillars ===== -->
 <section id="hero-features">
   <div class="container">
@@ -490,6 +497,295 @@
       ctx.fillStyle = valueToColor(cells[i].value);
       ctx.fillRect(x, y, cellW, cellH);
     }
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script>
+
+<!-- ===== Signal Merge & Route Canvas ===== -->
+<script>
+(function() {
+  var canvas = document.getElementById('mergeCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+
+  function resize() {
+    var rect = canvas.parentElement.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    W = rect.width; H = rect.height;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  var CYAN = [34, 211, 238];
+  var ORANGE = [249, 115, 22];
+  var VIOLET = [167, 139, 250];
+
+  // Input streams: 4 incoming signal lanes from left
+  var inputs = [
+    { y: 0.22, color: CYAN,   label: 'Art-Net', amplitude: 0.8 },
+    { y: 0.38, color: CYAN,   label: 'Art-Net', amplitude: 0.6 },
+    { y: 0.62, color: VIOLET, label: 'sACN',    amplitude: 0.7 },
+    { y: 0.78, color: VIOLET, label: 'sACN',    amplitude: 0.5 }
+  ];
+
+  // Output streams: 3 routed destinations to right
+  var outputs = [
+    { y: 0.25, color: ORANGE, label: 'Dest A' },
+    { y: 0.50, color: ORANGE, label: 'Dest B' },
+    { y: 0.75, color: ORANGE, label: 'Dest C' }
+  ];
+
+  // Merge point at center
+  var mergeX = 0.5;
+
+  // Flowing particles on streams
+  var streamParticles = [];
+  var PARTICLES_PER_INPUT = 12;
+  var PARTICLES_PER_OUTPUT = 8;
+
+  // Input particles
+  for (var i = 0; i < inputs.length; i++) {
+    for (var p = 0; p < PARTICLES_PER_INPUT; p++) {
+      streamParticles.push({
+        type: 'in',
+        stream: i,
+        t: p / PARTICLES_PER_INPUT,
+        speed: 0.002 + Math.random() * 0.002,
+        size: 1.5 + Math.random() * 1.5
+      });
+    }
+  }
+
+  // Output particles
+  for (var i = 0; i < outputs.length; i++) {
+    for (var p = 0; p < PARTICLES_PER_OUTPUT; p++) {
+      streamParticles.push({
+        type: 'out',
+        stream: i,
+        t: p / PARTICLES_PER_OUTPUT,
+        speed: 0.002 + Math.random() * 0.0015,
+        size: 1.5 + Math.random() * 1.5
+      });
+    }
+  }
+
+  // Merge core particles (swirling at merge point)
+  var coreParticles = [];
+  for (var i = 0; i < 24; i++) {
+    coreParticles.push({
+      angle: (Math.PI * 2 / 24) * i,
+      radius: 8 + Math.random() * 20,
+      speed: 0.008 + Math.random() * 0.012,
+      size: 1 + Math.random() * 2,
+      colorIdx: Math.floor(Math.random() * 3)
+    });
+  }
+
+  var time = 0;
+  var running = true;
+
+  var observer = new IntersectionObserver(function(entries) {
+    running = entries[0].isIntersecting;
+    if (running) animate();
+  }, { threshold: 0.05 });
+  observer.observe(canvas.parentElement);
+
+  // Easing: ease-in for input (accelerate toward merge), ease-out for output
+  function easeInQuad(t) { return t * t; }
+  function easeOutQuad(t) { return t * (2 - t); }
+
+  // Get point on input stream curve (left edge → merge center)
+  function inputPoint(streamIdx, t) {
+    var inp = inputs[streamIdx];
+    var startX = -0.02 * W;
+    var startY = inp.y * H;
+    var endX = mergeX * W;
+    var endY = H * 0.5;
+
+    // Ease-in: particles accelerate toward merge
+    var et = easeInQuad(t);
+
+    // Subtle sine wave on the path
+    var wave = Math.sin(t * Math.PI * 2 + time * 1.5 + streamIdx) * (1 - t) * 12 * inp.amplitude;
+
+    var x = startX + (endX - startX) * et;
+    var y = startY + (endY - startY) * et + wave;
+    return { x: x, y: y };
+  }
+
+  // Get point on output stream curve (merge center → right edge)
+  function outputPoint(streamIdx, t) {
+    var out = outputs[streamIdx];
+    var startX = mergeX * W;
+    var startY = H * 0.5;
+    var endX = 1.02 * W;
+    var endY = out.y * H;
+
+    // Ease-out: particles decelerate from merge
+    var et = easeOutQuad(t);
+
+    var wave = Math.sin(t * Math.PI * 2 + time * 1.2 + streamIdx * 2) * t * 8;
+
+    var x = startX + (endX - startX) * et;
+    var y = startY + (endY - startY) * et + wave;
+    return { x: x, y: y };
+  }
+
+  function animate() {
+    if (!running) return;
+    time += 0.016;
+
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = '#06060a';
+    ctx.fillRect(0, 0, W, H);
+
+    var mx = mergeX * W;
+    var my = H * 0.5;
+
+    // === Ambient glow at merge point ===
+    var pulseA = 0.04 + Math.sin(time * 0.8) * 0.02;
+    var glow1 = ctx.createRadialGradient(mx, my, 0, mx, my, H * 0.45);
+    glow1.addColorStop(0, 'rgba(34, 211, 238, ' + pulseA + ')');
+    glow1.addColorStop(0.5, 'rgba(167, 139, 250, ' + (pulseA * 0.5) + ')');
+    glow1.addColorStop(1, 'transparent');
+    ctx.fillStyle = glow1;
+    ctx.fillRect(0, 0, W, H);
+
+    // === Draw stream paths (faint trails) ===
+    // Input streams
+    for (var si = 0; si < inputs.length; si++) {
+      ctx.beginPath();
+      for (var t = 0; t <= 1; t += 0.02) {
+        var pt = inputPoint(si, t);
+        if (t === 0) ctx.moveTo(pt.x, pt.y);
+        else ctx.lineTo(pt.x, pt.y);
+      }
+      var c = inputs[si].color;
+      ctx.strokeStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ', 0.06)';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+
+    // Output streams
+    for (var si = 0; si < outputs.length; si++) {
+      ctx.beginPath();
+      for (var t = 0; t <= 1; t += 0.02) {
+        var pt = outputPoint(si, t);
+        if (t === 0) ctx.moveTo(pt.x, pt.y);
+        else ctx.lineTo(pt.x, pt.y);
+      }
+      var c = outputs[si].color;
+      ctx.strokeStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ', 0.06)';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+
+    // === Draw merge core: swirling ring of particles ===
+    var coreColors = [CYAN, VIOLET, ORANGE];
+    for (var i = 0; i < coreParticles.length; i++) {
+      var cp = coreParticles[i];
+      cp.angle += cp.speed;
+      var breathe = 1 + Math.sin(time * 0.6 + i) * 0.25;
+      var r = cp.radius * breathe;
+      var px = mx + Math.cos(cp.angle) * r;
+      var py = my + Math.sin(cp.angle) * r;
+      var cc = coreColors[cp.colorIdx];
+
+      // Glow
+      ctx.beginPath();
+      ctx.arc(px, py, cp.size * 4, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + cc[0] + ',' + cc[1] + ',' + cc[2] + ', 0.04)';
+      ctx.fill();
+
+      // Core
+      ctx.beginPath();
+      ctx.arc(px, py, cp.size, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + cc[0] + ',' + cc[1] + ',' + cc[2] + ', 0.7)';
+      ctx.fill();
+    }
+
+    // Bright merge center dot
+    var centerPulse = 0.15 + Math.sin(time * 1.2) * 0.08;
+    var cGlow = ctx.createRadialGradient(mx, my, 0, mx, my, 16);
+    cGlow.addColorStop(0, 'rgba(255, 255, 255, ' + centerPulse + ')');
+    cGlow.addColorStop(0.4, 'rgba(34, 211, 238, ' + (centerPulse * 0.5) + ')');
+    cGlow.addColorStop(1, 'transparent');
+    ctx.fillStyle = cGlow;
+    ctx.beginPath();
+    ctx.arc(mx, my, 16, 0, Math.PI * 2);
+    ctx.fill();
+
+    // === Draw flowing particles on streams ===
+    for (var i = 0; i < streamParticles.length; i++) {
+      var sp = streamParticles[i];
+      sp.t += sp.speed;
+      if (sp.t > 1) sp.t -= 1;
+
+      var pt, c;
+      if (sp.type === 'in') {
+        pt = inputPoint(sp.stream, sp.t);
+        c = inputs[sp.stream].color;
+        // Particles glow brighter as they approach merge
+        var brightness = 0.2 + sp.t * 0.7;
+      } else {
+        pt = outputPoint(sp.stream, sp.t);
+        c = outputs[sp.stream].color;
+        // Particles glow brighter near merge, fade toward destination
+        var brightness = 0.8 - sp.t * 0.5;
+      }
+
+      // Trail/glow
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, sp.size * 5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ', ' + (brightness * 0.06) + ')';
+      ctx.fill();
+
+      // Core particle
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, sp.size, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ', ' + brightness + ')';
+      ctx.fill();
+    }
+
+    // === Labels ===
+    ctx.font = '500 8px Inter, sans-serif';
+    ctx.textBaseline = 'middle';
+
+    // MERGE label
+    ctx.textAlign = 'center';
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.18)';
+    ctx.font = '600 7px Inter, sans-serif';
+    ctx.fillText('MERGE', mx, my - 32);
+
+    // Input labels (left)
+    ctx.textAlign = 'left';
+    ctx.font = '500 8px "JetBrains Mono", monospace';
+    for (var i = 0; i < inputs.length; i++) {
+      var c = inputs[i].color;
+      ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ', 0.25)';
+      ctx.fillText(inputs[i].label, 12, inputs[i].y * H);
+    }
+
+    // Output labels (right)
+    ctx.textAlign = 'right';
+    for (var i = 0; i < outputs.length; i++) {
+      var c = outputs[i].color;
+      ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ', 0.25)';
+      ctx.fillText(outputs[i].label, W - 12, outputs[i].y * H);
+    }
+
+    // HTP merge indicator
+    ctx.textAlign = 'center';
+    ctx.font = '600 7px Inter, sans-serif';
+    ctx.fillStyle = 'rgba(34, 211, 238, 0.12)';
+    ctx.fillText('HTP', mx, my + 32);
 
     requestAnimationFrame(animate);
   }

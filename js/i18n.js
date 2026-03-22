@@ -27,7 +27,7 @@
       pillar3_label: 'Visualization',
       pillar3_title: '伝送のビジュアライズ',
       pillar3_desc: '512 チャンネルのグリッド表示、ソースからデスティネーションへの信号経路アニメーション、ダッシュボードでのリアルタイム統計。信号がどこからどこへ、どのように流れているかを一目で把握。',
-      features_label: 'More Features',
+      features_label: 'Features',
       features_title: '現場で必要なもの、揃ってます',
       features_desc: '',
       feat_checker_title: 'テスト信号ツール',
@@ -144,7 +144,7 @@
       pillar3_label: 'Visualization',
       pillar3_title: 'Signal Flow Visualization',
       pillar3_desc: '512-channel grid display, animated signal path diagrams from sources through universes to destinations, and real-time dashboard statistics. See where your signals flow at a glance.',
-      features_label: 'More Features',
+      features_label: 'Features',
       features_title: 'Everything you need on site',
       features_desc: '',
       feat_checker_title: 'Test Signal Tool',
@@ -247,7 +247,7 @@
       ss_tab_forwarding: 'Weiterleitung', ss_tab_discovery: 'Geräteerkennung', ss_tab_dashboard2: 'Dashboard (50 Universen)',
       ss_cap_dashboard: 'Echtzeit-Übersicht aktiver Universen, erkannter Geräte, Ziele und Paketrate.',
       hero_subtitle:
-        'Verwaltung, Visualisierung und Forwarding von Art-Net / sACN Signalen \u2013 alles in einem Tool. Minimalistisch und dennoch leistungsstark \u2013 das DMX-Werkzeug f\u00fcr die Live-Produktion.',
+        'Einheitliche Verwaltung, Visualisierung, Aufzeichnung und Weiterleitung von Art-Net / sACN Signalen. Ein DMX-Management-Tool f\u00fcr die Live-Produktion.',
       badge_cross_platform: 'Cross-Platform',
       badge_minimal: 'Minimal & Powerful',
       hero_download_btn: 'Download v2.7.12',
@@ -274,8 +274,7 @@
       feat_config_desc: 'Forwarding-Konfigurationen als Dateien speichern und laden. Einstellungen über Veranstaltungsorte hinweg wiederverwenden und Backups erstellen.',
       features_label: 'Features',
       features_title: 'Alles, was Sie vor Ort brauchen',
-      features_desc:
-        'Kein \u00dcberfluss. Empfangen, Mergen, \u00dcberwachen, Konvertieren und Weiterleiten von DMX-Signalen \u2013 in einer \u00fcbersichtlichen Oberfl\u00e4che.',
+      features_desc: '',
       feat1_title: 'Echtzeit-DMX-Visualisierung',
       feat1_desc:
         'Alle 512 Kan\u00e4le als Echtzeit-Raster dargestellt. Farbkodierte Intensit\u00e4tswerte erm\u00f6glichen es, Signal\u00e4nderungen sofort zu erkennen. Multi-Universe-Anzeige wird unterst\u00fctzt.',
@@ -363,7 +362,7 @@
       ss_tab_forwarding: 'Transfert', ss_tab_discovery: 'D\u00e9couverte', ss_tab_dashboard2: 'Tableau de bord (50 univers)',
       ss_cap_dashboard: 'Aper\u00e7u en temps r\u00e9el des univers actifs, appareils d\u00e9couverts, destinations et d\u00e9bit.',
       hero_subtitle:
-        'Gestion, visualisation et forwarding unifi\u00e9s des signaux Art-Net / sACN. Un outil DMX minimal mais puissant, con\u00e7u pour la production live.',
+        'Gestion, visualisation, enregistrement et retransmission unifi\u00e9s des signaux Art-Net / sACN. Un outil de gestion DMX con\u00e7u pour la production live.',
       badge_cross_platform: 'Cross-Platform',
       badge_minimal: 'Minimal & Powerful',
       hero_download_btn: 'Download v2.7.12',
@@ -390,8 +389,7 @@
       feat_config_desc: 'Sauvegarder et charger les configurations de forwarding. Réutiliser les paramètres entre lieux et créer des sauvegardes.',
       features_label: 'Features',
       features_title: 'Tout ce qu\u0027il vous faut sur site',
-      features_desc:
-        'Pas de superflu. R\u00e9ception, fusion, surveillance, conversion et transfert de signaux DMX \u2014 dans une interface \u00e9pur\u00e9e.',
+      features_desc: '',
       feat1_title: 'Visualisation DMX en temps r\u00e9el',
       feat1_desc:
         'Affichez les 512 canaux en temps r\u00e9el sous forme de grille. L\u2019intensit\u00e9 color\u00e9e permet de rep\u00e9rer instantan\u00e9ment les changements de signal. Affichage multi-univers simultan\u00e9 pris en charge.',
@@ -481,7 +479,7 @@
       nav_home: 'Inicio',
       nav_download: 'Descargar',
       hero_subtitle:
-        'Gesti\u00f3n, visualizaci\u00f3n y reenv\u00edo unificados de se\u00f1ales Art-Net / sACN. Una herramienta DMX minimalista pero potente, dise\u00f1ada para producci\u00f3n en vivo.',
+        'Gesti\u00f3n, visualizaci\u00f3n, grabaci\u00f3n y reenv\u00edo unificados de se\u00f1ales Art-Net / sACN. Una herramienta de gesti\u00f3n DMX para producci\u00f3n en vivo.',
       badge_cross_platform: 'Cross-Platform',
       badge_minimal: 'Minimal & Powerful',
       hero_download_btn: 'Download v2.7.12',
@@ -508,8 +506,7 @@
       feat_config_desc: 'Guardar y cargar configuraciones de forwarding. Reutilizar ajustes entre venues y crear respaldos.',
       features_label: 'Features',
       features_title: 'Todo lo que necesitas en el sitio',
-      features_desc:
-        'Sin funciones innecesarias. Recepci\u00f3n, mezcla, monitorizaci\u00f3n, conversi\u00f3n y reenv\u00edo de se\u00f1ales DMX, todo en una interfaz limpia.',
+      features_desc: '',
       feat1_title: 'Visualizaci\u00f3n DMX en tiempo real',
       feat1_desc:
         'Visualiza los 512 canales en una cuadr\u00edcula en tiempo real. La intensidad codificada por colores permite detectar cambios de se\u00f1al al instante. Compatible con visualizaci\u00f3n simult\u00e1nea de m\u00faltiples universos.',
@@ -597,7 +594,7 @@
       ss_tab_forwarding: 'Inoltro', ss_tab_discovery: 'Scoperta dispositivi', ss_tab_dashboard2: 'Dashboard (50 universi)',
       ss_cap_dashboard: 'Panoramica in tempo reale di universi attivi, dispositivi scoperti, destinazioni e velocit\u00e0 pacchetti.',
       hero_subtitle:
-        'Gestione, visualizzazione e forwarding unificati dei segnali Art-Net / sACN. Uno strumento DMX minimale ma potente, progettato per la produzione live.',
+        'Gestione, visualizzazione, registrazione e inoltro unificati dei segnali Art-Net / sACN. Uno strumento di gestione DMX per la produzione dal vivo.',
       badge_cross_platform: 'Cross-Platform',
       badge_minimal: 'Minimal & Powerful',
       hero_download_btn: 'Download v2.7.12',
@@ -624,8 +621,7 @@
       feat_config_desc: 'Salva e carica le configurazioni di forwarding. Riutilizza le impostazioni tra venue e crea backup.',
       features_label: 'Features',
       features_title: 'Tutto ciò che serve sul campo',
-      features_desc:
-        'Nessuna funzione superflua. Ricezione, merge, monitoraggio, conversione e inoltro dei segnali DMX in un\u2019interfaccia pulita.',
+      features_desc: '',
       feat1_title: 'Visualizzazione DMX in tempo reale',
       feat1_desc:
         'Visualizza tutti i 512 canali in una griglia in tempo reale. L\u2019intensit\u00e0 codificata a colori permette di individuare istantaneamente i cambiamenti di segnale. Supporto per la visualizzazione simultanea multi-universo.',
@@ -715,7 +711,7 @@
       nav_home: 'Home',
       nav_download: 'Downloaden',
       hero_subtitle:
-        'Ge\u00efntegreerd beheer, visualisatie en forwarding van Art-Net / sACN signalen. Een minimalistische maar krachtige DMX-tool, gebouwd voor liveproductie.',
+        'Uniform beheer, visualisatie, opname en doorsturen van Art-Net / sACN signalen. Een DMX-beheertool voor live productie.',
       badge_cross_platform: 'Cross-Platform',
       badge_minimal: 'Minimal & Powerful',
       hero_download_btn: 'Download v2.7.12',
@@ -742,8 +738,7 @@
       feat_config_desc: 'Forwarding-configuraties opslaan en laden. Instellingen hergebruiken tussen locaties en backups maken.',
       features_label: 'Features',
       features_title: 'Alles wat je nodig hebt op locatie',
-      features_desc:
-        'Geen overbodige functies. Ontvangen, mergen, monitoren, converteren en doorsturen van DMX-signalen \u2014 alles in \u00e9\u00e9n overzichtelijke interface.',
+      features_desc: '',
       feat1_title: 'Realtime DMX-visualisatie',
       feat1_desc:
         'Bekijk alle 512 kanalen in een realtime raster. Kleurgecodeerde intensiteit laat je signaalwijzigingen direct herkennen. Multi-universe gelijktijdige weergave wordt ondersteund.',
@@ -831,7 +826,7 @@
       ss_tab_forwarding: 'Encaminhamento', ss_tab_discovery: 'Descoberta', ss_tab_dashboard2: 'Painel (50 universos)',
       ss_cap_dashboard: 'Vis\u00e3o geral em tempo real de universos ativos, dispositivos, destinos e taxa de pacotes.',
       hero_subtitle:
-        'Gest\u00e3o, visualiza\u00e7\u00e3o e encaminhamento unificados de sinais Art-Net / sACN. Uma ferramenta DMX minimalista mas poderosa, feita para produ\u00e7\u00e3o ao vivo.',
+        'Gest\u00e3o, visualiza\u00e7\u00e3o, grava\u00e7\u00e3o e encaminhamento unificados de sinais Art-Net / sACN. Uma ferramenta de gest\u00e3o DMX para produ\u00e7\u00e3o ao vivo.',
       badge_cross_platform: 'Cross-Platform',
       badge_minimal: 'Minimal & Powerful',
       hero_download_btn: 'Download v2.7.12',
@@ -858,8 +853,7 @@
       feat_config_desc: 'Salvar e carregar configurações de forwarding. Reutilizar configurações entre locais e criar backups.',
       features_label: 'Features',
       features_title: 'Tudo o que você precisa no local',
-      features_desc:
-        'Sem excessos. Rece\u00e7\u00e3o, fus\u00e3o, monitoriza\u00e7\u00e3o, convers\u00e3o e encaminhamento de sinais DMX \u2014 tudo numa interface limpa.',
+      features_desc: '',
       feat1_title: 'Visualiza\u00e7\u00e3o DMX em tempo real',
       feat1_desc:
         'Visualize todos os 512 canais numa grelha em tempo real. A intensidade codificada por cores permite detetar instantaneamente altera\u00e7\u00f5es de sinal. Suporte para visualiza\u00e7\u00e3o simult\u00e2nea de m\u00faltiplos universos.',
@@ -947,7 +941,7 @@
       ss_tab_forwarding: '\uc804\uc1a1', ss_tab_discovery: '\uc7a5\uce58 \uac80\uc0c9', ss_tab_dashboard2: '\ub300\uc2dc\ubcf4\ub4dc (50 \uc720\ub2c8\ubc84\uc2a4)',
       ss_cap_dashboard: '\ud65c\uc131 \uc720\ub2c8\ubc84\uc2a4, \uac80\uc0c9\ub41c \uc7a5\uce58, \ubaa9\uc801\uc9c0 \ubc0f \ud328\ud0b7 \uc18d\ub3c4\uc758 \uc2e4\uc2dc\uac04 \uac1c\uc694.',
       hero_subtitle:
-        'Art-Net / sACN \uc2e0\ud638\uc758 \uad00\ub9ac, \uc2dc\uac01\ud654, \ud3ec\uc6cc\ub529\uc744 \ud1b5\ud569. \ubbf8\ub2c8\uba40\ud558\uc9c0\ub9cc \uac15\ub825\ud55c, \ub77c\uc774\ube0c \ud504\ub85c\ub355\uc158 \ud604\uc7a5\uc744 \uc704\ud55c DMX \ud234.',
+        'Art-Net / sACN \uc2e0\ud638\uc758 \ud1b5\ud569 \uad00\ub9ac, \uc2dc\uac01\ud654, \uae30\ub85d, \uc804\ub2ec\uc744 \ud558\ub098\ub85c. \ub77c\uc774\ube0c \ud504\ub85c\ub355\uc158 \ud604\uc7a5\uc744 \uc704\ud55c DMX \uad00\ub9ac \ub3c4\uad6c.',
       badge_cross_platform: 'Cross-Platform',
       badge_minimal: 'Minimal & Powerful',
       hero_download_btn: 'Download v2.7.12',
@@ -955,8 +949,8 @@
       pillar1_title: '신호 통합 및 전송',
       pillar1_desc: 'Art-Net / sACN 신호를 수신하고 HTP, LTP 또는 Priority로 병합. 유니버스별 필터링, 오프셋 리매핑, 지연 설정 및 여러 대상에 동시 전달. 다중 NIC로 서브넷 간 통합 관리.',
       pillar2_label: 'Record & Playback',
-      pillar2_title: '신호 녹화 및 재생',
-      pillar2_desc: 'DMX 신호를 실시간으로 녹화. 델타 압축 ANMR 포맷으로 긴 캡처도 컴팩트하게. Player 모드에서 언제든 재생 — 리허설 기록, 백업 출력 또는 디버깅에.',
+      pillar2_title: '신호 기록 및 재생',
+      pillar2_desc: 'DMX 신호를 실시간으로 기록. 델타 압축 ANMR 포맷으로 긴 캡처도 컴팩트하게. Player 모드에서 언제든 재생 — 리허설 기록, 백업 출력 또는 디버깅에.',
       pillar3_label: 'Visualization',
       pillar3_title: '신호 흐름 시각화',
       pillar3_desc: '512채널 그리드 표시, 소스에서 유니버스를 거쳐 목적지까지의 애니메이션 신호 경로 다이어그램, 실시간 대시보드 통계. 신호 흐름을 한눈에 파악.',
@@ -973,9 +967,8 @@
       feat_config_title: '설정 내보내기 및 가져오기',
       feat_config_desc: '포워딩 설정을 파일로 저장하고 불러오기. 현장 간 설정 재사용 및 백업.',
       features_label: 'Features',
-      features_title: '\ubbf8\ub2c8\uba40\ud558\uc9c0\ub9cc, \uac15\ub825\ud558\ub2e4',
-      features_desc:
-        '\ubd88\ud544\uc694\ud55c \uae30\ub2a5 \uc5c6\uc774. DMX \uc2e0\ud638\uc758 \uc218\uc2e0, \uba38\uc9c0, \ubaa8\ub2c8\ud130\ub9c1, \ubcc0\ud658, \uc804\uc1a1\uc744 \uac04\uacb0\ud55c \uc778\ud130\ud398\uc774\uc2a4\ub85c \uc751\ucd95.',
+      features_title: '\ud604\uc7a5\uc5d0\uc11c \ud544\uc694\ud55c \ubaa8\ub4e0 \uac83',
+      features_desc: '',
       feat1_title: '\uc2e4\uc2dc\uac04 DMX \uc2dc\uac01\ud654',
       feat1_desc:
         '512\ucc44\ub110\uc744 \uadf8\ub9ac\ub4dc\ub85c \uc2e4\uc2dc\uac04 \ud45c\uc2dc. \uc0c9\uc0c1\ubcc4 \uc778\ud150\uc2dc\ud2f0\ub85c \uc2e0\ud638 \ubcc0\ud654\ub97c \uc989\uc2dc \ud30c\uc545. \uba40\ud2f0 \uc720\ub2c8\ubc84\uc2a4 \ub3d9\uc2dc \ud45c\uc2dc \uc9c0\uc6d0.',
@@ -1018,7 +1011,7 @@
       download_label: 'Download',
       download_title: '\ub2e4\uc6b4\ub85c\ub4dc',
       download_desc:
-        'v2.7.12 \u2014 \uc2e0\ud638 \ub179\ud654/\uc7ac\uc0dd, \ud14c\uc2a4\ud2b8 \uc2e0\ud638 \ub3c4\uad6c, Guardian \ubc0f \ud074\ub7ec\uc2a4\ud130 \uc774\uc911\ud654.',
+        'v2.7.12 \u2014 \uc2e0\ud638 \uae30\ub85d/\uc7ac\uc0dd, \ud14c\uc2a4\ud2b8 \uc2e0\ud638 \ub3c4\uad6c, Guardian \ubc0f \ud074\ub7ec\uc2a4\ud130 \uc774\uc911\ud654.',
       dl_win: 'Windows',
       dl_win_version: 'v2.7.12 \u00b7 Installer (.exe)',
       dl_win_portable: 'Windows Portable',
@@ -1037,7 +1030,7 @@
       teaser_desc: '\ub2e4\uc74c \ubc84\uc804\uc5d0\uc11c \ub354 \uae4a\uc774.',
       teaser_feat1_title: '\uc2e0\ud638 \ub77c\uc6b0\ud305 \uc815\ubc00\ub3c4 \ud5a5\uc0c1',
       teaser_feat1_desc: '\uace0\uc815\ubc00 \ud0c0\uc774\uba38, GC \ud504\ub9ac \uc218\uc2e0 \uacbd\ub85c, 1ms \ud0c0\uc774\uba38 \ud574\uc0c1\ub3c4. \uc9c0\ud130\ub97c \uc81c\uac70\ud558\uc5ec \ud504\ub808\uc784 \ub2e8\uc704\uc758 \uc815\ud655\ud55c \ub77c\uc6b0\ud305\uc744.',
-      teaser_feat2_title: '\uc2e0\ud638 \ub179\ud654 \ubc0f \uc7ac\uc0dd \uae30\ub2a5',
+      teaser_feat2_title: '\uc2e0\ud638 \uae30\ub85d \ubc0f \uc7ac\uc0dd \uae30\ub2a5',
       teaser_feat2_desc: 'DMX \uc2e0\ud638\ub97c \uce90\ucc98\ud558\uace0 \uc5b8\uc81c\ub4e0 \uc815\ud655\ud558\uac8c \uc7ac\uc0dd. \ub9ac\ud5c8\uc124, \ub514\ubc84\uae45, \ub77c\uc774\ube0c \uc1fc \ubc31\uc5c5\uc5d0.',
       feedback_label: 'Feedback',
       feedback_title: '피드백을 공유해 주세요',
@@ -1063,7 +1056,7 @@
       ss_tab_forwarding: '\u8f6c\u53d1', ss_tab_discovery: '\u8bbe\u5907\u53d1\u73b0', ss_tab_dashboard2: '\u4eea\u8868\u76d8\uff0850\u4e2a\u5b87\u5b99\uff09',
       ss_cap_dashboard: '\u5b9e\u65f6\u663e\u793a\u6d3b\u8dc3\u5b87\u5b99\u3001\u5df2\u53d1\u73b0\u8bbe\u5907\u3001\u76ee\u7684\u5730\u548c\u6570\u636e\u5305\u901f\u7387\u7684\u6982\u89c8\u3002',
       hero_subtitle:
-        '\u7edf\u4e00\u7ba1\u7406\u3001\u53ef\u89c6\u5316\u548c\u8f6c\u53d1 Art-Net / sACN \u4fe1\u53f7\u3002\u7b80\u7ea6\u800c\u5f3a\u5927\u7684 DMX \u5de5\u5177\uff0c\u4e3a\u73b0\u573a\u5236\u4f5c\u800c\u751f\u3002',
+        'Art-Net / sACN \u4fe1\u53f7\u7684\u7edf\u4e00\u7ba1\u7406\u3001\u53ef\u89c6\u5316\u3001\u8bb0\u5f55\u4e0e\u8f6c\u53d1\u3002\u4e3a\u73b0\u573a\u6f14\u51fa\u6253\u9020\u7684 DMX \u7ba1\u7406\u5de5\u5177\u3002',
       badge_cross_platform: 'Cross-Platform',
       badge_minimal: 'Minimal & Powerful',
       hero_download_btn: 'Download v2.7.12',
@@ -1089,9 +1082,8 @@
       feat_config_title: '配置导出与导入',
       feat_config_desc: '将转发配置保存为文件并加载。跨场地复用设置并创建备份。',
       features_label: 'Features',
-      features_title: '\u7b80\u7ea6\uff0c\u4f46\u5f3a\u5927',
-      features_desc:
-        '\u6ca1\u6709\u591a\u4f59\u529f\u80fd\u3002DMX \u4fe1\u53f7\u7684\u63a5\u6536\u3001\u5408\u5e76\u3001\u76d1\u63a7\u3001\u8f6c\u6362\u548c\u8f6c\u53d1\uff0c\u5c3d\u5728\u4e00\u4e2a\u7b80\u6d01\u7684\u754c\u9762\u4e2d\u3002',
+      features_title: '\u73b0\u573a\u6240\u9700\uff0c\u4e00\u5e94\u4ff1\u5168',
+      features_desc: '',
       feat1_title: '\u5b9e\u65f6 DMX \u53ef\u89c6\u5316',
       feat1_desc:
         '\u4ee5\u7f51\u683c\u5f62\u5f0f\u5b9e\u65f6\u663e\u793a 512 \u4e2a\u901a\u9053\u3002\u901a\u8fc7\u989c\u8272\u7f16\u7801\u7684\u4eae\u5ea6\u503c\uff0c\u5373\u65f6\u6355\u6349\u4fe1\u53f7\u53d8\u5316\u3002\u652f\u6301\u591a Universe \u540c\u65f6\u663e\u793a\u3002',
