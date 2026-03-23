@@ -1,8 +1,13 @@
 {
-  "version": "2.7.18",
+  "version": "2.8.8",
   "downloadUrl": "https://llcheesell.github.io/artnetmanager-release/",
-  "releaseNotes": "Fix: app failed to launch after Permanent Shutdown (guardian deadlock)",
+  "releaseNotes": "Notification system, cluster UX improvements, bug fixes",
   "history": [
+    {
+      "version": "2.8.8",
+      "date": "2026-03-23",
+      "notes": "Notification system (toast popups, operator announcements, critical alerts), cluster detach/rejoin UX, reset dismissed announcements, bug fixes"
+    },
     {
       "version": "2.7.18",
       "date": "2026-03-23",
