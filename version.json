@@ -1,8 +1,14 @@
 {
-  "version": "2.8.9",
+  "version": "2.10.1-test",
   "downloadUrl": "https://llcheesell.github.io/artnetmanager-release/",
-  "releaseNotes": "v2.8.9 - macOS code signing & notarization",
+  "releaseNotes": "ANMR: classify recording compatibility + show writer version in Playlist",
   "history": [
+    {
+      "version": "2.10.1-test",
+      "date": "2026-04-25",
+      "notes": "ANMR: classify recording compatibility + show writer version in Playlist\n\nDefine and implement the project's ANMR compatibility policy end-to-end.\n\nReader side (main process):\n- readFileHeader() now extracts the writer's app version from magic bytes\n  5-7 into RecordingMetadata.writerVersion (still informational — the\n  identity check still uses only the 5-byte prefix).\n- New src/main/recording/Compatibility.ts exposes classifyCompatibility()\n  which returns one of:\n    - 'ok'                   format match, writer ≤ current → play normally\n    - 'unknown-app-version'  format match, writer > current → play with ⚠️\n    - 'legacy-format'        format < current               → legacy compat ⚠️\n    - 'future-format'        format > current               → cannot play\n- PlaybackEngine.load() refuses 'future-format' files with a clear error.\n- RecordingFileScanner populates writerVersion / formatVersion /\n  compatibility on every PlaylistEntry.\n\nUI side (renderer):\n- Playlist row displays the recorded writer version () next to\n  the file date so operators can see which build produced each file.\n- Non-'ok' compatibility shows an amber ⚠️ badge (UnknownVersion /\n  LegacyFormat) with a tooltip explaining the implication.\n- 'future-format' entries are greyed out, line-through, Ban icon, and\n  both single- and double-click are disabled — they cannot be loaded.\n\nDocs:\n- CLAUDE.md gains a Compatibility Rules table that codifies the verdicts\n  and the forward-looking policy: future ANMR_FORMAT_VERSION bumps must\n  ship a legacy reader for the previous format, and the legacy badge is\n  the user-visible signal that some newer features may be unreproducible.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+      "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.10.1-test"
+    },
     {
       "version": "2.8.9",
       "date": "2026-04-25",
@@ -85,5 +91,5 @@
       "notes": "Merge engine, multi-NIC, display formats, guardian mode"
     }
   ],
-  "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.8.9"
+  "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.10.1-test"
 }
