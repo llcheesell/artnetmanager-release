@@ -1,8 +1,14 @@
 {
-  "version": "2.8.8",
+  "version": "2.8.9",
   "downloadUrl": "https://llcheesell.github.io/artnetmanager-release/",
-  "releaseNotes": "Notification system, cluster UX improvements, bug fixes",
+  "releaseNotes": "v2.8.9 - macOS code signing & notarization",
   "history": [
+    {
+      "version": "2.8.9",
+      "date": "2026-04-25",
+      "notes": "v2.8.9 - macOS code signing & notarization\n\nThe macOS build is now signed with a Developer ID certificate and\nnotarized by Apple. The 'unidentified developer' Gatekeeper warning\nno longer appears when opening the app for the first time.",
+      "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.8.9"
+    },
     {
       "version": "2.8.8",
       "date": "2026-03-23",
@@ -78,5 +84,6 @@
       "date": "2026-03-19",
       "notes": "Merge engine, multi-NIC, display formats, guardian mode"
     }
-  ]
+  ],
+  "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.8.9"
 }
