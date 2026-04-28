@@ -84,7 +84,7 @@
       download_label: 'Download',
       download_title: 'ダウンロード',
       download_desc:
-        'v2.10.7 — LTC入力のチャンネル選択に対応。Cluster STANDBY時はForwarding設定UIが読み取り専用になり、PRIMARYで上書きされる挙動が明示されます。',
+        'v2.10.7: LTC入力チャンネル選択 / Cluster STANDBYのForwarding設定保護 — v2.10.5: Art-Net + LTC両方のTimecode受信・転送、LTC Manager出力ツール — v2.8.9: macOS版を Apple Developer ID で署名・公証',
       dl_win: 'Windows',
       dl_win_version: 'v2.10.7 · Installer (.exe)',
       dl_win_portable: 'Windows Portable',
@@ -200,7 +200,7 @@
       download_label: 'Download',
       download_title: 'Download',
       download_desc:
-        'v2.10.7 — Pick which input channel decodes LTC. Cluster STANDBY hosts now show a read-only Forwarding page so it is clear settings are owned by the PRIMARY device.',
+        'v2.10.7: LTC input channel selection / read-only Forwarding on cluster STANDBY — v2.10.5: Timecode reception + forwarding for Art-Net and LTC, LTC Manager output tool — v2.8.9: macOS builds signed and notarized with Apple Developer ID',
       dl_win: 'Windows',
       dl_win_version: 'v2.10.7 \u00b7 Installer (.exe)',
       dl_win_portable: 'Windows Portable',
@@ -316,7 +316,7 @@
       download_label: 'Download',
       download_title: 'Download',
       download_desc:
-        'v2.10.7 — Wählen Sie den LTC-Decodierungskanal aus. STANDBY-Hosts haben jetzt eine schreibgeschützte Forwarding-Seite, sodass klar ist, dass die Einstellungen vom PRIMARY-Gerät verwaltet werden.',
+        'v2.10.7: LTC-Eingangskanalauswahl / schreibgeschütztes Forwarding bei Cluster-STANDBY — v2.10.5: Timecode-Empfang + Weiterleitung für Art-Net und LTC, LTC Manager-Ausgabetool — v2.8.9: macOS-Builds mit Apple Developer ID signiert und beglaubigt',
       dl_win: 'Windows',
       dl_win_version: 'v2.10.7 \u00b7 Installer (.exe)',
       dl_win_portable: 'Windows Portable',
@@ -431,7 +431,7 @@
       download_label: 'Download',
       download_title: 'T\u00e9l\u00e9chargement',
       download_desc:
-        'v2.10.7 — Sélectionnez le canal d\'entrée pour décoder le LTC. Les hôtes STANDBY affichent maintenant une page Forwarding en lecture seule, indiquant clairement que les paramètres sont gérés par l\'appareil PRIMARY.',
+        'v2.10.7 : sélection du canal d\'entrée LTC / Forwarding en lecture seule en mode STANDBY — v2.10.5 : réception et transfert de timecode Art-Net et LTC, outil de sortie LTC Manager — v2.8.9 : builds macOS signés et notarisés avec Apple Developer ID',
       dl_win: 'Windows',
       dl_win_version: 'v2.10.7 \u00b7 Installer (.exe)',
       dl_win_portable: 'Windows Portable',
@@ -548,7 +548,7 @@
       download_label: 'Download',
       download_title: 'Descargar',
       download_desc:
-        'v2.10.7 — Elija qué canal de entrada decodifica LTC. Los hosts STANDBY ahora muestran la página de Forwarding en solo lectura, dejando claro que la configuración la gestiona el dispositivo PRIMARY.',
+        'v2.10.7: selección de canal de entrada LTC / Forwarding en solo lectura en STANDBY — v2.10.5: recepción y reenvío de timecode Art-Net y LTC, herramienta de salida LTC Manager — v2.8.9: builds de macOS firmados y notarizados con Apple Developer ID',
       dl_win: 'Windows',
       dl_win_version: 'v2.10.7 \u00b7 Installer (.exe)',
       dl_win_portable: 'Windows Portable',
@@ -663,7 +663,7 @@
       download_label: 'Download',
       download_title: 'Scarica',
       download_desc:
-        'v2.10.7 — Scegli quale canale di ingresso decodifica LTC. Gli host STANDBY ora mostrano la pagina Forwarding in sola lettura, chiarendo che le impostazioni sono gestite dal dispositivo PRIMARY.',
+        'v2.10.7: selezione canale di ingresso LTC / Forwarding in sola lettura in STANDBY — v2.10.5: ricezione e inoltro timecode Art-Net e LTC, strumento di output LTC Manager — v2.8.9: build macOS firmati e notarizzati con Apple Developer ID',
       dl_win: 'Windows',
       dl_win_version: 'v2.10.7 \u00b7 Installer (.exe)',
       dl_win_portable: 'Windows Portable',
@@ -780,7 +780,7 @@
       download_label: 'Download',
       download_title: 'Downloaden',
       download_desc:
-        'v2.10.7 — Kies welk invoerkanaal LTC decodeert. STANDBY-hosts tonen nu een alleen-lezen Forwarding-pagina, zodat duidelijk is dat de instellingen door het PRIMARY-apparaat worden beheerd.',
+        'v2.10.7: LTC-invoerkanaalselectie / alleen-lezen Forwarding bij cluster STANDBY — v2.10.5: timecode-ontvangst en doorsturen voor Art-Net en LTC, LTC Manager-uitvoertool — v2.8.9: macOS-builds ondertekend en notarized met Apple Developer ID',
       dl_win: 'Windows',
       dl_win_version: 'v2.10.7 \u00b7 Installer (.exe)',
       dl_win_portable: 'Windows Portable',
@@ -895,7 +895,7 @@
       download_label: 'Download',
       download_title: 'Download',
       download_desc:
-        'v2.10.7 — Escolha qual canal de entrada decodifica LTC. Hosts STANDBY agora exibem a página Forwarding em modo somente leitura, deixando claro que as configurações são gerenciadas pelo dispositivo PRIMARY.',
+        'v2.10.7: seleção do canal de entrada LTC / Forwarding somente leitura em cluster STANDBY — v2.10.5: recepção e encaminhamento de timecode para Art-Net e LTC, ferramenta de saída LTC Manager — v2.8.9: builds macOS assinados e autenticados com Apple Developer ID',
       dl_win: 'Windows',
       dl_win_version: 'v2.10.7 \u00b7 Installer (.exe)',
       dl_win_portable: 'Windows Portable',
@@ -1010,7 +1010,7 @@
       download_label: 'Download',
       download_title: '\ub2e4\uc6b4\ub85c\ub4dc',
       download_desc:
-        'v2.10.7 — LTC를 디코딩할 입력 채널을 선택할 수 있습니다. STANDBY 호스트는 이제 Forwarding 페이지를 읽기 전용으로 표시하여 설정이 PRIMARY 장치의 소유임을 명확히 합니다.',
+        'v2.10.7: LTC 입력 채널 선택 / 클러스터 STANDBY에서 Forwarding 읽기 전용 — v2.10.5: Art-Net과 LTC의 타임코드 수신·전달, LTC Manager 출력 도구 — v2.8.9: macOS 빌드를 Apple Developer ID로 서명·공증',
       dl_win: 'Windows',
       dl_win_version: 'v2.10.7 \u00b7 Installer (.exe)',
       dl_win_portable: 'Windows Portable',
@@ -1125,7 +1125,7 @@
       download_label: 'Download',
       download_title: '\u4e0b\u8f7d',
       download_desc:
-        'v2.10.7 — 可选择解码 LTC 的输入通道。STANDBY 主机的 Forwarding 页面现在为只读，明确显示设置由 PRIMARY 设备管理。',
+        'v2.10.7：LTC 输入通道选择 / 集群 STANDBY 模式下 Forwarding 只读 — v2.10.5：Art-Net 与 LTC 的时间码接收与转发、LTC Manager 输出工具 — v2.8.9：macOS 版本使用 Apple Developer ID 签名和公证',
       dl_win: 'Windows',
       dl_win_version: 'v2.10.7 \u00b7 Installer (.exe)',
       dl_win_portable: 'Windows Portable',
