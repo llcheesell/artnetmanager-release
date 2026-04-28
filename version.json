@@ -1,8 +1,14 @@
 {
-  "version": "2.10.5",
+  "version": "2.10.7",
   "downloadUrl": "https://llcheesell.github.io/artnetmanager-release/",
-  "releaseNotes": "v2.10.5 — Timecode routing, LTC Manager, and stability",
+  "releaseNotes": "Release v2.10.7",
   "history": [
+    {
+      "version": "2.10.7",
+      "date": "2026-04-28",
+      "notes": "Release v2.10.7\n\nLTC input channel selection (Settings → Timecode Source)\n- Settings → Timecode Source now exposes an Input Channel picker beside\n  the audio device picker. The receiver decodes only the chosen channel\n  via a ChannelSplitter → ChannelMerger graph, instead of forcing the\n  device to mono and downmixing every input. Multi-input USB audio\n  interfaces (Scarlett, MOTU, Apogee, etc.) now work as expected.\n  (Originally fixed in v2.10.6, tagged as part of this release.)\n\nCluster STANDBY: Forwarding UI is now read-only\n- STANDBY hosts could previously add / edit / delete both DMX and\n  Art-Net Timecode forwarding destinations, but each change was silently\n  overwritten by the next cluster sync push from PRIMARY. The Forwarding\n  page now displays a bilingual banner explaining that the config is\n  cluster-synced and disables every mutation button (Add / Edit /\n  Duplicate / Delete / Toggle / Reorder, both DMX and TC) when STANDBY.\n- Server-side belt-and-suspenders: the IPC handlers themselves reject\n  DEST_*/TC_DEST_* mutations when role is standby (no-op + log) so any\n  path that bypasses the UI is also caught.\n- Detach via the Cluster panel to edit settings independently.",
+      "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.10.7"
+    },
     {
       "version": "2.10.5",
       "date": "2026-04-28",
@@ -97,5 +103,5 @@
       "notes": "Merge engine, multi-NIC, display formats, guardian mode"
     }
   ],
-  "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.10.5"
+  "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.10.7"
 }
