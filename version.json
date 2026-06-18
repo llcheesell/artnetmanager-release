@@ -1,8 +1,14 @@
 {
-  "version": "2.10.7",
+  "version": "2.11.1",
   "downloadUrl": "https://llcheesell.github.io/artnetmanager-release/",
-  "releaseNotes": "Release v2.10.7",
+  "releaseNotes": "Release v2.11.1",
   "history": [
+    {
+      "version": "2.11.1",
+      "date": "2026-06-18",
+      "notes": "Release v2.11.1\n\nFirst public release since v2.10.7 — cumulative. Headline: a cluster\n(PRIMARY/STANDBY) redundancy overhaul that makes failover safe.\n\nCluster / redundancy:\n- Operator-assigned election priority (Settings → Cluster, 1–255) replaces the\n  old wall-clock-startup priority that could silently invert across machines\n  and cause split-brain. Election key is now a stable, symmetric\n  (priority, nodeId) total order — the cluster can no longer reach 0 or 2\n  PRIMARYs from the election itself.\n- Steady-state two-PRIMARY backstop + zero-primary watchdog: a split-brain (or\n  an aborted failover) now auto-resolves to exactly one PRIMARY within ~one\n  heartbeat, instead of persisting silently as it did on v2.10.7.\n- NEW dual-PRIMARY operator alarm (critical notification) — the conflict is now\n  visible, not just an info-level log.\n- Failover output continuity: on STANDBY→PRIMARY promotion the node re-emits the\n  current state of every universe immediately (no wait for the next console\n  refresh) and sends Art-Net sequence 0 for 3 s so order-checking receivers\n  accept the new stream.\n- Degraded-PRIMARY detection, config-sync backoff, peer-map hardening.\n\nPlayback / recording:\n- Deterministic seek: scrubbing reconstructs the exact universe state via a\n  per-universe FULL-keyframe index (no more \"only a few channels react\").\n- Recording writes periodic FULL keyframes; clean finalize on quit; write-error\n  and disk-low notifications.\n\nOther:\n- ANMR ↔ DMX converter (CLI + standalone GUI app) for CompDMX interop.\n- Signal Checker / LTC Manager are independent windows.\n- Auto update-check on launch with multi-version release notes.\n- Art-Net bind no longer hangs on port conflict; sACN runtime reconfiguration.",
+      "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.11.1"
+    },
     {
       "version": "2.10.7",
       "date": "2026-04-28",
@@ -103,5 +109,5 @@
       "notes": "Merge engine, multi-NIC, display formats, guardian mode"
     }
   ],
-  "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.10.7"
+  "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.11.1"
 }
