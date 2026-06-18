@@ -5,7 +5,7 @@
       "version": "2.12.0",
       "channel": "stable",
       "notes_md": "v2.12.0 — In-app updates + new download site\n\nNew:\n- In-app updates: ArtNet Manager now checks for new versions on launch and can download and install the update for you — with a progress bar and a one-click restart. No more visiting the website and reinstalling by hand.\n- \"What's new\" summary: after an update installs, the app shows you what changed.\n- Update channel: choose Stable (default) or Beta in Settings to opt into early builds.\n- New download site at apps.llcheesell.com/ArtnetManager. It always shows the latest version and links; the old page redirects here.\n\nImproved:\n- The download page now fills in the latest version and per-platform links automatically.\n\nNote:\n- Auto-update works from this version onward. If you're on an older build, install v2.12.0 once (from the download site) and future updates happen in-app.",
-      "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.12.0",
+      "releaseUrl": "https://apps.llcheesell.com/ArtnetManager/#download",
       "released_at": 1781799610,
       "urgency": "normal",
       "mandatory": false,
