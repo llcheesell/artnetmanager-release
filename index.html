@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ArtNet Manager &mdash; DMX Signal Management for Live Production</title>
+  <!-- MOVED: this distribution site now lives at apps.llcheesell.com/ArtnetManager.
+       Files here are kept (e.g. manifest.json for the in-app updater), but the
+       landing page redirects. canonical points search engines to the new home. -->
+  <link rel="canonical" href="https://apps.llcheesell.com/ArtnetManager">
+  <meta http-equiv="refresh" content="0; url=https://apps.llcheesell.com/ArtnetManager">
+  <script>
+    // Client-side redirect (faster than meta-refresh); preserves any hash.
+    (function () {
+      var dest = 'https://apps.llcheesell.com/ArtnetManager';
+      try { location.replace(dest + location.hash); } catch (e) { location.href = dest; }
+    })();
+  </script>
+  <title>ArtNet Manager has moved → apps.llcheesell.com/ArtnetManager</title>
   <meta name="description" content="Cross-platform Art-Net/sACN signal management, visualization, recording, and forwarding tool designed for live production environments.">
   <!-- Open Graph -->
   <meta property="og:title" content="ArtNet Manager — DMX Signal Management for Live Production">
