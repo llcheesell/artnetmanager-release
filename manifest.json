@@ -2,21 +2,27 @@
   "schema_version": 1,
   "channels": {
     "stable": {
-      "version": "2.11.1",
+      "version": "2.12.0",
       "channel": "stable",
-      "notes_md": "Improved:\n- Cluster failover is more reliable. When a STANDBY takes over, it immediately re-sends the current lighting state so output doesn't drop to zero while waiting for the next console refresh.\n- If two PRIMARY units are ever detected on the network, you now get a clear on-screen alert (it used to resolve silently with no warning).\n\nFixed:\n- A freshly-promoted unit's Art-Net stream is no longer rejected by some downstream nodes/visualizers right after failover.",
-      "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.11.1",
-      "released_at": 1781798561,
+      "notes_md": "v2.12.0 — In-app updates + new download site\n\nNew:\n- In-app updates: ArtNet Manager now checks for new versions on launch and can download and install the update for you — with a progress bar and a one-click restart. No more visiting the website and reinstalling by hand.\n- \"What's new\" summary: after an update installs, the app shows you what changed.\n- Update channel: choose Stable (default) or Beta in Settings to opt into early builds.\n- New download site at apps.llcheesell.com/ArtnetManager. It always shows the latest version and links; the old page redirects here.\n\nImproved:\n- The download page now fills in the latest version and per-platform links automatically.\n\nNote:\n- Auto-update works from this version onward. If you're on an older build, install v2.12.0 once (from the download site) and future updates happen in-app.",
+      "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.12.0",
+      "released_at": 1781799610,
       "urgency": "normal",
       "mandatory": false,
       "project_compatibility_breaking": false,
       "assets": {
-        "mac_universal": "https://github.com/llcheesell/artnetmanager-release/releases/download/v2.11.1/ArtNet.Manager-2.11.1-universal.dmg",
-        "win_x64": "https://github.com/llcheesell/artnetmanager-release/releases/download/v2.11.1/ArtNet.Manager.Setup.2.11.1.exe"
+        "mac_universal": "https://github.com/llcheesell/artnetmanager-release/releases/download/v2.12.0/ArtNet.Manager-2.12.0-universal.dmg",
+        "win_x64": "https://github.com/llcheesell/artnetmanager-release/releases/download/v2.12.0/ArtNet.Manager.Setup.2.12.0.exe"
       }
     }
   },
   "history": [
+    {
+      "version": "2.12.0",
+      "date": "2026-06-18",
+      "notes": "v2.12.0 — In-app updates + new download site\n\nNew:\n- In-app updates: ArtNet Manager now checks for new versions on launch and can download and install the update for you — with a progress bar and a one-click restart. No more visiting the website and reinstalling by hand.\n- \"What's new\" summary: after an update installs, the app shows you what changed.\n- Update channel: choose Stable (default) or Beta in Settings to opt into early builds.\n- New download site at apps.llcheesell.com/ArtnetManager. It always shows the latest version and links; the old page redirects here.\n\nImproved:\n- The download page now fills in the latest version and per-platform links automatically.\n\nNote:\n- Auto-update works from this version onward. If you're on an older build, install v2.12.0 once (from the download site) and future updates happen in-app.",
+      "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.12.0"
+    },
     {
       "version": "2.11.1",
       "date": "2026-06-18",
@@ -150,5 +156,5 @@
       "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.0.0"
     }
   ],
-  "generated_at": 1781798561
+  "generated_at": 1781799610
 }
