@@ -2,21 +2,27 @@
   "schema_version": 1,
   "channels": {
     "stable": {
-      "version": "2.12.1",
+      "version": "2.12.2",
       "channel": "stable",
-      "notes_md": "v2.12.1 — Live-production reliability hardening\n\nFixed:\n- Forwarding now sends the merged universe state (HTP/LTP/Priority). With two consoles on one universe, downstream nodes previously received an unmerged last-writer-wins stream while the local monitor looked correct.\n- A brief network dropout (>127 lost frames) no longer blacks out a universe for several seconds after the source has already recovered.\n- 44Hz output pacing no longer loses frames to Windows timer granularity (measured ~16% loss at 40Hz input is now ~0%).\n- Cluster: heartbeats use each NIC's directed broadcast — fixes dual-PRIMARY split-brain on multi-NIC machines. Planned shutdowns announce themselves so the standby takes over in milliseconds instead of seconds. Heartbeat/sync sockets now recover from bind and runtime errors. Timecode forwarding destinations now sync to the standby.\n- sACN: forwarding one universe to two destinations no longer sends the second stream to the wrong IP. Priority-0 streams are honored internally for merging.\n- Recording: refuses to start on a nearly-full disk (<500MB); recordings growing past 4GB stay playable (the seek index is omitted instead of corrupting the file).\n- Routing and settings files are written atomically — a crash mid-save can no longer wipe the routing table.\n- \"Permanent Shutdown\" now works in the packaged app (the guardian no longer restarts it forever).\n- \"Install Update\" no longer gets stuck behind the quit-confirmation dialog.\n\nImproved:\n- Player-mode output recovers automatically if the network interface hiccups mid-playback.\n- Monitoring marks a universe inactive within ~1s of its source disappearing (was up to 10s).\n\nNote:\n- In a cluster, run the same version on both nodes. A mixed 2.12.0/2.12.1 pair with timecode forwarding destinations will report a persistent config-hash mismatch until both are updated.",
+      "notes_md": "v2.12.2 — In-app update download fix\n\nFixed:\n- The update panel's \"Download & update\" button no longer fails with \"Cannot set properties of undefined (setting 'autoDownload')\". The in-app download path had been broken since it was introduced in v2.12.0.\n\nImproved:\n- The update notice at the top of the Dashboard is now a single slim line pointing at the bottom-right update panel (with a Details link to the release page), instead of a second full release-notes card.\n\nNote:\n- If you are on v2.12.0 or v2.12.1, the broken button is in the version you are running — please download this update manually once (Details link or the download site). From v2.12.2 onward, updates install in-app as intended.",
       "releaseUrl": "https://apps.llcheesell.com/ArtnetManager/#download",
-      "released_at": 1785730510,
+      "released_at": 1785732455,
       "urgency": "normal",
       "mandatory": false,
       "project_compatibility_breaking": false,
       "assets": {
-        "mac_universal": "https://github.com/llcheesell/artnetmanager-release/releases/download/v2.12.1/ArtNet.Manager-2.12.1-universal.dmg",
-        "win_x64": "https://github.com/llcheesell/artnetmanager-release/releases/download/v2.12.1/ArtNet.Manager.Setup.2.12.1.exe"
+        "mac_universal": "https://github.com/llcheesell/artnetmanager-release/releases/download/v2.12.2/ArtNet.Manager-2.12.2-universal.dmg",
+        "win_x64": "https://github.com/llcheesell/artnetmanager-release/releases/download/v2.12.2/ArtNet.Manager.Setup.2.12.2.exe"
       }
     }
   },
   "history": [
+    {
+      "version": "2.12.2",
+      "date": "2026-08-03",
+      "notes": "v2.12.2 — In-app update download fix\n\nFixed:\n- The update panel's \"Download & update\" button no longer fails with \"Cannot set properties of undefined (setting 'autoDownload')\". The in-app download path had been broken since it was introduced in v2.12.0.\n\nImproved:\n- The update notice at the top of the Dashboard is now a single slim line pointing at the bottom-right update panel (with a Details link to the release page), instead of a second full release-notes card.\n\nNote:\n- If you are on v2.12.0 or v2.12.1, the broken button is in the version you are running — please download this update manually once (Details link or the download site). From v2.12.2 onward, updates install in-app as intended.",
+      "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.12.2"
+    },
     {
       "version": "2.12.1",
       "date": "2026-08-03",
@@ -162,5 +168,5 @@
       "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.0.0"
     }
   ],
-  "generated_at": 1785730510
+  "generated_at": 1785732455
 }

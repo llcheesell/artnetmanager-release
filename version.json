@@ -1,8 +1,14 @@
 {
-  "version": "2.12.1",
-  "releaseNotes": "v2.12.1 — Live-production reliability hardening",
+  "version": "2.12.2",
+  "releaseNotes": "v2.12.2 — In-app update download fix",
   "releaseUrl": "https://apps.llcheesell.com/ArtnetManager/#download",
   "history": [
+    {
+      "version": "2.12.2",
+      "date": "2026-08-03",
+      "notes": "v2.12.2 — In-app update download fix\n\nFixed:\n- The update panel's \"Download & update\" button no longer fails with \"Cannot set properties of undefined (setting 'autoDownload')\". The in-app download path had been broken since it was introduced in v2.12.0.\n\nImproved:\n- The update notice at the top of the Dashboard is now a single slim line pointing at the bottom-right update panel (with a Details link to the release page), instead of a second full release-notes card.\n\nNote:\n- If you are on v2.12.0 or v2.12.1, the broken button is in the version you are running — please download this update manually once (Details link or the download site). From v2.12.2 onward, updates install in-app as intended.",
+      "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.12.2"
+    },
     {
       "version": "2.12.1",
       "date": "2026-08-03",
