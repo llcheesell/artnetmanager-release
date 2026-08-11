@@ -1,8 +1,14 @@
 {
-  "version": "2.12.2",
-  "releaseNotes": "v2.12.2 — In-app update download fix",
+  "version": "2.13.1",
+  "releaseNotes": "Release v2.13.1",
   "releaseUrl": "https://apps.llcheesell.com/ArtnetManager/#download",
   "history": [
+    {
+      "version": "2.13.1",
+      "date": "2026-08-11",
+      "notes": "Release v2.13.1\n\nPer-destination egress NIC, an operator gate before a cluster overwrites your\nconfiguration, production send counters in the UI, an experimental\nseparate-process signal engine with a Settings toggle, and a broad reliability\npass. Rolls up everything from v2.12.3 through v2.13.1.\n\nUpgrade notes (read before updating a show system):\n- Art-Net destinations sharing one IP on different ports now each send at full\n  rate - total traffic to that IP can double. sACN destinations are unaffected.\n- Update every cluster node before assigning an egress NIC, or older peers\n  will reject configuration sync until updated.\n- A cluster configuration differing only by egress NIC now asks before\n  overwriting (previously applied silently with no backup).\n\nNew:\n- Per-destination egress NIC for DMX and timecode forwarding (multi-NIC mode)\n- Cluster join-decision gate: Use PRIMARY's config / Make THIS node PRIMARY /\n  Detach - with a timestamped local backup before any overwrite\n- Delay: direct numeric entry and two-tap measurement (rebindable key)\n- Production send counters: Dashboard output strip + sidebar error indicator,\n  full breakdown in the diagnostic snapshot\n- Experimental: separate-process signal engine with automatic crash restart.\n  Settings > Signal Engine shows the running mode and the mode for next launch.\n\nImproved:\n- Send counts reflect what actually left the machine (confirmed-send\n  accounting for Art-Net and sACN, failures recorded by error code)\n- sACN senders pre-warmed - output no longer waits on the multicast join\n- Cluster universe-mismatch warning shows per-node counts and only warns on\n  actionable states\n- Only a real PRIMARY serves cluster configuration\n- Diagnostic snapshot: heartbeat/state-sync send accounting, config-request\n  accounting, per-destination egress\n\nFixed:\n- Same-IP different-port Art-Net destinations shared one rate budget (#85)\n- Truncated sACN packets entered as all-zero universes (#87)\n- sACN error reporting no longer depends on an error listener being attached\n- An unresolvable Art-Net target address could force the shared receive socket\n  to rebind, taking reception down (#34)",
+      "releaseUrl": "https://github.com/llcheesell/artnetmanager-release/releases/tag/v2.13.1"
+    },
     {
       "version": "2.12.2",
       "date": "2026-08-03",
